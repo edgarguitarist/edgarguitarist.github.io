@@ -4,7 +4,7 @@
 
 <link id="icon" rel="icon" type="image/png" href=""/>
 <!-- Bulma -->
-<link rel="stylesheet" href="vendors/bulma-0.9.3/css/bulma.css">
+<link rel="stylesheet" href="css/bulma.css">
 <!-- Custom Styles -->
 <link rel="stylesheet" href="css/styles.css">
 <link rel="stylesheet" href="css/footer.css">
