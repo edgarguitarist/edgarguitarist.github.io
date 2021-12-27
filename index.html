@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - Edgar Mariano Laz Terán</title>
+
+    <link id="icon" rel="icon" type="image/png" href="" />
+    <!-- Bulma -->
+    <link rel="stylesheet" href="vendors/bulma-0.9.3/css/bulma.css">
+    <!-- Custom Styles -->
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/footer.css">
+    <!-- Iconos del FontAwesome -->
+    <script src="js/icons.js"></script>
+    <!-- jGrowl -->
+    <link href="vendors/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
+</head>
+
+<body>
+    <nav class="navbar is-fixed-top has-background-black-bis" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" href="index.html">
+                <img id="logo" src="images/default.gif" class="h-60 mp-0" alt="logo">
+            </a>
+
+            <a role="button" class="navbar-burger has-text-white is-size-6-desktop is-size-3" aria-label="menu" aria-expanded="false" data-target="navbarBulma" style="align-self: center;">
+                <em class="wd-60 maxcon fas fa-bars mv-10"></em>
+            </a>
+        </div>
+        <div id="navbarBulma" class="navbar-menu has-background-black-bis">
+            <div class="navbar-end">
+                <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#">
+                    <em class="fas fa-home"></em>Home
+                </a>
+                <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#aboutme">
+                    <em class="fas fa-concierge-bell"></em>About Me
+                </a>
+                <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#skills">
+                    <em class="fas fa-info-circle"></em>Skills
+                </a>
+                <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#ab">
+                    <em class="fas fa-comments"></em>Work Experience
+                </a>
+
+            </div>
+            <div class="navbar-end">
+
+                <div class="navbar-item">
+
+                    <div class="buttons">
+                        <button id="flags" class="button mr-15 has-text-white has-background-black-bis" onclick="changeButton(this)" href="#">
+                            <!-- Modal para contactarme -->
+                            <img id="flag_img" src="images/flags/es.png" alt="flag" class="mp-0 h-30">Es
+                        </button>
+                        <a target="_blank" class="button is-primary-light is-size-6-desktop is-size-3" href="login.html">
+                            <!-- Modal para contactarme -->
+                            <em class="fas fa-user"></em>Contact Me
+                        </a>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </nav>
+</body>
+
+<footer class="footer2">
+    <div class="columns is-full">
+        <div class="column is-three-fifths self-center has-text-centered">
+            <p class="copyright-text">Copyright &copy; 2021 - Developed by <strong class="has-text-white">Edgar Mariano Laz Terán</strong></p>
+        </div>
+        <div class="column">
+            <ul class="list-inline social-buttons">
+                <li class="ul-padding"><a title="Facebook" rel="noopener noreferrer" class="fb" target="_blank" href="https://www.facebook.com/edgarm.laz"><em class="fab fa-facebook-f"></em></a></li>
+                <li class="ul-padding"><a title="Instagram" rel="noopener noreferrer" class="ins" target="_blank" href="https://www.instagram.com/bockcao/"><em class="fab fa-instagram"></em></a></li>
+                <li class="ul-padding"><a title="Twitter" rel="noopener noreferrer" class="twi" target="_blank" href="https://twitter.com/bockcao"><em class="fab fa-twitter"></em></a></li>
+                <li class="ul-padding"><a title="GitHub" rel="noopener noreferrer" class="git" target="_blank" href="https://github.com/edgarguitarist"><em class="fab fa-github"></em></a></li>
+                <li class="ul-padding"><a title="LinkedIn" rel="noopener noreferrer"x class="lin" target="_blank" href="https://www.linkedin.com/in/edgarlteran/"><em class="fab fa-linkedin-in"></em></a></li>
+            </ul>
+        </div>
+        <div class="column"></div>
+    </div>
+</footer>
+
+<!-- Partial -->
+<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js' crossorigin="anonymous" integrity=""></script>
+<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js' crossorigin="anonymous" integrity=""></script>
+<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' crossorigin="anonymous" integrity=""></script>
+
+<!-- Custom Scripts -->
+<script src="js/scripts.js"></script>
+
+<!-- jGrowl -->
+<script src="vendors/jGrowl/jquery.jgrowl.js"></script>
+<!-- mover de php a js los mensajes de jgrowl -->
+
+</html>

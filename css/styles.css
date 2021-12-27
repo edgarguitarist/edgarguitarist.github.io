@@ -698,3 +698,7 @@ button[type="submit"]:disabled {
   border: 1px solid var(--dark);
   cursor: not-allowed;
 }
+
+#logo{
+  border-radius: 50%;
+}
