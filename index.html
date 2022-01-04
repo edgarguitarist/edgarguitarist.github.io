@@ -1,12 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html> <!-- Ignore this for toggle lang -->
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio - Edgar Mariano Laz Terán</title>
-
-    <link id="icon" rel="icon" type="image/png" href="" />
+    <link id="icon" rel="icon" type="image/png" href=""/>
     <!-- Bulma -->
     <link rel="stylesheet" href="vendors/bulma-0.9.3/css/bulma.css">
     <!-- Custom Styles -->
@@ -21,62 +20,63 @@
 <body>
     <nav class="navbar is-fixed-top has-background-black-bis" role="navigation" aria-label="main navigation">
         <div class="navbar-brand">
-            <a class="navbar-item" href="index.html">
+            <a class="navbar-item" href="#mymodal">
                 <img id="logo" src="images/default.gif" class="h-60 mp-0" alt="logo">
             </a>
-
-            <a role="button" class="navbar-burger has-text-white is-size-6-desktop is-size-3" aria-label="menu" aria-expanded="false" data-target="navbarBulma" style="align-self: center;">
+            <a role="button" class="navbar-burger has-text-white is-size-6-desktop is-size-3 ver-centered" aria-label="menu" aria-expanded="false" data-target="navbarBulma">
                 <em class="wd-60 maxcon fas fa-bars mv-10"></em>
             </a>
         </div>
         <div id="navbarBulma" class="navbar-menu has-background-black-bis">
             <div class="navbar-end">
                 <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#">
-                    <em class="fas fa-home"></em>Home
+                    <em class="fas fa-home"></em><span lang="en">Home</span><span lang="es">Inicio</span>
                 </a>
                 <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#aboutme">
-                    <em class="fas fa-concierge-bell"></em>About Me
+                    <em class="fas fa-concierge-bell"></em><span lang="en">About Me</span><span lang="es">Acerca de Mi</span>
                 </a>
                 <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#skills">
-                    <em class="fas fa-info-circle"></em>Skills
+                    <em class="fas fa-info-circle"></em><span lang="en">Skills</span><span lang="es">Habilidades</span>
                 </a>
-                <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#ab">
-                    <em class="fas fa-comments"></em>Work Experience
+                <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#knowledges">
+                    <em class="fas fa-info-circle"></em><span lang="en">Knowledges</span><span lang="es">Conocimientos</span>
                 </a>
-
+                <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#workexperiences">
+                    <em class="fas fa-comments"></em><span lang="en">Work Experiences</span><span lang="es">Experiencias de Trabajo</span>
+                </a>
             </div>
             <div class="navbar-end">
-
                 <div class="navbar-item">
-
                     <div class="buttons">
-                        <button id="flags" class="button mr-15 has-text-white has-background-black-bis" onclick="changeButton(this)" href="#">
-                            <!-- Modal para contactarme -->
+                        <button id="flags" class="button is-white is-outlined is-size-6-desktop is-size-3" onclick="changeButton(this)" href="#">                            
                             <img id="flag_img" src="images/flags/es.png" alt="flag" class="mp-0 h-30">Es
                         </button>
-                        <a target="_blank" class="button is-primary-light is-size-6-desktop is-size-3" href="login.html">
-                            <!-- Modal para contactarme -->
-                            <em class="fas fa-user"></em>Contact Me
+                        <a class="button ml-15 is-white is-outlined is-size-6-desktop is-size-3" href="#contactmodal">
+                            <!-- TODO: Modal para contactarme -->
+                            <em class="fas fa-user"></em><span lang="en">Contact Me</span><span lang="es">Contáctame</span>
                         </a>
                     </div>
-
-
                 </div>
             </div>
         </div>
     </nav>
+
+    <div class="container top-nav">
+        <h1 class="tittle has-text-centered"><span lang="en">hello there how are you doing</span><span lang="es">ola k ase?</span></h1>
+    </div>
+
 </body>
 
 <footer class="footer2">
     <div class="columns is-full">
         <div class="column is-three-fifths self-center has-text-centered">
-            <p class="copyright-text">Copyright &copy; 2021 - Developed by <strong class="has-text-white">Edgar Mariano Laz Terán</strong></p>
+            <p class="copyright-text"><span lang="en">Copyright &copy; 2021 - Developed by</span><span lang="es">Derechos de Autor &copy; 2021 - Desarrollado por</span> <strong class="has-text-white">Edgar Mariano Laz Terán</strong></p>
         </div>
         <div class="column">
             <ul class="list-inline social-buttons">
                 <li class="ul-padding"><a title="Facebook" rel="noopener noreferrer" class="fb" target="_blank" href="https://www.facebook.com/edgarm.laz"><em class="fab fa-facebook-f"></em></a></li>
-                <li class="ul-padding"><a title="Instagram" rel="noopener noreferrer" class="ins" target="_blank" href="https://www.instagram.com/bockcao/"><em class="fab fa-instagram"></em></a></li>
-                <li class="ul-padding"><a title="Twitter" rel="noopener noreferrer" class="twi" target="_blank" href="https://twitter.com/bockcao"><em class="fab fa-twitter"></em></a></li>
+                <li class="ul-padding"><a title="Instagram" rel="noopener noreferrer" class="ins" target="_blank" href="https://www.instagram.com/edgarguitarist/"><em class="fab fa-instagram"></em></a></li>
+                <li class="ul-padding"><a title="Twitter" rel="noopener noreferrer" class="twi" target="_blank" href="https://twitter.com/edguitarista"><em class="fab fa-twitter"></em></a></li>
                 <li class="ul-padding"><a title="GitHub" rel="noopener noreferrer" class="git" target="_blank" href="https://github.com/edgarguitarist"><em class="fab fa-github"></em></a></li>
                 <li class="ul-padding"><a title="LinkedIn" rel="noopener noreferrer"x class="lin" target="_blank" href="https://www.linkedin.com/in/edgarlteran/"><em class="fab fa-linkedin-in"></em></a></li>
             </ul>
@@ -95,6 +95,6 @@
 
 <!-- jGrowl -->
 <script src="vendors/jGrowl/jquery.jgrowl.js"></script>
-<!-- mover de php a js los mensajes de jgrowl -->
+<!-- TODO: mover de php a js los mensajes de jgrowl -->
 
 </html>

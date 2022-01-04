@@ -393,7 +393,7 @@ img::-moz-selection {
   height: 100vh;
 }
 
-/* algo raro paso aqui, no se si funciona esto para que no se rompa en los celulares*/
+/* algo raro paso aquí, no se si funciona esto para que no se rompa en los celulares*/
 @media only screen and (max-width: 768px) {
   [class*="vh-"] {
     min-height: 50vh !important;
@@ -643,6 +643,10 @@ svg {
 @media screen and (max-width: 990px) {
   /* Mobile  */
 
+  html{
+    zoom: 50%;
+  }
+
   .h-60 {
     height: 130px !important;
   }
@@ -701,4 +705,8 @@ button[type="submit"]:disabled {
 
 #logo{
   border-radius: 50%;
+}
+
+:lang(es) a{
+  display: inline-block;
 }

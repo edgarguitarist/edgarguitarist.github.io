@@ -1,4 +1,4 @@
-// obtener informacion de un usuario de github
+// obtener información de un usuario de github
 
 function getMyInfoGit() {
   var url = "https://api.github.com/users/edgarguitarist";
@@ -40,23 +40,23 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
-//cambiar atributos de un boton cuando se haga click
+//cambiar atributos de un botón cuando se haga click
 function changeButton(elemento) {
   var button = document.getElementById(elemento.id);
   if (button.classList.contains("English")) {
     button.classList.remove("English");
     button.classList.add("Spanish");
     button.innerHTML = "<img id='flag_img' src='images/flags/es.png' alt='flag' class='mp-0 h-30'>Es";
-    //flag.src = "images/flags/es.png";
   } else {
     button.classList.remove("Spanish");
     button.classList.add("English");
-    button.innerHTML = "<img id='flag_img' src='images/flags/en.png' alt='flag' class='mp-0 h-30'>En";
-    //flag.src = "images/flags/en.png";
-
+    button.innerHTML = "<img id='flag_img' src='images/flags/en.png' alt='flag' class='mp-0 h-30'>En";   
   }
+  $('[lang="es"]').toggle();
+  $('[lang="en"]').toggle();
 }
 
 $(document).ready(function () {
   getMyInfoGit();
+  $('[lang="es"]').hide();
 });
