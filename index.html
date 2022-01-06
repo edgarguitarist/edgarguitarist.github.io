@@ -48,8 +48,9 @@
             <div class="navbar-end">
                 <div class="navbar-item">
                     <div class="buttons">
-                        <button id="flags" class="button is-white is-outlined is-size-6-desktop is-size-3" onclick="changeButton(this)" href="#">                            
-                            <img id="flag_img" src="images/flags/es.png" alt="flag" class="mp-0 h-30">Es
+                        <button id="flags" class="button is-white is-outlined is-size-6-desktop is-size-3 b-500" onclick="changeButton(this)" href="#">                            
+                            <img id="flag_es" src="images/flags/es.png" alt="flag" class="mp-0 h-30" lang="en"><span lang="en">Es</span>
+                            <img id="flag_en" src="images/flags/en.png" alt="flag" class="mp-0 h-30" lang="es"><span lang="es">En</span>
                         </button>
                         <a class="button ml-15 is-white is-outlined is-size-6-desktop is-size-3" href="#contactmodal">
                             <!-- TODO: Modal para contactarme -->
@@ -61,13 +62,64 @@
         </div>
     </nav>
 
-    <div class="container top-nav">
-        <h1 class="tittle has-text-centered"><span lang="en">hello there how are you doing</span><span lang="es">ola k ase?</span></h1>
-    </div>
+    <div>
+        <section id="" class="first-section">
+            <div class="container has-text-centered">                
+                <div class="columns has-text-centered">
+                    <div class="column">
+                        <h1 class="tittle has-text-centered has-text-weight-semibold is-size-1"><span lang="en">Home</span><span lang="es">Inicio</span></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <section id="aboutme" class="">
+            <div class="container has-text-centered">                
+                <div class="columns has-text-centered">
+                    <div class="column">
+                        <h1 class="tittle has-text-centered has-text-weight-semibold is-size-1"><span lang="en">About me</span><span lang="es">Acerca de mi</span></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills" class="">
+            <div class="container has-text-centered">                
+                <div class="columns has-text-centered">
+                    <div class="column">
+                        <h1 class="tittle has-text-centered has-text-weight-semibold is-size-1"><span lang="en">Skills</span><span lang="es">Habilidades</span></h1>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="knowledges" class="">
+            <div class="container has-text-centered">  
+                <h1 class="tittle has-text-centered has-text-weight-semibold is-size-1"><span lang="en">Knowledges</span><span lang="es">Conocimientos</span></h1>
+                <div>
+                    <h1 class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"><span lang="en">Programming Languages</span><span lang="es">Lenguajes de Programación</span></h1>
+                    <div id="languages" class="columns is-full"></div>
+                </div>
+                <div class="mt-20">
+                    <h1 class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"><span lang="en">Libraries & Frameworks</span><span lang="es">Bibliotecas & Frameworks</span></h1>
+                    <div id="libfra" class="columns"></div>
+                </div>
+            </div>
+        </section>
+
+        <section id="workexperiences" class="">
+            <div class="container has-text-centered">                
+                <h1 class="tittle has-text-centered has-text-weight-semibold is-size-1"><span lang="en">Work Experiences</span><span lang="es">Experiencias de Trabajo</span></h1>
+                
+            </div>
+        </section>        
+    </div>
 </body>
 
-<footer class="footer2">
+
+
+
+<footer class="">
     <div class="columns is-full">
         <div class="column is-three-fifths self-center has-text-centered">
             <p class="copyright-text"><span lang="en">Copyright &copy; 2021 - Developed by</span><span lang="es">Derechos de Autor &copy; 2021 - Desarrollado por</span> <strong class="has-text-white">Edgar Mariano Laz Terán</strong></p>
@@ -92,9 +144,10 @@
 
 <!-- Custom Scripts -->
 <script src="js/scripts.js"></script>
+<script src="js/contents.js"></script>
 
 <!-- jGrowl -->
 <script src="vendors/jGrowl/jquery.jgrowl.js"></script>
-<!-- TODO: mover de php a js los mensajes de jgrowl -->
+<script src="js/my-jgrowl-messages.js" defer></script>
 
 </html>

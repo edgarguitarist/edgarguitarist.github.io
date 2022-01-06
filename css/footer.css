@@ -5,8 +5,8 @@ footer {
     position: absolute;
     width: 100%;
     color: white;
-    margin-top: 100px;
-    z-index: 999;  
+    /* margin-top: 100px; */
+    z-index: 999;
     overflow-x: hidden;
   }
   
