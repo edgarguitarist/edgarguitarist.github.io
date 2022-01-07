@@ -1,4 +1,5 @@
-const idioma = navigator.language.substring(0, 2) || navigator.userLanguage.substring(0, 2);
+const idioma =
+  navigator.language.substring(0, 2) || navigator.userLanguage.substring(0, 2);
 var currentLang = idioma == "es" ? "es" : "en";
 
 function getMyInfoGit() {
@@ -13,6 +14,50 @@ function getMyInfoGit() {
     }
   };
   xhr.send();
+}
+
+//hacer un array con los nombres de los archivos del directorio images
+// function getImages() {
+//   var images = ["hola", ""];
+//   let xhr = new XMLHttpRequest();
+//   xhr.open("GET", "images/error-404/", true);
+//   xhr.onreadystatechange = function () {
+//     if (xhr.readyState == 4 && xhr.status == 200) {
+//       let files = xhr.responseText.split("\n");
+//       for (let i = 0; i < files.length; i++) {
+//         if (files[i].includes(".gif")) {
+//           let data =
+//             files[i].split(" ")[1].split("/error-404/")[1].split(".")[0] +
+//             ".gif";
+//           console.log(data);
+//           images.push(data); //CHECK: : El Array se comporta raro y el length no es el correcto
+//         }
+//       }
+//     }
+//   };
+//   xhr.send();
+//   return images;
+// }
+
+const gifs = [
+  "bender.gif",
+  "dbz.gif",
+  "error.gif",
+  "gatito.gif",
+  "dbz.gif",
+  "bender.gif",
+  "gatito.gif",
+  "iron_man.gif"
+];
+
+
+function setRandomImage() {
+  /*let images = getImages();
+   let random = Math.floor(Math.random() * images.length); 
+   console.log(images, images.length);*/
+  let random = Math.floor(Math.random() * gifs.length);
+  document.getElementById("error_404").src =
+    "images/error-404/" + gifs[random];
 }
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -32,6 +77,13 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
+function screenshotMachine(url) {
+  return (
+    "https://api.screenshotmachine.com/?key=a97b01&dimension=1024x768&format=PNG&url=" +
+    url
+  );
+}
+
 function changeButton(elemento) {
   let button = document.getElementById(elemento.id);
   console.log(elemento.id);
@@ -50,8 +102,6 @@ function changeButton(elemento) {
 
 $(document).ready(function () {
   getMyInfoGit();
-  showContentCard(languages, "languages"); // Languages
-  showContentCard(libfra, "libfra"); // Languages
-  let wth = idioma == 'es' ? 'en' : 'es';
+  let wth = idioma == "es" ? "en" : "es";
   $('[lang="' + wth + '"]').hide();
 });

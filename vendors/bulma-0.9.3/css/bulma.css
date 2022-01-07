@@ -746,14 +746,14 @@ fieldset[disabled] .button.is-white.is-inverted {
 }
 
 .button.is-white.is-outlined {
-  background-color: transparent;
+   background-color: transparent;
   border-color: white;
   color: white;
 }
 
 .button.is-white.is-outlined:hover,
 .button.is-white.is-outlined.is-hovered,
-.button.is-white.is-outlined:focus,
+/* INFO: .button.is-white.is-outlined:focus, Quite esta propiedad para que no se mantenga blanco el boton luego de haber dado click */
 .button.is-white.is-outlined.is-focused {
   background-color: white;
   border-color: white;
@@ -6725,7 +6725,7 @@ a.navbar-item.is-active,
   flex-grow: 0;
   flex-shrink: 0;
 }
-/* 
+/*
 .navbar-item img {
   max-height: 1.75rem;
 } */

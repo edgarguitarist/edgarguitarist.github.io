@@ -18,6 +18,12 @@ body {
   font-family: "Roboto Slab", "Helvetica Neue", Helvetica, Arial, sans-serif !important;
   zoom: 80%;
 }
+.bodye{
+  overflow-y: hidden;
+}
+.htmle{
+  overflow-y: hidden;
+}
 
 section {
   padding: 100px 0;
@@ -132,7 +138,7 @@ h6 {
 
 .ins:hover,
 .ins:focus,
-.ins:active {
+.ins:active { /* INFO: ESTO LO APRENDÍ DE MIDU.DEV  */
   background: #d6249f;
   background: radial-gradient(
     circle at 30% 107%,
@@ -144,6 +150,8 @@ h6 {
   );
   box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
 }
+
+
 */ .btn:focus,
 .btn:active,
 .btn.active,
@@ -407,7 +415,10 @@ img::-moz-selection {
   min-height: 100vh;
   height: 100vh;
 }
-
+.vhe-125 {
+  min-height: 125vh;
+  height: 125vh;
+}
 /* algo raro paso aquí, no se si funciona esto para que no se rompa en los celulares*/
 @media only screen and (max-width: 768px) {
   [class*="vh-"] {
@@ -594,6 +605,10 @@ em {
   align-items: center;
 }
 
+.margin-unique{
+  margin-top: 10%;
+}
+
 .center_login {
   height: 125vh;
 }
@@ -651,8 +666,18 @@ svg {
   font-size: 1.5rem;
 }
 
+.is-grid{
+  display: -ms-grid;
+  display: grid;
+}
+
 .has-text-orange {
   color: #ffc107 !important;
+}
+
+.repos:hover :last-child{
+  color: #129BFC;
+  transform: scale(1.02);
 }
 
 @media screen and (max-width: 990px) {
@@ -678,6 +703,10 @@ svg {
   .footer3 {
     position: fixed !important;
     bottom: 0 !important;
+  }
+
+  .margin-unique{
+    margin-top: 60%;
   }
 
   .large-body {
@@ -730,3 +759,7 @@ button[type="submit"]:disabled {
   display: inline-block;
 }
 
+/* .is-outlined:focus{
+  background: transparent !important;
+  color: white !important;
+} */

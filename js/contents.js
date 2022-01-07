@@ -29,6 +29,12 @@ const languages = {
     state: "",
     states: "",
   },
+  kotlin: {
+    name: "Kotlin",
+    url_image: "images/svg/kotlin-1.svg",
+    state: "",
+    states: "",
+  },
   mariadb: {
     name: "MariaDB",
     url_image: "images/svg/mariadb.svg",
@@ -76,15 +82,89 @@ const libfra = {
   },
 };
 
-function showContentCard(data, destiny) {
+const repoExtra = {
+  changa: {
+    url_image: screenshotMachine("https://ueparosemenatola.com/"),
+    url: "https://ueparosemenatola.com/",
+  },
+  edgarguitarist: {
+    url_image: screenshotMachine("https://github.com/edgarguitarist"),
+    url: "https://github.com/edgarguitarist",
+  },
+  "edgarguitarist.github.io": {
+    url_image: screenshotMachine("https://edgarguitarist.github.io/"),
+    url: "https://edgarguitarist.github.io/",
+  },
+  guinzo: {
+    url_image: screenshotMachine("https://bockcaodesigners.com/"),
+    url: "https://bockcaodesigners.com/",
+  },
+  jean: {
+    url_image: screenshotMachine("https://jossyemb-produc.com/"),
+    url: "https://jossyemb-produc.com/",
+  },
+  jess: {
+    url_image: "images/web_down/jess.jpeg",
+    url: "error-404.html",
+  },
+  midudev: {
+    url_image: screenshotMachine(""),
+  },
+};
+
+async function getRepositories(url) {
+  const url_api = "https://api.github.com/users/edgarguitarist/repos";
+  const res = await fetch(url_api);
+  const data = await res.json();
+  //retornar el name de los data
+  return data.map((repo) => repo);
+}
+
+//crear un objeto con los datos de los repositorios
+const repositorios = getRepositories().then((data) => {
+  let repos = {};
+  for (let i = 0; i < data.length; i++) {
+    if (!data[i].fork) {
+      repos[data[i].name] = {
+        name: data[i].name,
+        html_url: data[i].html_url,
+      };
+    }
+  }
+  for (let key in repos) {
+    for (let key2 in repoExtra) {
+      if (key == key2) {
+        repos[key].url_image = repoExtra[key2].url_image || "";
+        repos[key].state = repoExtra[key2].state || "";
+        repos[key].states = repoExtra[key2].states || "";
+        repos[key].url = repoExtra[key2].url || "";
+      }
+    }
+  }
+  showContentCard(repos, "repos", 5, 3, true);
+});
+
+function showContentCard(
+  data,
+  destiny,
+  mobile = 3,
+  desktop = 2,
+  anchor = false
+) {
   let output = "";
   for (let key in data) {
+    a_href = anchor
+      ? '<a class="repos" href="' + data[key].url + '" target="_blank">'
+      : "";
+    a_close = anchor ? "</a>" : "";
     output += `
-            <div class="column is-3-mobile is-inline-block">
+    
+            <div class="column is-${mobile}-mobile is-${desktop}-desktop is-inline-block">
+            ${a_href}
                 <div class="card">
                     <div class="card-image">
                       <figure class="image is-4by3 is-flex">
-                        <img class="mv-15" src="${data[key].url_image}" alt="${data[key].name}">
+                        <img class="mv-15 card-capture" src="${data[key].url_image}" alt="${data[key].name}">
                       </figure>
                     </div>
                     <div class="card-content">
@@ -102,6 +182,7 @@ function showContentCard(data, destiny) {
                         </div>
                     </div>
                 </div>
+                ${a_close}
             </div>`;
   }
   document.getElementById(destiny).innerHTML = output;
