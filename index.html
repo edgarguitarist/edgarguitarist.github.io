@@ -67,7 +67,7 @@
         </div>
     </nav>
 
-    <div>
+    <div id="content">
         <section id="" class="first-section">
             <div class="container has-text-centered">                
                 <div class="columns has-text-centered">
@@ -106,6 +106,10 @@
                     <div id="languages" class="columns is-full is-multiline"></div>
                 </div>
                 <div class="mt-20">
+                    <h1 class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"><span lang="en">Database Management System (DBMS)</span><span lang="es">Sistemas Gestores de Base de Datos (SGBD)</span></h1>
+                    <div id="dbms" class="columns is-full is-multiline"></div>
+                </div>
+                <div class="mt-20">
                     <h1 class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"><span lang="en">Libraries & Frameworks</span><span lang="es">Bibliotecas & Frameworks</span></h1>
                     <div id="libfra" class="columns is-full is-multiline"></div>
                 </div>
@@ -116,7 +120,7 @@
             <div class="container has-text-centered">                
                 <h1 class="tittle has-text-centered has-text-weight-semibold is-size-1"><span lang="en">Work Experiences</span><span lang="es">Experiencias de Trabajo</span></h1>
                 <div>
-                    <h1 class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"><span lang="en">Repositories</span><span lang="es">Repositorios</span></h1>
+                    <h1 class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"><a class="git-nb" href="https://github.com/edgarguitarist?tab=repositories"><em class="fab fa-github"></em><span lang="en">Repositories</span><span lang="es">Repositorios</span></a></h1>
                     <div id="repos" class="columns is-full is-multiline"></div>
                 </div>
                 
@@ -155,7 +159,8 @@
 <script>
     $(document).ready(function () {        
         showContentCard(languages, "languages"); // Languages
-        showContentCard(libfra, "libfra"); // Languages        
+        showContentCard(libfra, "libfra"); // Librerias y Frameworks
+        showContentCard(dbms, "dbms"); // DBMS        
     });
 </script>
 

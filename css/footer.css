@@ -78,6 +78,12 @@ footer {
     background-color: #24292f;
   }
 
+  .git-nb:hover,
+  .git-nb:focus,
+  .git-nb:active {
+    color: #24292f;
+  }
+
   .twi:hover,
   .twi:focus,
   .twi:active {

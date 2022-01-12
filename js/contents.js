@@ -35,18 +35,39 @@ const languages = {
     state: "",
     states: "",
   },
+}
+
+const dbms = {
+  mysql: {
+    name: "MySQL",
+    url_image: "images/svg/mysql-6.svg",
+    state: "",
+    states: "",
+  },
   mariadb: {
     name: "MariaDB",
     url_image: "images/svg/mariadb.svg",
     state: "",
     states: "",
   },
-};
+  mongodb: {
+    name: "MongoDB",
+    url_image: "images/svg/mongodb-icon-1.svg",
+    state: "Learning",
+    states: "Aprendiendo",
+  },
+}
 
 const libfra = {
   node_js: {
     name: "Node.js",
     url_image: "images/svg/nodejs-1.svg",
+    state: "Learning",
+    states: "Aprendiendo",
+  },
+  express: {
+    name: "Express",
+    url_image: "images/svg/express-109.svg",
     state: "Learning",
     states: "Aprendiendo",
   },
@@ -80,7 +101,7 @@ const libfra = {
     state: "",
     states: "",
   },
-};
+}
 
 const repoExtra = {
   changa: {
@@ -110,59 +131,65 @@ const repoExtra = {
   midudev: {
     url_image: screenshotMachine(""),
   },
-};
-
-async function getRepositories(url) {
-  const url_api = "https://api.github.com/users/edgarguitarist/repos";
-  const res = await fetch(url_api);
-  const data = await res.json();
-  //retornar el name de los data
-  return data.map((repo) => repo);
 }
 
-//crear un objeto con los datos de los repositorios
-const repositorios = getRepositories().then((data) => {
-  let repos = {};
-  for (let i = 0; i < data.length; i++) {
-    if (!data[i].fork) {
-      repos[data[i].name] = {
-        name: data[i].name,
-        html_url: data[i].html_url,
-      };
-    }
-  }
-  for (let key in repos) {
-    for (let key2 in repoExtra) {
-      if (key == key2) {
-        repos[key].url_image = repoExtra[key2].url_image || "";
-        repos[key].state = repoExtra[key2].state || "";
-        repos[key].states = repoExtra[key2].states || "";
-        repos[key].url = repoExtra[key2].url || "";
+async function getRepositories(url) {
+  const url_api = "https://api.github.com/users/edgarguitarist/repos"
+  const res = await fetch(url_api)
+  const data = await res.json()
+  //retornar el name de los data
+  return data.map((repo) => repo)
+}
+
+const armador = (data) =>{
+  let repos = {}
+    for (let i = 0; i < data.length; i++) {
+      if (!data[i].fork) {
+        repos[data[i].name] = {
+          name: data[i].name,
+          html_url: data[i].html_url,
+        }
       }
     }
-  }
-  showContentCard(repos, "repos", 5, 3, true);
-});
+    for (let key in repos) {
+      for (let key2 in repoExtra) {
+        if (key == key2) {
+          repos[key].url_image = repoExtra[key2].url_image || ""
+          repos[key].state = repoExtra[key2].state || ""
+          repos[key].states = repoExtra[key2].states || ""
+          repos[key].url = repoExtra[key2].url || ""
+        }
+      }
+    }
+    showContentCard(repos, "repos", 3, 3, 4, true)
+    return repos
+}
 
-function showContentCard(
-  data,
-  destiny,
-  mobile = 3,
-  desktop = 2,
-  anchor = false
-) {
-  let output = "";
+const repositorios =
+  armador(JSON.parse(localStorage.getItem("repositorios"))) ||
+  getRepositories().then((data) => {
+    localStorage.setItem("repositorios", JSON.stringify(data)) 
+    armador(data)
+  })
+
+function showContentCard(  data, destiny, mobile = 4, tablet = 4, desktop = 6, anchor = false) {
+  mobile = Math.floor(12 / mobile)
+  desktop = Object.keys(data).length <= 6 ? Math.floor(12 / desktop) : Math.floor(12 / desktop) //3
+  console.log(Object.keys(data).length, desktop) 
+  tablet = Math.floor(12 / tablet)
+  let output = ""
+  
   for (let key in data) {
     a_href = anchor
       ? '<a class="repos" href="' + data[key].url + '" target="_blank">'
-      : "";
-    a_close = anchor ? "</a>" : "";
+      : ""
+    a_close = anchor ? "</a>" : ""
     output += `
     
-            <div class="column is-${mobile}-mobile is-${desktop}-desktop is-inline-block">
+            <div class="column is-${mobile}-mobile is-${tablet}-tablet is-${desktop}-desktop is-inline-block">
             ${a_href}
                 <div class="card">
-                    <div class="card-image">
+                    <div class="card-image ph-15">
                       <figure class="image is-4by3 is-flex">
                         <img class="mv-15 card-capture" src="${data[key].url_image}" alt="${data[key].name}">
                       </figure>
@@ -183,7 +210,7 @@ function showContentCard(
                     </div>
                 </div>
                 ${a_close}
-            </div>`;
+            </div>`
   }
-  document.getElementById(destiny).innerHTML = output;
+  document.getElementById(destiny).innerHTML = output
 }

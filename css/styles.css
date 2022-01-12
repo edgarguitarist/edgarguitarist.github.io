@@ -107,6 +107,10 @@ h6 {
   margin: 0 auto;
 }
 
+.card{
+  box-shadow: #0000000e 0px 0px 0px 0.2rem;
+}
+
 .fb,
 .yt,
 .ins {
@@ -152,7 +156,7 @@ h6 {
 }
 
 
-*/ .btn:focus,
+.btn:focus,
 .btn:active,
 .btn.active,
 .btn:active:focus {
@@ -741,6 +745,13 @@ svg {
     border-radius: 100%;
     font-size: 40px !important;
     line-height: 85px !important;
+  }
+}
+
+/*media query tablet*/
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  #content{
+    margin:0% 4% !important;
   }
 }
 

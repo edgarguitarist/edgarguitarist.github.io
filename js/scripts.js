@@ -1,19 +1,19 @@
 const idioma =
-  navigator.language.substring(0, 2) || navigator.userLanguage.substring(0, 2);
-var currentLang = idioma == "es" ? "es" : "en";
+  navigator.language.substring(0, 2) || navigator.userLanguage.substring(0, 2)
+var currentLang = idioma == "es" ? "es" : "en"
 
 function getMyInfoGit() {
-  const url = "https://api.github.com/users/edgarguitarist";
-  let xhr = new XMLHttpRequest();
-  xhr.open("GET", url, true);
+  const url = "https://api.github.com/users/edgarguitarist"
+  let xhr = new XMLHttpRequest()
+  xhr.open("GET", url, true)
   xhr.onreadystatechange = function () {
     if (xhr.readyState == 4 && xhr.status == 200) {
-      let user = JSON.parse(xhr.responseText);
-      document.getElementById("logo").src = user.avatar_url;
-      document.getElementById("icon").href = user.avatar_url;
+      let user = JSON.parse(xhr.responseText)
+      localStorage.setItem('avatar', user.avatar_url) 
+      return user.avatar_url
     }
-  };
-  xhr.send();
+  }
+  xhr.send()
 }
 
 //hacer un array con los nombres de los archivos del directorio images
@@ -47,61 +47,59 @@ const gifs = [
   "dbz.gif",
   "bender.gif",
   "gatito.gif",
-  "iron_man.gif"
-];
-
+  "iron_man.gif",
+]
 
 function setRandomImage() {
   /*let images = getImages();
    let random = Math.floor(Math.random() * images.length); 
    console.log(images, images.length);*/
-  let random = Math.floor(Math.random() * gifs.length);
-  document.getElementById("error_404").src =
-    "images/error-404/" + gifs[random];
+  let random = Math.floor(Math.random() * gifs.length)
+  document.getElementById("error_404").src = "images/error-404/" + gifs[random]
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   const $navbarBurgers = Array.prototype.slice.call(
     document.querySelectorAll(".navbar-burger"),
     0
-  );
+  )
   if ($navbarBurgers.length > 0) {
     $navbarBurgers.forEach((el) => {
       el.addEventListener("click", () => {
-        const target = el.dataset.target;
-        const $target = document.getElementById(target);
-        el.classList.toggle("is-active");
-        $target.classList.toggle("is-active");
-      });
-    });
+        const target = el.dataset.target
+        const $target = document.getElementById(target)
+        el.classList.toggle("is-active")
+        $target.classList.toggle("is-active")
+      })
+    })
   }
-});
+})
 
 function screenshotMachine(url) {
   return (
     "https://api.screenshotmachine.com/?key=a97b01&dimension=1024x768&format=PNG&url=" +
     url
-  );
+  )
 }
 
 function changeButton(elemento) {
-  let button = document.getElementById(elemento.id);
-  console.log(elemento.id);
+  let button = document.getElementById(elemento.id)
   if (button.classList.contains("English")) {
-    button.classList.remove("English");
-    button.classList.add("Spanish");
-    currentLang = "es";
+    button.classList.remove("English")
+    button.classList.add("Spanish")
+    currentLang = "es"
   } else {
-    button.classList.remove("Spanish");
-    button.classList.add("English");
-    currentLang = "en";
+    button.classList.remove("Spanish")
+    button.classList.add("English")
+    currentLang = "en"
   }
-  $('[lang="es"]').toggle();
-  $('[lang="en"]').toggle();
+  $('[lang="es"]').toggle()
+  $('[lang="en"]').toggle()
 }
 
-$(document).ready(function () {
-  getMyInfoGit();
-  let wth = idioma == "es" ? "en" : "es";
-  $('[lang="' + wth + '"]').hide();
-});
+window.onload = () => {
+  document.getElementById("logo").src =  localStorage.getItem('avatar') || getMyInfoGit()
+  document.getElementById("icon").href = localStorage.getItem('avatar') || getMyInfoGit()
+    let wth = idioma == "es" ? "en" : "es"
+    $('[lang="' + wth + '"]').hide()
+}
