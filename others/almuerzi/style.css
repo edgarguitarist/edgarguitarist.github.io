@@ -1,0 +1,94 @@
+body {
+  background-color: #eee;
+
+  font-family: "Roboto", sans-serif;
+}
+
+#app {
+  display: flex;
+}
+
+#app div {
+  flex-grow: 1;
+  background-color: white;
+  margin: 5px;
+  margin-top: 0;
+}
+
+/* body div:first-child{
+    margin-left: 0px;
+} */
+
+#orders {
+  margin-right: 0px;
+}
+#meals {
+  margin-left: 0px;
+}
+
+ul {
+  list-style-type: none;
+}
+
+ul li {
+  cursor: pointer;
+}
+
+.selected {
+  background-color: #eee;
+}
+
+#submit {
+  background-color: #2a91bd;
+  margin: 15px;
+  margin-left: 40px;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 15px;
+}
+
+#submit:disabled {
+  background-color: #ccc;
+  color: white;
+}
+
+#app .form-main {
+  max-width: 400px;
+  margin: 0px auto;
+  margin-top: 100px;
+  padding: 15px;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: calc(100% - 10px);
+  padding-left: 5px;
+  height: 24px;
+  background-color: #dedede;
+  border: solid 0px;
+  border-radius: 5px;
+}
+
+form p {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0px;
+}
+
+.form-main h3 {
+  font-size: 24px;
+  text-align: center;
+  width: 100%;
+}
+
+.login-submit {
+  margin: 20px 0px;
+  background-color: #2a91bd;
+  width: 100%;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+}

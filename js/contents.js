@@ -26,12 +26,24 @@ const languages = {
   java: {
     name: "Java",
     url_image: "images/svg/java.svg",
-    state: "",
-    states: "",
+    state: "Android Studio",
+    states: "Android Studio",
   },
   kotlin: {
     name: "Kotlin",
     url_image: "images/svg/kotlin-1.svg",
+    state: "Android Studio",
+    states: "Android Studio",
+  },
+  python: {
+    name: "Python",
+    url_image: "images/svg/python-1.svg",
+    state: "Basic",
+    states: "Basico",
+  },
+  arduino: {
+    name: "Arduino",
+    url_image: "images/svg/arduino-1.svg",
     state: "",
     states: "",
   },
@@ -125,12 +137,13 @@ const repoExtra = {
     url: "https://jossyemb-produc.com/",
   },
   jess: {
-    url_image: "images/web_down/jess.jpeg",
-    url: "error-404.html",
+    url_image: "images/no_web/jess.jpeg",
+    url: "",
   },
-  midudev: {
-    url_image: screenshotMachine(""),
-  },
+  serverless: {
+    url_image: "images/no_web/almuerzi.png",
+    url: "https://edgarguitarist.github.io/others/almuerzi/",
+  }
 }
 
 async function getRepositories(url) {
@@ -141,70 +154,90 @@ async function getRepositories(url) {
   return data.map((repo) => repo)
 }
 
-const armador = (data) =>{
+const armador = (data) => {
   let repos = {}
-    for (let i = 0; i < data.length; i++) {
-      if (!data[i].fork) {
-        repos[data[i].name] = {
-          name: data[i].name,
-          html_url: data[i].html_url,
-        }
+  for (let i = 0; i < data.length; i++) {
+    if (!data[i].fork) {
+      repos[data[i].name] = {
+        name: data[i].name,
+        html_url: data[i].html_url,
       }
     }
-    for (let key in repos) {
-      for (let key2 in repoExtra) {
-        if (key == key2) {
-          repos[key].url_image = repoExtra[key2].url_image || ""
-          repos[key].state = repoExtra[key2].state || ""
-          repos[key].states = repoExtra[key2].states || ""
-          repos[key].url = repoExtra[key2].url || ""
-        }
+  }
+  for (let key in repos) {
+    for (let key2 in repoExtra) {
+      if (key == key2) {
+        repos[key].url_image = repoExtra[key2].url_image || ""
+        repos[key].state = repoExtra[key2].state || ""
+        repos[key].states = repoExtra[key2].states || ""
+        repos[key].url = repoExtra[key2].url || ""
       }
     }
-    showContentCard(repos, "repos", 3, 3, 4, true)
-    return repos
+  }
+  showContentCard(repos, "repos", 3, 3, 4, true)
+  return repos
 }
 
-const repositorios =
-  armador(JSON.parse(localStorage.getItem("repositorios"))) ||
-  getRepositories().then((data) => {
-    localStorage.setItem("repositorios", JSON.stringify(data)) 
-    armador(data)
-  })
+const repositorios = () => {
+  if(localStorage.getItem("repositorios")){
+    armador(JSON.parse(localStorage.getItem("repositorios"))) 
+  }else{
+    getRepositories().then((data) => {
+      if (data.length > 0) {
+        localStorage.setItem("repositorios", JSON.stringify(data))
+        armador(data)
+      } else {
+        console.log("No se pueden cargar los repositorios")
+      }
+    })
+  }
+} 
 
-function showContentCard(  data, destiny, mobile = 4, tablet = 4, desktop = 6, anchor = false) {
+repositorios()
+
+function showContentCard(
+  data,
+  destiny,
+  mobile = 4,
+  tablet = 4,
+  desktop = 6,
+  anchor = false
+) {
   mobile = Math.floor(12 / mobile)
-  desktop = Object.keys(data).length <= 6 ? Math.floor(12 / desktop) : Math.floor(12 / desktop) //3
-  console.log(Object.keys(data).length, desktop) 
+  desktop = Math.floor(12 / desktop) //2
   tablet = Math.floor(12 / tablet)
-  let output = ""
-  
+  let output =""
+  let name, url_image, state, states, url
   for (let key in data) {
+    name = data[key].name || ""
+    url = data[key].url || "https://github.com/edgarguitarist/" + name 
     a_href = anchor
-      ? '<a class="repos" href="' + data[key].url + '" target="_blank">'
+      ? '<a class="repos" href="' + url + '" target="_blank">'
       : ""
     a_close = anchor ? "</a>" : ""
-    output += `
-    
+    url_image = data[key].url_image || "images/svg/no-image.svg"
+    state = data[key].state || ""
+    states = data[key].states || ""
+    output += `    
             <div class="column is-${mobile}-mobile is-${tablet}-tablet is-${desktop}-desktop is-inline-block">
             ${a_href}
                 <div class="card">
                     <div class="card-image ph-15">
                       <figure class="image is-4by3 is-flex">
-                        <img class="mv-15 card-capture" src="${data[key].url_image}" alt="${data[key].name}">
+                        <img class="mv-15 card-capture" src="${url_image}" alt="${name}">
                       </figure>
                     </div>
                     <div class="card-content">
                         <div class="content">
                             <span class="b-700 is-size-5-mobile is-size-5-tablet is-size-6-desktop">
-                                ${data[key].name}
+                                ${name}
                             </span>
                             <br>
-                            <span lang="en" class="has-text-danger b-700 is-size-5-mobile is-size-5-tablet is-size-6-desktop">
-                                ${data[key].state}
+                            <span lang="en" class="has-text-info-dark b-700 is-size-5-mobile is-size-5-tablet is-size-6-desktop ">
+                                ${state}
                             </span>
-                            <span lang="es" class="has-text-danger b-700 is-size-5-mobile is-size-5-tablet is-size-6-desktop">
-                                ${data[key].states}
+                            <span lang="es" class="has-text-info-dark b-700 is-size-5-mobile is-size-5-tablet is-size-6-desktop">
+                                ${states}
                             </span>
                         </div>
                     </div>
