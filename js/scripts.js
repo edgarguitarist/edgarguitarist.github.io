@@ -98,7 +98,7 @@ function changeButton(elemento) {
 }
 
 window.onload = () => {
-  document.getElementById("icon").href = localStorage.getItem('avatar') || "images/me/me2.png"
+  document.getElementById("icon").href = localStorage.getItem('avatar') || "images/me/me3.png"
     let wth = idioma == "es" ? "en" : "es"
     $('[lang="' + wth + '"]').hide()
 }

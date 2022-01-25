@@ -858,7 +858,7 @@ h1 {
   height: 90px;
   content: "";
   background-color: transparent;
-  background-image: url("../images/me/me2.png");
+  /* background-image: url("../images/me/me2.png"); */
   background-repeat: no-repeat;
   background-size: cover;
   border-radius: 50%;
