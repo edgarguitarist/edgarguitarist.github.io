@@ -875,3 +875,6 @@ h1 {
 .lastSection{
   margin-bottom: 100px;
 }
+.text-center-webkit{
+  text-align: -webkit-center;
+}
