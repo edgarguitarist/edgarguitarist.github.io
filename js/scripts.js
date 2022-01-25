@@ -98,8 +98,7 @@ function changeButton(elemento) {
 }
 
 window.onload = () => {
-  document.getElementById("logo").src =  localStorage.getItem('avatar') || getMyInfoGit()
-  document.getElementById("icon").href = localStorage.getItem('avatar') || getMyInfoGit()
+  document.getElementById("icon").href = localStorage.getItem('avatar') || "images/me/me2.png"
     let wth = idioma == "es" ? "en" : "es"
     $('[lang="' + wth + '"]').hide()
 }

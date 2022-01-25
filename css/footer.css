@@ -115,13 +115,32 @@ footer {
     );
     box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
   }
+
+  .pdf:hover,
+  .pdf:focus,
+  .pdf:active {
+    color: red;
+    background: white;
+    background-color: white;
+    border: 1px solid red;
+  }
   
+  .pdf2:hover,
+  .pdf2:focus,
+  .pdf2:active {
+    color: white;
+    background: red;
+    background-color: red;
+    /* border: 1px solid red; */
+  }
+
   .list-inline {
     display: inline-flex;
   }
   .ul-padding {
     padding-right: 10px;
     padding-left: 10px;
+    text-align-last: center;
   }
   
   .copyright-text {

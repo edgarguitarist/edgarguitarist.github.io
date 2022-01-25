@@ -1,171 +1,598 @@
 <!DOCTYPE html>
-<html> <!-- Ignore this for toggle lang -->
+<html>
+  <!-- Ignore this for toggle lang -->
 
-<head>
+  <head>
     <meta lang="es" />
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta name="description" content="Portfolio - Edgar Mariano Laz Terán"/>
-	<meta name="keywords" content="Edgar Laz, Portfolio Edgar Laz, Portafolio Edgar Laz, Curriculum Edgar Laz, Edgar Mariano Laz Terán, Portfolio Edgar Mariano Laz Terán, Portafolio Edgar Mariano Laz Terán, Curriculum Edgar Mariano Laz Terán, Ing. Edgar Laz, Ingeniero Edgar Laz, Ing. Edgar Mariano Laz Terán, Ingeniero Edgar Mariano Laz Terán, GitHub Edgar Laz, edgarguitarist, edguitarist, eguitarist"/>
-	<meta name="author" content="Edgar Mariano Laz Terán"/>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Portfolio - Edgar Mariano Laz Terán" />
+    <meta
+      name="keywords"
+      content="Edgar Laz, Portfolio Edgar Laz, Portafolio Edgar Laz, Curriculum Edgar Laz, Edgar Mariano Laz Terán, Portfolio Edgar Mariano Laz Terán, Portafolio Edgar Mariano Laz Terán, Curriculum Edgar Mariano Laz Terán, Ing. Edgar Laz, Ingeniero Edgar Laz, Ing. Edgar Mariano Laz Terán, Ingeniero Edgar Mariano Laz Terán, GitHub Edgar Laz, edgarguitarist, edguitarist, eguitarist"
+    />
+    <meta name="author" content="Edgar Mariano Laz Terán" />
     <meta name="robots" content="index,follow" />
     <title>Portfolio - Edgar Mariano Laz Terán</title>
-    <link id="icon" rel="icon" type="image/png" href=""/>
+    <link id="icon" rel="icon" type="image/png" href="" />
     <!-- Bulma -->
-    <link rel="stylesheet" href="vendors/bulma-0.9.3/css/bulma.css">
+    <link rel="stylesheet" href="vendors/bulma-0.9.3/css/bulma.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <!-- Custom Styles -->
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/footer.css" />
     <!-- FontAwesome -->
     <script src="js/icons.js"></script>
     <!-- jGrowl -->
-    <link href="vendors/jGrowl/jquery.jgrowl.css" rel="stylesheet" media="screen">
-</head>
+    <link
+      href="vendors/jGrowl/jquery.jgrowl.css"
+      rel="stylesheet"
+      media="screen"
+    />
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </head>
 
-<body>
-    <nav class="navbar is-fixed-top has-background-black-bis" role="navigation" aria-label="main navigation">
-        <div class="navbar-brand">
-            <a class="navbar-item" href="#mymodal">
-                <img id="logo" src="images/default.gif" class="h-60 mp-0" alt="logo">
-            </a>
-            <a role="button" class="navbar-burger has-text-white is-size-6-desktop is-size-3 ver-centered" aria-label="menu" aria-expanded="false" data-target="navbarBulma">
-                <em class="wd-60 maxcon fas fa-bars mv-10"></em>
-            </a>
+  <body>
+    <nav
+      class="navbar is-fixed-top has-background-black-bis"
+      role="navigation"
+      aria-label="main navigation"
+    >
+      <div class="navbar-brand">
+        <a class="navbar-item" href="#mymodal">
+          <!-- <img
+            id="logo"
+            src="images/default.gif"
+            class="h-60 mp-0"
+            alt="logo"
+          /> -->
+          <h2 class="subtitle is-lowercase has-text-white has-text-weight-bold">
+            edgarguitarist
+          </h2>
+        </a>
+        <a
+          role="button"
+          class="navbar-burger has-text-white is-size-6-desktop is-size-3 ver-centered"
+          aria-label="menu"
+          aria-expanded="false"
+          data-target="navbarBulma"
+        >
+          <em class="wd-60 maxcon fas fa-bars mv-10"></em>
+        </a>
+      </div>
+      <div id="navbarBulma" class="navbar-menu has-background-black-bis">
+        <div class="navbar-end">
+          <!-- <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#">
+                    <em class="fas fa-home"></em><span lang="en" hidden>Home</span><span lang="es">Inicio</span>
+                </a> -->
+          <a
+            class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3"
+            href="index.html#aboutme"
+          >
+            <em class="fas fa-star"></em><span lang="en" hidden>About Me</span
+            ><span lang="es">Acerca de Mi</span>
+          </a>
+          <a
+            class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3"
+            href="index.html#skills"
+          >
+            <em class="fas fa-hat-wizard"></em>
+            <span lang="en" hidden>Skills</span>
+            <span lang="es">Habilidades</span>
+          </a>
+          <a
+            class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3"
+            href="index.html#works"
+          >
+            <ion-icon
+              name="code-working-outline"
+              class="is-size-4 mr-1"
+            ></ion-icon>
+            <span lang="en" hidden>Projects</span>
+            <span lang="es">Proyectos</span>
+          </a>
+          <a
+            class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3"
+            href="index.html#knowledges"
+          >
+            <em class="fas fa-info-circle"></em
+            ><span lang="en" hidden>Knowledges</span
+            ><span lang="es">Conocimientos</span>
+          </a>
         </div>
-        <div id="navbarBulma" class="navbar-menu has-background-black-bis">
-            <div class="navbar-end">
-                <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#">
-                    <em class="fas fa-home"></em><span lang="en">Home</span><span lang="es">Inicio</span>
-                </a>
-                <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#aboutme">
-                    <em class="fas fa-concierge-bell"></em><span lang="en">About Me</span><span lang="es">Acerca de Mi</span>
-                </a>
-                <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#skills">
-                    <em class="fas fa-info-circle"></em><span lang="en">Skills</span><span lang="es">Habilidades</span>
-                </a>
-                <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#knowledges">
-                    <em class="fas fa-info-circle"></em><span lang="en">Knowledges</span><span lang="es">Conocimientos</span>
-                </a>
-                <a class="navbar-item has-text-weight-medium has-text-white is-size-6-desktop is-size-3" href="index.html#workexperiences">
-                    <em class="fas fa-comments"></em><span lang="en">Work Experiences</span><span lang="es">Experiencias de Trabajo</span>
-                </a>
+        <div class="navbar-end">
+          <div class="navbar-item">
+            <div class="buttons">
+              <button
+                id="flags"
+                class="button is-white is-outlined is-size-6-desktop is-size-3 b-500"
+                onclick="changeButton(this)"
+                href="#"
+              >
+                <img
+                  id="flag_es"
+                  src="images/flags/es.png"
+                  alt="flag"
+                  class="mp-0 h-30"
+                  lang="en"
+                  hidden
+                /><span lang="en" hidden>Es</span>
+                <img
+                  id="flag_en"
+                  src="images/flags/en.png"
+                  alt="flag"
+                  class="mp-0 h-30"
+                  lang="es"
+                /><span lang="es">En</span>
+              </button>
+              <a
+                class="button ml-15 is-white is-outlined is-size-6-desktop is-size-3 b-700"
+                href="#contactmodal"
+              >
+                <!-- TODO: Modal para contactarme -->
+                <em class="fas fa-user"></em
+                ><span lang="en" hidden>Contact Me</span
+                ><span lang="es">Contáctame</span>
+              </a>
             </div>
-            <div class="navbar-end">
-                <div class="navbar-item">
-                    <div class="buttons">
-                        <button id="flags" class="button is-white is-outlined is-size-6-desktop is-size-3 b-500" onclick="changeButton(this)" href="#">                            
-                            <img id="flag_es" src="images/flags/es.png" alt="flag" class="mp-0 h-30" lang="en"><span lang="en">Es</span>
-                            <img id="flag_en" src="images/flags/en.png" alt="flag" class="mp-0 h-30" lang="es"><span lang="es">En</span>
-                        </button>
-                        <a class="button ml-15 is-info is-outlined has-text-white is-size-6-desktop is-size-3 b-700" href="#contactmodal">
-                            <!-- TODO: Modal para contactarme -->
-                            <em class="fas fa-user"></em><span lang="en">Contact Me</span><span lang="es">Contáctame</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
+          </div>
         </div>
+      </div>
     </nav>
 
     <div id="content">
-        <section id="" class="first-section">
+      <!-- <section id="" class="first-section">
             <div class="container has-text-centered">                
+                <h1 class="tittle has-text-centered has-text-weight-semibold is-size-1"><span lang="en" hidden>Home</span><span lang="es">Inicio</span></h1>
                 <div class="columns has-text-centered">
                     <div class="column">
-                        <h1 class="tittle has-text-centered has-text-weight-semibold is-size-1"><span lang="en">Home</span><span lang="es">Inicio</span></h1>
+
+
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
-        <section id="aboutme" class="">
-            <div class="container has-text-centered">                
-                <div class="columns has-text-centered">
-                    <div class="column">
-                        <h1 class="tittle has-text-centered has-text-weight-semibold is-size-1"><span lang="en">About me</span><span lang="es">Acerca de mi</span></h1>
-                    </div>
-                </div>
+      <section id="aboutme" class="hero is-fullheight">
+        <div class="hero-body">
+          <div class="container">
+            <div class="columns is-vcentered reverse-columns">
+              <div
+                data-aos="fade-down"
+                class="column is-10-mobile is-offset-1-mobile is-10-tablet is-offset-1-tablet is-4-desktop is-offset-1-desktop is-4-widescreen is-offset-1-widescreen is-4-fullhd is-offset-1-fullhd"
+                data-aos="fade-up"
+              >
+                <figure class="image gradient-wrapper">
+                  <img
+                    class="is-rounded Profileimage"
+                    style="background-color: white"
+                    alt=""
+                    src="images/me/me2.png"
+                  />
+                </figure>
+              </div>
+              <div
+                class="column is-10-mobile is-offset-1-mobile is-10-tablet is-offset-1-tablet is-5-desktop is-offset-1-desktop is-5-widescreen is-offset-1-widescreen is-5-fullhd is-offset-1-fullhd"
+              >
+                <h1 class="title titled is-2 mb-6 retroshadow">
+                  <span lang="en" hidden
+                    >I'm a Full Stack Web Developer and Mobile</span
+                  >
+                  <span lang="es"
+                    >Soy Desarrollador Full Stack Web y Movil</span
+                  >
+                </h1>
+                <h1 class="subtitle subtitled is-bolder">
+                  <a
+                    class="button is-ghost is-size-3 has-text-weight-bold"
+                    title=""
+                    href="#skills"
+                  >
+                    <span lang="en" hidden>Know me...</span>
+                    <span lang="es">Conóceme...</span>
+                    👽
+                    <em class="fas fa-arrow-down bounceOutDown"></em>
+                  </a>
+                </h1>
+                <div class="column">
+                    <ul class="list-inline social-buttons">
+                      <li class="ul-padding">
+                        <a
+                          title="Facebook"
+                          rel="noopener noreferrer"
+                          class="fb"
+                          target="_blank"
+                          href="https://www.facebook.com/edgarm.laz"
+                          ><em class="fab fa-facebook-f"></em
+                        ></a>
+                      </li>
+                      <li class="ul-padding">
+                        <a
+                          title="Instagram"
+                          rel="noopener noreferrer"
+                          class="ins"
+                          target="_blank"
+                          href="https://www.instagram.com/edgarguitarist/"
+                          ><em class="fab fa-instagram"></em
+                        ></a>
+                      </li>
+                      <li class="ul-padding">
+                        <a
+                          title="Twitter"
+                          rel="noopener noreferrer"
+                          class="twi"
+                          target="_blank"
+                          href="https://twitter.com/edguitarista"
+                          ><em class="fab fa-twitter"></em
+                        ></a>
+                      </li>
+                      <li class="ul-padding">
+                        <a
+                          title="GitHub"
+                          rel="noopener noreferrer"
+                          class="git"
+                          target="_blank"
+                          href="https://github.com/edgarguitarist"
+                          ><em class="fab fa-github"></em
+                        ></a>
+                      </li>
+                      <li class="ul-padding">
+                        <a
+                          title="LinkedIn"
+                          rel="noopener noreferrer"
+                          class="lin"
+                          target="_blank"
+                          href="https://www.linkedin.com/in/edgarlteran/"
+                          ><em class="fab fa-linkedin-in"></em
+                        ></a>
+                      </li>
+                      <li class="ul-padding">
+                        <a
+                          title="Curriculum"
+                          rel="noopener noreferrer"                          
+                          class="pdf2"
+                          target="_blank"
+                          href="public/Edgar M. Laz Terán.pdf"
+                          ><em class="far fa-file-pdf"></em
+                        ></a>
+                      </li>
+                    </ul>
+                  </div>
+              </div>
             </div>
-        </section>
+          </div>
+        </div>
+      </section>
 
-        <section id="skills" class="">
-            <div class="container has-text-centered">                
-                <div class="columns has-text-centered">
-                    <div class="column">
-                        <h1 class="tittle has-text-centered has-text-weight-semibold is-size-1"><span lang="en">Skills</span><span lang="es">Habilidades</span></h1>
-                    </div>
-                </div>
+      <section id="skills" class="">
+        <div class="container">
+          <div class="mb-3 pb-3 columns is-multiline">
+            <div class="column is-12 is-8-desktop mx-auto has-text-centered">
+              <h1
+                class="tittle has-text-centered has-text-weight-semibold is-size-1"
+              >
+                Habilidades
+              </h1>
+              <p class="subtitle has-text-grey mb-1">
+                Una de las cosas que me ha permitido forjar cada una de las
+                siguientes habilidades ha sido mi curiosidad por saber como
+                funcionan las cosas que nos rodean en especial la tecnología y
+                la constante lectura e investigación para resolver cada
+                incognita.
+              </p>
             </div>
-        </section>
+          </div>
+          <div class="columns is-multiline">
+            <div class="column"></div>
+            <div class="column is-12 is-5-desktop has-text-centered-mobile">
+              <h2 class="subtitle is-size-3">Habilidades Duras</h2>
+              <div class="mb-6">
+                <div class="ml-3">
+                  <h4 class="is-size-5 mb-2 ions">
+                    <ion-icon
+                      name="chatbubbles-outline"
+                      class="is-size-4 mr-1"
+                    ></ion-icon>
+                    Ingles Intermedio - B1
+                  </h4>
+                </div>
+              </div>
+              <div class="mb-6">
+                <span> </span>
+                <div class="ml-3">
+                  <h4 class="is-size-5 mb-2">
+                    ✅ Manejo de Metodologías Ágiles
+                  </h4>
+                </div>
+              </div>
+              <div class="mb-6">
+                <span> </span>
+                <div class="ml-3">
+                  <h4 class="is-size-5 mb-2">
+                    <em
+                      class="fas fa-globe-americas is-size-4 has-text-info"
+                    ></em>
+                    Manejo de Herramientas de Desarrollo Web y Movil
+                  </h4>
+                </div>
+              </div>
+              <div class="mb-6">
+                <span> </span>
+                <div class="ml-3">
+                  <h4 class="is-size-5 mb-2">
+                    <em class="fab fa-git-alt is-size-4 has-text-git"></em
+                    >Manejo de Versionado de Software (Git)
+                  </h4>
+                </div>
+              </div>
+              <div class="mb-6">
+                <span> </span>
+                <div class="ml-3">
+                  <h4 class="is-size-5 mb-2">
+                    <em class="fas fa-database is-size-4 has-text-info"></em
+                    >Manejo de Gestores de Bases de Datos Relacionales y No
+                    Relacionales
+                  </h4>
+                </div>
+              </div>
+            </div>
+            <div class="column"></div>
+            <div class="column is-12 is-5-desktop has-text-centered-mobile">
+              <h2 class="subtitle is-size-3">Habilidades Blandas</h2>
+              <div class="mb-6">
+                <span> </span>
+                <div class="ml-3">
+                  <h4 class="is-size-5 mb-2">
+                    <i class="fas fa-people-carry is-size-4"></i> Trabajo en
+                    Equipo
+                  </h4>
+                </div>
+              </div>
+              <div class="mb-6">
+                <span> </span>
+                <div class="ml-3">
+                  <h4 class="is-size-5 mb-2 ions">
+                    <ion-icon
+                      name="people-outline"
+                      class="is-size-3 mr-1"
+                    ></ion-icon>
+                    Facilidad de Comunicación
+                  </h4>
+                </div>
+              </div>
+              <div class="mb-6">
+                <span> </span>
+                <div class="ml-3">
+                  <h4 class="is-size-5 mb-2">💡 Proactividad</h4>
+                </div>
+              </div>
+              <div class="mb-6">
+                <span> </span>
+                <div class="ml-3">
+                  <h4 class="is-size-5 mb-2">♻️ Adaptabilidad</h4>
+                </div>
+              </div>
+              <div class="mb-6">
+                <span> </span>
+                <div class="ml-3">
+                  <h4 class="is-size-5 mb-2 ions">
+                    <ion-icon
+                      name="list-outline"
+                      class="is-size-3 mr-1"
+                    ></ion-icon>
+                    Organización
+                  </h4>
+                </div>
+              </div>
+              <div class="mb-6">
+                <span> </span>
+                <div class="ml-3">
+                  <h4 class="is-size-5 mb-2">⭐ Sin Miedo al Éxito</h4>
+                </div>
+              </div>
+            </div>
+            <div class="column"></div>
+          </div>
+        </div>
+      </section>
 
-        <section id="knowledges" class="">
-            <div class="container has-text-centered">  
-                <h1 class="tittle has-text-centered has-text-weight-semibold is-size-1"><span lang="en">Knowledges</span><span lang="es">Conocimientos</span></h1>
-                <div>
-                    <h1 class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"><span lang="en">Programming Languages</span><span lang="es">Lenguajes de Programación</span></h1>
-                    <div id="languages" class="columns is-full is-multiline"></div>
-                </div>
-                <div class="mt-20">
-                    <h1 class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"><span lang="en">Database Management System (DBMS)</span><span lang="es">Sistemas Gestores de Base de Datos (SGBD)</span></h1>
-                    <div id="dbms" class="columns is-full is-multiline"></div>
-                </div>
-                <div class="mt-20">
-                    <h1 class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"><span lang="en">Libraries & Frameworks</span><span lang="es">Bibliotecas & Frameworks</span></h1>
-                    <div id="libfra" class="columns is-full is-multiline"></div>
-                </div>
-            </div>
-        </section>
+      <section id="works" class="">
+        <div class="container has-text-centered">
+          <h1
+            class="tittle has-text-centered has-text-weight-semibold is-size-1"
+          >
+            <span lang="en" hidden>Projects</span
+            ><span lang="es">Proyectos</span>
+          </h1>
+          <div>
+            <h2
+              class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"
+            >
+              <a
+                class="git-nb"
+                href="https://github.com/edgarguitarist?tab=repositories"
+                ><em class="fab fa-github"></em
+                ><span lang="en" hidden>Repositories</span
+                ><span lang="es">Repositorios</span></a
+              >
+            </h2>
+            <div id="repos" class="columns is-full is-multiline"></div>
+          </div>
+        </div>
+      </section>
 
-        <section id="workexperiences" class="">
-            <div class="container has-text-centered">                
-                <h1 class="tittle has-text-centered has-text-weight-semibold is-size-1"><span lang="en">Work Experiences</span><span lang="es">Experiencias de Trabajo</span></h1>
-                <div>
-                    <h1 class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"><a class="git-nb" href="https://github.com/edgarguitarist?tab=repositories"><em class="fab fa-github"></em><span lang="en">Repositories</span><span lang="es">Repositorios</span></a></h1>
-                    <div id="repos" class="columns is-full is-multiline"></div>
-                </div>
-                
-            </div>
-        </section>        
+      <section id="knowledges" class="lastSection">
+        <div class="container has-text-centered">
+          <h1
+            class="tittle has-text-centered has-text-weight-semibold is-size-1"
+          >
+            <span lang="en" hidden>Knowledges</span
+            ><span lang="es">Conocimientos</span>
+          </h1>
+          <div>
+            <h2
+              class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"
+            >
+              <span lang="en" hidden>Programming Languages</span
+              ><span lang="es">Lenguajes de Programación</span>
+            </h2>
+            <div id="languages" class="columns is-full is-multiline"></div>
+          </div>
+          <div class="mt-20">
+            <h2
+              class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"
+            >
+              <span lang="en" hidden>Database Management System (DBMS)</span
+              ><span lang="es">Sistemas Gestores de Base de Datos (SGBD)</span>
+            </h2>
+            <div id="dbms" class="columns is-full is-multiline"></div>
+          </div>
+          <div class="mt-20">
+            <h2
+              class="subtittle has-text-left has-text-weight-semibold is-size-4 mv-20 ml-20"
+            >
+              <span lang="en" hidden>Libraries & Frameworks</span
+              ><span lang="es">Bibliotecas & Frameworks</span>
+            </h2>
+            <div id="libfra" class="columns is-full is-multiline"></div>
+          </div>
+        </div>
+      </section>
     </div>
-</body>
+  </body>
 
-
-<footer class="">
+  <footer class="">
     <div class="columns is-full">
-        <div class="column is-three-fifths self-center has-text-centered">
-            <p class="copyright-text"><span lang="en">Copyright &copy; 2021 - Developed by</span><span lang="es">Derechos de Autor &copy; 2021 - Desarrollado por</span> <strong class="has-text-white">Edgar Mariano Laz Terán</strong></p>
-        </div>
-        <div class="column">
-            <ul class="list-inline social-buttons">
-                <li class="ul-padding"><a title="Facebook" rel="noopener noreferrer" class="fb" target="_blank" href="https://www.facebook.com/edgarm.laz"><em class="fab fa-facebook-f"></em></a></li>
-                <li class="ul-padding"><a title="Instagram" rel="noopener noreferrer" class="ins" target="_blank" href="https://www.instagram.com/edgarguitarist/"><em class="fab fa-instagram"></em></a></li>
-                <li class="ul-padding"><a title="Twitter" rel="noopener noreferrer" class="twi" target="_blank" href="https://twitter.com/edguitarista"><em class="fab fa-twitter"></em></a></li>
-                <li class="ul-padding"><a title="GitHub" rel="noopener noreferrer" class="git" target="_blank" href="https://github.com/edgarguitarist"><em class="fab fa-github"></em></a></li>
-                <li class="ul-padding"><a title="LinkedIn" rel="noopener noreferrer"x class="lin" target="_blank" href="https://www.linkedin.com/in/edgarlteran/"><em class="fab fa-linkedin-in"></em></a></li>
-            </ul>
-        </div>
-        <div class="column"></div>
+      <div class="column is-three-fifths self-center has-text-centered">
+        <p class="copyright-text">
+          <span lang="en" hidden>Developed by</span
+          ><span lang="es">Desarrollado por</span>
+          <strong class="has-text-white">Edgar Mariano Laz Terán</strong>
+        </p>
+      </div>
+      <div class="column">
+        <ul class="list-inline social-buttons">
+          <li class="ul-padding">
+            <a
+              title="Facebook"
+              rel="noopener noreferrer"
+              class="fb"
+              target="_blank"
+              href="https://www.facebook.com/edgarm.laz"
+              ><em class="fab fa-facebook-f"></em
+            ></a>
+          </li>
+          <li class="ul-padding">
+            <a
+              title="Instagram"
+              rel="noopener noreferrer"
+              class="ins"
+              target="_blank"
+              href="https://www.instagram.com/edgarguitarist/"
+              ><em class="fab fa-instagram"></em
+            ></a>
+          </li>
+          <li class="ul-padding">
+            <a
+              title="Twitter"
+              rel="noopener noreferrer"
+              class="twi"
+              target="_blank"
+              href="https://twitter.com/edguitarista"
+              ><em class="fab fa-twitter"></em
+            ></a>
+          </li>
+          <li class="ul-padding">
+            <a
+              title="GitHub"
+              rel="noopener noreferrer"
+              class="git"
+              target="_blank"
+              href="https://github.com/edgarguitarist"
+              ><em class="fab fa-github"></em
+            ></a>
+          </li>
+          <li class="ul-padding">
+            <a
+              title="LinkedIn"
+              rel="noopener noreferrer"
+              x
+              class="lin"
+              target="_blank"
+              href="https://www.linkedin.com/in/edgarlteran/"
+              ><em class="fab fa-linkedin-in"></em
+            ></a>
+          </li>
+          <li class="ul-padding">
+            <a
+              title="Curriculum"
+              rel="noopener noreferrer"                          
+              class="pdf2"
+              target="_blank"
+              href="public/Edgar M. Laz Terán.pdf"
+              ><em class="far fa-file-pdf"></em
+            ></a>
+          </li>
+        </ul>
+      </div>
+      <div class="column"></div>
     </div>
-</footer>
+  </footer>
 
-<!-- Partial -->
-<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js' crossorigin="anonymous" integrity=""></script>
-<script src='https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js' crossorigin="anonymous" integrity=""></script>
-<script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js' crossorigin="anonymous" integrity=""></script>
+  <!-- Partial -->
+  <script
+    src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"
+    crossorigin="anonymous"
+    integrity=""
+  ></script>
+  <script
+    src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"
+    crossorigin="anonymous"
+    integrity=""
+  ></script>
+  <script
+    src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"
+    crossorigin="anonymous"
+    integrity=""
+  ></script>
 
-<!-- Custom Scripts -->
-<script src="js/scripts.js " defer></script>
-<script src="js/contents.js" defer></script>
-<script>
-    $(document).ready(function () {        
-        showContentCard(languages, "languages"); // Languages
-        showContentCard(libfra, "libfra"); // Librerias y Frameworks
-        showContentCard(dbms, "dbms"); // DBMS        
-    });
-</script>
+  <!-- Custom Scripts -->
+  <script src="js/scripts.js " defer></script>
+  <script src="js/contents.js" defer></script>
+  <script>
+    $(document).ready(function () {
+      showContentCard(languages, "languages") // Languages
+      showContentCard(libfra, "libfra") // Librerias y Frameworks
+      showContentCard(dbms, "dbms") // DBMS
+    })
+  </script>
 
-<!-- jGrowl -->
-<script src="vendors/jGrowl/jquery.jgrowl.js"></script>
-<script src="js/my-jgrowl-messages.js" defer></script>
+  <!-- jGrowl -->
+  <script src="vendors/jGrowl/jquery.jgrowl.js"></script>
+  <script src="js/my-jgrowl-messages.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/TypewriterJS/2.13.1/core.min.js"></script>
 
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      once: true,
+    })
+  </script>
 </html>
