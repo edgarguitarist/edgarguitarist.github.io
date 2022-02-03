@@ -38,8 +38,8 @@ const languages = {
   python: {
     name: "Python",
     url_image: "images/svg/python-1.svg",
-    state: "Basic",
-    states: "Basico",
+    state: "",
+    states: "",
   },
   arduino: {
     name: "Arduino",
@@ -65,8 +65,8 @@ const dbms = {
   mongodb: {
     name: "MongoDB",
     url_image: "images/svg/mongodb-icon-1.svg",
-    state: "Learning",
-    states: "Aprendiendo",
+    state: "",
+    states: "",
   },
 }
 
@@ -74,26 +74,26 @@ const libfra = {
   node_js: {
     name: "Node.js",
     url_image: "images/svg/nodejs-1.svg",
-    state: "Learning",
-    states: "Aprendiendo",
+    state: "",
+    states: "",
   },
   express: {
     name: "Express",
     url_image: "images/svg/express-109.svg",
-    state: "Learning",
-    states: "Aprendiendo",
+    state: "",
+    states: "",
   },
   react: {
     name: "React",
     url_image: "images/svg/react-2.svg",
-    state: "Learning",
-    states: "Aprendiendo",
+    state: "",
+    states: "",
   },
   next_js: {
     name: "Next.js",
     url_image: "images/svg/next-js.svg",
-    state: "Learning",
-    states: "Aprendiendo",
+    state: "",
+    states: "",
   },
   sass: {
     name: "Sass",
