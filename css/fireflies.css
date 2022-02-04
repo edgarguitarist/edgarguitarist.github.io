@@ -8,6 +8,7 @@
   margin: -0.2vw 0 0 9.8vw;
   animation: ease 200s alternate infinite;
   pointer-events: none;
+  z-index: -1;
 }
 .firefly::before, .firefly::after {
   content: "";
