@@ -691,6 +691,22 @@ svg {
   color: #ffc107 !important;
 }
 
+.scale-102:hover{
+  transform: scale(1.02);
+}
+.scale-104:hover{
+  transform: scale(1.04);
+}
+.scale-106:hover{
+  transform: scale(1.06);
+}
+.scale-108:hover{
+  transform: scale(1.08);
+}
+.scale-110:hover{
+  transform: scale(1.1);
+}
+
 .repos:hover :last-child {
   color: var(--midu);
   transform: scale(1.02);
