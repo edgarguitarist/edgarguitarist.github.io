@@ -127,7 +127,7 @@ const repoExtra = {
     profesionalName: "Mi Github",
   },
   "edgarguitarist.github.io": {
-    url_image: screenshotMachine("https://edgarguitarist.github.io/"),
+    url_image: screenshotMachine("https://edgarguitarist.github.io/index.html#aboutme"),
     url: "https://edgarguitarist.github.io/",
     profesionalName: "Mi Portfolio",
   },

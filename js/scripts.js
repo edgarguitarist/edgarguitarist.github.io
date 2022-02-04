@@ -51,9 +51,6 @@ const gifs = [
 ]
 
 function setRandomImage() {
-  /*let images = getImages();
-   let random = Math.floor(Math.random() * images.length); 
-   console.log(images, images.length);*/
   let random = Math.floor(Math.random() * gifs.length)
   document.getElementById("error_404").src = "images/error-404/" + gifs[random]
 }
