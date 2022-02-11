@@ -3,5 +3,6 @@
         "defaulten",
         "libfra"
     ],
-    "liveServer.settings.port": 5501
+    "liveServer.settings.port": 5501,
+    "svg.preview.background": "dark-transparent"
 }

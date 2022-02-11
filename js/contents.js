@@ -5,15 +5,21 @@ const languages = {
     state: "",
     states: "",
   },
+  css: {
+    name: "CSS",
+    url_image: "images/svg/css-3.svg",
+    state: "",
+    states: "",
+  },
   javascript: {
     name: "JavaScript",
     url_image: "images/svg/logo-javascript.svg",
     state: "",
     states: "",
   },
-  css: {
-    name: "CSS",
-    url_image: "images/svg/css-3.svg",
+  typescript: {
+    name: "TypeScript",
+    url_image: "images/svg/typescript.svg",
     state: "",
     states: "",
   },
@@ -34,12 +40,6 @@ const languages = {
     url_image: "images/svg/kotlin-1.svg",
     state: "Android Studio",
     states: "Android Studio",
-  },
-  python: {
-    name: "Python",
-    url_image: "images/svg/python-1.svg",
-    state: "",
-    states: "",
   },
   arduino: {
     name: "Arduino",
@@ -68,6 +68,12 @@ const dbms = {
     state: "",
     states: "",
   },
+  firebase: {
+    name: "Firebase",
+    url_image: "images/svg/firebase.svg",
+    state: "",
+    states: "",
+  }
 }
 
 const libfra = {
@@ -92,12 +98,6 @@ const libfra = {
   next_js: {
     name: "Next.js",
     url_image: "images/svg/next-js.svg",
-    state: "",
-    states: "",
-  },
-  sass: {
-    name: "Sass",
-    url_image: "images/svg/sass-1.svg",
     state: "",
     states: "",
   },
