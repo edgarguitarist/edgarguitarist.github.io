@@ -62,6 +62,12 @@ const dbms = {
     state: "",
     states: "",
   },
+  postgresql: {
+    name: "PostgreSQL",
+    url_image: "images/svg/postgresql.svg",
+    state: "",
+    states: "",
+  },
   mongodb: {
     name: "MongoDB",
     url_image: "images/svg/mongodb-icon-1.svg",
