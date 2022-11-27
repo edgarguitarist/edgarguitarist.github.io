@@ -4,8 +4,8 @@
       "description": "edgarguitarist portfolio"
     },
     "home": {
-      "title": "Welcome to my awesome website!",
-      "subtitle": "This is a <0>more complex</0> string to translate, mixed with <1>html elements</1>, such as a <2>a cool link</2>!",
-      "seeyousoon": "<0>Vuelve pronto, mientras tanto disfruta con este gato bailando.</0>"
+      "title": "Bienvenido a mi Portfolio!",
+      "subtitle": "Esta página se está migrando a <0>ASTRO</0> 🚀!",
+      "seeyousoon": "Vuelve pronto, mientras tanto disfruta con este gato bailando."
     }
   }

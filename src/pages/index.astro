@@ -1,7 +1,6 @@
 ---
-import { changeLanguage } from "i18next";
+import { changeLanguage, t } from "i18next";
 import Layout from "../layouts/Layout.astro";
-import Card from "../components/Card.astro";
 import { LanguageSelector, Trans } from "astro-i18next/components";
 
 changeLanguage("en");
@@ -9,14 +8,16 @@ changeLanguage("en");
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<LanguageSelector showFlag={true} class="languages" /> <h1>edgarguitarist</h1>
-		<div>
-			<Trans i18nKey="home.seeyousoon">
-				<h2 class="text-gradient">Come back soon, meanwhile enjoy with this dancing cat.</h2>
-			</Trans>	
-		</div>
-
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/2GgiZZhO-PA?controls=0&autoplay=1" title="cat breakdancing for 10 hours" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<LanguageSelector showFlag={false} class="languages" /> <h1>Hi, I'm edgarguitarist</h1>
+		<h2>
+			<Trans i18nKey="home.subtitle">
+				This page is being migrated to <a class="text-gradient" href="https://astro.build/">ASTRO</a> 🚀!
+			</Trans>
+		</h2>
+		
+		<h3 class="text-gradient">{t("home.seeyousoon")}</h3>
+		
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/2GgiZZhO-PA?controls=1&autoplay=1" title="cat breakdancing for 10 hours" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	</main>
 </Layout>
@@ -26,10 +27,14 @@ changeLanguage("en");
 		margin: auto;
 		padding: 1.5rem;
 		max-width: 60ch;
+		text-align: center;
+	}
+	a{
+		font-weight: bolder;
 	}
 	h1 {
 		font-size: 3rem;
-		font-weight: 800;
+		font-weight: 500;
 		margin: 0;
 	}
 	.text-gradient {
