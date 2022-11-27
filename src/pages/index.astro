@@ -8,7 +8,8 @@ changeLanguage("en");
 
 <Layout title="Welcome to Astro.">
 	<main>
-		<LanguageSelector showFlag={false} class="languages" /> <h1>Hi, I'm edgarguitarist</h1>
+		<LanguageSelector showFlag={false} class="languages" /> 
+		<h1>{t("home.salute")}</h1>
 		<h2>
 			<Trans i18nKey="home.subtitle">
 				This page is being migrated to <a class="text-gradient" href="https://astro.build/">ASTRO</a> 🚀!
@@ -17,7 +18,7 @@ changeLanguage("en");
 		
 		<h3 class="text-gradient">{t("home.seeyousoon")}</h3>
 		
-		<iframe width="560" height="315" src="https://www.youtube.com/embed/2GgiZZhO-PA?controls=1&autoplay=1" title="cat breakdancing for 10 hours" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/2GgiZZhO-PA?controls=0&autoplay=1" title="cat breakdancing for 10 hours" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	</main>
 </Layout>

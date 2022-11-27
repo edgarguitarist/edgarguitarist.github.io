@@ -5,6 +5,7 @@
     },
     "home": {
       "title": "Bienvenido a mi Portfolio!",
+      "salute": "Hola, Soy edgarguitarist",
       "subtitle": "Esta página se está migrando a <0>ASTRO</0> 🚀!",
       "seeyousoon": "Vuelve pronto, mientras tanto disfruta con este gato bailando."
     }
