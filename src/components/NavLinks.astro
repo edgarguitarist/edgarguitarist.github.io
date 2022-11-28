@@ -1,7 +1,6 @@
 ---
 import { t } from "i18next";
 import type { NavDicInterface, Nav } from "../types/global.types"
-
 interface Props {
   link: Nav;
 }
@@ -9,32 +8,29 @@ interface Props {
 const { link } = Astro.props;
 const navStyle =
   "hover:scale-105 hover:text-yellow-400 inline-flex gap-x-1 font-semibold text-white text-md";
+
 const navDic:NavDicInterface = {
   aboutme: {
     href: "#aboutme",
     //icon: <Star className={iconStyle} />,
-    label: t("navbar.aboutme"),
+    label: t("index.nav.aboutme"),
   },
   skills: {
     href: "#skills",
     //icon: <Wizard className={iconStyle} />,
-    label: t("navbar.skills"),
+    label: t("index.nav.skills"),
   },
   projects: {
     href: "#projects",
     //icon: <AccountTreeIcon className={iconStyle} />,
-    label: t("navbar.projects"),
+    label: t("index.nav.projects"),
   },
   knowledge: {
     href: "#knowledge",
     //icon: <InfoIcon className={iconStyle} />,
-    label: t("navbar.knowledge"),
+    label: t("index.nav.knowledge"),
   },
 };
-
-/*
-
-*/ 
 ---
 <a href={navDic[link].href} id={link} class={navStyle}>
   {navDic[link].label}
