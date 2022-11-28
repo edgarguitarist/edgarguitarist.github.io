@@ -1,0 +1,26 @@
+---
+import NavLinks from "./NavLinks.astro";
+import { Nav } from "../types/global.types"
+const {username} = Astro.props;
+---
+
+<nav id="navbar" class="inline-flex w-full fixed bg-black h-12 text-white z-50">
+  <div class="w-1/5 pl-6 my-3">
+    <a
+      target="_blank"
+      href={`https://www.github.com/${username}`}
+      class="text-lg text-white font-semibold hover:transform hover:scale-105"
+    >
+      {username}
+    </a>
+  </div>
+  <div class="w-3/5 inline-flex my-3 gap-x-8 place-content-center">
+    <NavLinks link={Nav.aboutme} />
+    <NavLinks link={Nav.skills} />
+    <NavLinks link={Nav.projects} />
+    <NavLinks link={Nav.knowledge} />
+  </div>
+  <div class="w-1/5 pr-6 my-1 text-right self-center">
+    <slot />
+  </div>
+</nav>
