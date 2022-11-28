@@ -1,18 +1,69 @@
 {
-    "site": {
-      "title": "My Portfolio",
-      "description": "edgarguitarist portfolio"
-    },
-    "home": {
+  "site": {
+    "title": "My Portfolio",
+    "description": "edgarguitarist portfolio"
+  },
+  "index": {
+    "working": {
       "title": "Welcome to my portfolio!",
       "salute": "Hi, I'm edgarguitarist",
       "subtitle": "This page is being migrated to <0>ASTRO</0> 🚀!",
       "seeyousoon": "Come back soon, meanwhile enjoy with this dancing cat."
     },
-    "navbar": {
-      "aboutme": "About",
+    "nav": {
+      "about": "About Me",
       "skills": "Skills",
       "projects": "Projects",
-      "knowledge": "Knowledge"
+      "knowledge": "Knowledge",
+      "contact_me": "Contact Me"
+    },
+    "about": {
+      "title": "ABOUT ME",
+      "description": "I'M A FULL STACK WEB DEVELOPER AND MOBILE",
+      "subtitle": "Know me..."
+    },
+    "skills": {
+      "title": "SKILLS",
+      "description": "One of the things that has allowed me to forge each of the following skills has been my curiosity to know how the things that surround us work, especially technology, and the constant reading and research to solve each unknown.",
+      "hards": {
+        "title": "HARD SKILLS",
+        "skill1": "INTERMEDIATE ENGLISH - B1",
+        "skill2": "AGILE METHODOLOGIES",
+        "skill3": "WEB AND MOBILE DEVELOPMENT TOOLS",
+        "skill4": "SOFTWARE VERSIONING MANAGEMENT (GIT)",
+        "skill5": "DATABASE MANAGER"
+      },
+      "softs": {
+        "title": "SOFT SKILLS",
+        "skill1": "LEADERSHIP",
+        "skill2": "TEAMWORK",
+        "skill3": "COMMUNICATION",
+        "skill4": "CREATIVITY",
+        "skill5": "ADAPTABILITY",
+        "skill6": "NO FEAR OF SUCCESS"
+      }
+    },
+    "projects": {
+      "title": "PROJECTS",
+      "subtitle": "REPOSITORIES",
+      "subtitle2": "FORKS",
+      "no_description": "No Description"
+    },
+    "knowledge": {
+      "title": "KNOWLEDGES",
+      "section1": "PROGRAMMING LANGUAGES",
+      "section2": "DATABASE MANAGEMENT SYSTEM (DBMS)",
+      "section3": "LIBRARIES & FRAMEWORKS"
+    },
+    "footer": {
+      "developer": "Developed with ❤️ by",
+      "curriculum": "/Edgar_Laz-Developer.pdf"
     }
+  },
+  "not_found": {
+    "image_alt": "Pagina no Encontrada",
+    "title": "Error 404",
+    "subtitle": "Página no Encontrada! :C",
+    "button": "Regresar"
   }
+}

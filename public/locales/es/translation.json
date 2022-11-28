@@ -1,18 +1,69 @@
 {
-    "site": {
-      "title": "Mi Portfolio",
-      "description": "edgarguitarist portfolio"
-    },
-    "home": {
+  "site": {
+    "title": "Mi Portfolio",
+    "description": "edgarguitarist portfolio"
+  },
+  "index": {
+    "working": {
       "title": "Bienvenido a mi Portfolio!",
       "salute": "Hola, Soy edgarguitarist",
       "subtitle": "Esta página se está migrando a <0>ASTRO</0> 🚀!",
       "seeyousoon": "Vuelve pronto, mientras tanto disfruta con este gato bailando."
     },
-    "navbar": {
-      "aboutme": "Sobre Mi",
+    "nav": {
+      "about": "Sobre Mi",
       "skills": "Habilidades",
       "projects": "Proyectos",
-      "knowledge": "Conocimientos"
+      "knowledge": "Conocimientos",
+      "contact_me": "Contáctame"
+    },
+    "about": {
+      "title": "Acerca de Mi",
+      "description": "SOY DESARROLLADOR FULL STACK WEB Y MOVIL",
+      "subtitle": "Conóceme..."
+    },
+    "skills": {
+      "title": "HABILIDADES",
+      "description": "Una de las cosas que me ha permitido forjar cada una de las siguientes habilidades ha sido mi curiosidad por saber como funcionan las cosas que nos rodean en especial la tecnología y la constante lectura e investigación para resolver cada incognita.",
+      "hards": {
+        "title": "Habilidades Técnicas",
+        "skill1": "INGLÉS INTERMEDIO - B1",
+        "skill2": "METODOLOGÍAS ÁGILES",
+        "skill3": "HERRAMIENTAS DE DESARROLLO WEB Y MOVIL",
+        "skill4": "VERSIONADO DE SOFTWARE (GIT)",
+        "skill5": "GESTORES DE BASES DE DATOS"
+      },
+      "softs": {
+        "title": "Habilidades Sociales",
+        "skill1": "LIDERAZGO",
+        "skill2": "TRABAJO EN EQUIPO",
+        "skill3": "COMUNICACIÓN",
+        "skill4": "CREATIVIDAD",
+        "skill5": "ADAPTABILIDAD",
+        "skill6": "SIN MIEDO AL ÉXITO"
+      }
+    },
+    "projects": {
+      "title": "PROYECTOS",
+      "subtitle": "REPOSITORIOS",
+      "subtitle2": "FORKS",
+      "no_description": "Sin Descripción"
+    },
+    "knowledge": {
+      "title": "CONOCIMIENTOS",
+      "section1": "LENGUAJES DE PROGRAMACIÓN",
+      "section2": "SISTEMAS GESTORES DE BASE DE DATOS (SGBD)",
+      "section3": "BIBLIOTECAS & FRAMEWORKS"
+    },
+    "footer": {
+      "developer": "Desarrollador con ❤️ por",
+      "curriculum": "/Edgar_Laz-Desarrollador.pdf"
     }
+  },
+  "not_found": {
+    "image_alt": "Pagina no Encontrada",
+    "title": "Error 404",
+    "subtitle": "Página no Encontrada! :C",
+    "button": "Regresar"
   }
+}
