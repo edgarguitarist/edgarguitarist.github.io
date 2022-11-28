@@ -1,0 +1,27 @@
+---
+import { t } from "i18next";
+import { Info } from "../types/global.types";
+import ButtonSocials from "./ButtonSocials.astro";
+import AnimationLink from "./AnimationLink.astro";
+---
+
+<footer
+  class="inline-flex w-full max-w-screen content-center bg-black h-16 text-white lg:fixed bottom-0"
+>
+  <div class="inline-flex w-full my-auto">
+    <div class="text-center w-1/2 my-auto p-2">
+      <p class="sm:text-sm md:text-base">
+        <span lang="es">{t("index.footer.developer")}</span>
+        <strong class="text-white">Edgar Laz</strong>
+      </p>
+    </div>
+    <div class="w-1/2 inline-flex gap-x-3 place-content-center p-2">
+      <!-- <ButtonSocials social={Info.instagram} /> -->
+      <ButtonSocials social={Info.twitter} />
+      <ButtonSocials social={Info.linkedin} />
+      <ButtonSocials social={Info.github} />
+      <ButtonSocials social={Info.pdf2} />
+    </div>
+  </div>
+  <AnimationLink />
+</footer>

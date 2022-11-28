@@ -3,6 +3,8 @@ import { changeLanguage, t } from "i18next";
 import Layout from "../../layouts/Layout.astro";
 import { LanguageSelector, Trans } from "astro-i18next/components";
 import Navbar from "../../components/Navbar.astro";
+import Footer from "../../components/Footer.astro";
+import "../../styles/global.css";
 
 changeLanguage("es");
 ---
@@ -15,7 +17,7 @@ changeLanguage("es");
 		<h1 class="mt-10 text-4xl font-bold">{t("index.working.salute")}</h1>
 		<h2 class="text-3xl my-5">
 			<Trans i18nKey="index.working.subtitle">
-				This page is being migrated to <a class="text-gradient" href="https://astro.build/">ASTRO</a> 🚀!
+				This page is being migrated to <a class="text-gradient font-bold" href="https://astro.build/">ASTRO</a> 🚀!
 			</Trans>
 		</h2>
 		
@@ -24,25 +26,5 @@ changeLanguage("es");
 		<iframe class="my-5" width="560" height="315" src="https://www.youtube.com/embed/2GgiZZhO-PA?controls=0&autoplay=1" title="cat breakdancing for 10 hours" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 	</main>
+	<Footer/>
 </Layout>
-
-<style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 80%;
-		text-align: -webkit-center;
-	}
-	a{
-		font-weight: bolder;
-	}
-	
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	
-</style>
