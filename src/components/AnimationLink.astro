@@ -1,0 +1,14 @@
+---
+---
+
+<img id="link" src="/link.webp" class="link" alt="link" />
+
+<script>
+  const link = document.getElementById("link") as HTMLImageElement;
+  const toggleAnimation = (e: any) => {
+    link.src = e.type !== "mouseover" ? "/link.webp" : "/link-2.webp";
+  };
+
+  link.addEventListener("mouseover", toggleAnimation);
+  link.addEventListener("mouseout", toggleAnimation);
+</script>
