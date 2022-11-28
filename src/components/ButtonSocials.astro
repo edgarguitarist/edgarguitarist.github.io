@@ -1,0 +1,76 @@
+---
+
+import type {
+  SocialDicInterface,
+  Info,
+} from "../types/global.types";
+import { t } from "i18next";
+import { PascalCase } from "../utils/global.utils";
+
+import { Icon } from 'astro-icon'
+
+interface Props {
+  social: Info;
+  className?: string;
+}
+
+const { social, className } = Astro.props;
+
+const iconStyle = "w-3/5 h-3/5 my-auto";
+const buttonStyle = className
+  ? className
+  : "text-white text-center hover:transform hover:scale-105 social-btn w-10 h-10 ";
+const socialDic: SocialDicInterface = {
+  facebook: {
+    href: "https://www.facebook.com/edgarm.laz",
+    //iconName: <Facebook />,
+    style: buttonStyle + "fb",
+  },
+  instagram: {
+    href: "https://www.instagram.com/edgarguitarist/",
+    //iconName: <Instagram />,
+    style: buttonStyle + "ins",
+  },
+  twitter: {
+    href: "https://twitter.com/edgarguitarist",
+    iconName: "mdi:twitter",
+    style: buttonStyle + "twi",
+  },
+  github: {
+    href: "https://www.github.com/edgarguitarist",
+    iconName: "mdi:github",
+    style: buttonStyle + "git",
+  },
+  pdf: {
+    href: t("index.footer.curriculum"),
+    iconName: "mdi:file-pdf-box",
+    style: buttonStyle + "pdf",
+  },
+  pdf2: {
+    href: t("index.footer.curriculum"),
+    iconName: "mdi:file-pdf",
+    style: buttonStyle + "pdf2",
+  },
+  linkedin: {
+    href: "https://www.linkedin.com/in/edgarlteran/",
+    iconName: "mdi:linkedin",
+    style: buttonStyle + "lin",
+  },
+  whatsapp: {
+    href: "https://wa.me/593982686560",
+    iconName: "mdi:whatsapp",
+    style: buttonStyle + "wha",
+  },
+};
+---
+
+<a
+  href={socialDic[social].href}
+  id={social}
+  target="_blank"
+  title={PascalCase(social)}
+  class={socialDic[social].style || buttonStyle}
+>
+<Icon name={socialDic[social].iconName} class={iconStyle}/>
+  
+</a>
