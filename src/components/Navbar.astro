@@ -1,26 +1,31 @@
 ---
 import NavLinks from "./NavLinks.astro";
-import { Nav } from "../types/global.types"
-const {username} = Astro.props;
+import { Nav } from "../types/global.types";
+import { Icon } from "astro-icon";
+const { username } = Astro.props;
 ---
 
-<nav id="navbar" class="inline-flex w-full fixed bg-black h-12 text-white z-50">
-  <div class="w-1/5 pl-6 my-3">
+<nav id="navbar" class="inline-flex w-full fixed bg-black h-12 z-50 text-white">
+  <div class="w-1/5 pl-6 self-center">
     <a
       target="_blank"
       href={`https://www.github.com/${username}`}
-      class="text-lg text-white font-semibold hover:transform hover:scale-105"
+      class="text-lg font-semibold hover:text-violet-400"
     >
       {username}
     </a>
   </div>
-  <div class="w-3/5 inline-flex my-3 gap-x-8 place-content-center">
+  <div class="w-3/5 inline-flex gap-x-1 place-content-center">
+    <!-- TODO: Hacer que se muestre una linea con el gradiente debajo en vez de que consuma todo el fondo -->
     <NavLinks link={Nav.aboutme} />
     <NavLinks link={Nav.skills} />
     <NavLinks link={Nav.projects} />
     <NavLinks link={Nav.knowledge} />
   </div>
   <div class="w-1/5 pr-6 my-1 text-right self-center">
-    <slot />
+    <div class="languages-wrapper">
+      <Icon name="mdi:translate" class="w-5 h-5"/>
+      <slot />
+    </div>
   </div>
 </nav>

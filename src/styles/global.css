@@ -15,6 +15,30 @@ main {
   text-align: -webkit-center;
 }
 
+.languages-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  padding:  5px 10px;
+  border-radius: 9999px;
+  gap: 5px;
+  background-color: #4e4e4e;
+  width: fit-content;
+}
+
+.languages-wrapper > select {
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-weight: 500;
+  cursor: pointer;  
+}
+
+.languages-wrapper > select > option {
+  background-color: transparent;
+  color: black;
+  font-weight: 500;
+  padding: 5px 20px;
+}
 
 .text-gradient {
   background-image: var(--accent-gradient);
@@ -22,6 +46,16 @@ main {
   -webkit-text-fill-color: transparent;
   background-size: 400%;
   background-position: 0%;
+}
+
+.nav-gradient:hover {
+  
+  background-image: var(--accent-gradient);
+  /* -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; */
+  background-size: 400%;
+  background-position: 0%;
+  font-weight: 700;
 }
 
 a {
@@ -126,7 +160,7 @@ a {
   -moz-border-radius: 50%;
   border-radius: 50%;
 }
-
+/*124, 58, 237*/
 .profile-photo:after {
   position: absolute;
   display: block;
