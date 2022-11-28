@@ -8,5 +8,11 @@
       "salute": "Hi, I'm edgarguitarist",
       "subtitle": "This page is being migrated to <0>ASTRO</0> 🚀!",
       "seeyousoon": "Come back soon, meanwhile enjoy with this dancing cat."
+    },
+    "navbar": {
+      "aboutme": "About",
+      "skills": "Skills",
+      "projects": "Projects",
+      "knowledge": "Knowledge"
     }
   }
