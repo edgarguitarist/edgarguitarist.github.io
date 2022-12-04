@@ -1,13 +1,9 @@
 ---
-
-import type {
-  SocialDicInterface,
-  Info,
-} from "../types/global.types";
+import type { SocialDicInterface, Info } from "../../types/global.types";
 import { t } from "i18next";
 import { PascalCase } from "@utils/global.utils";
 
-import { Icon } from 'astro-icon'
+import { Icon } from "astro-icon";
 
 interface Props {
   social: Info;
@@ -71,6 +67,5 @@ const socialDic: SocialDicInterface = {
   title={PascalCase(social)}
   class={socialDic[social].style || buttonStyle}
 >
-<Icon name={socialDic[social].iconName} class={iconStyle}/>
-  
+  <Icon name={socialDic[social].iconName} class={iconStyle} />
 </a>
