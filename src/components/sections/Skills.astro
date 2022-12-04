@@ -1,0 +1,101 @@
+---
+import Sections from "@layouts/Sections.astro";
+import { t } from "i18next";
+import Icon from "astro-icon";
+import locale from "@public/locales/en/translation.json";
+
+const iconStyle = "w-7 h-7 my-auto ";
+const liStyle = "flex font-semibold text-2xl text-gray-800 gap-2 ";
+const skillsIcons: any = {
+  hards: {
+    skill1: {
+      iconName: "ic:baseline-language",
+      style: `${iconStyle} text-blue-400`,
+    },
+    skill2: {
+      iconName: "ic:baseline-check-box",
+      style: `${iconStyle} text-green-400`,
+    },
+    skill3: {
+      iconName: "ic:outline-mobile-friendly",
+      style: `${iconStyle} text-gray-800`,
+    },
+    skill4: {
+      iconName: "mdi:git",
+      style: `${iconStyle} text-orange-600`, //ml-1 -mr-1
+    },
+    skill5: {
+      iconName: "mdi:database-sync",
+      style: `${iconStyle} text-slate-700`,
+    },
+  },
+  softs: {
+    skill1: {
+      iconName: "fluent:communication-person-20-filled",
+      style: `${iconStyle} text-blue-800`,
+    },
+    skill2: {
+      iconName: "mdi:account-group-outline",
+      style: `${iconStyle} text-gray-800`,
+    },
+    skill3: {
+      iconName: "carbon:communication-unified",
+      style: `${iconStyle} text-slate-700`,
+    },
+    skill4: {
+      iconName: "bi:stars",
+      style: `${iconStyle} text-yellow-500`,
+    },
+    skill5: {
+      iconName: "ic:baseline-check-box",
+      style: `${iconStyle} text-green-700`,
+    },
+    skill6: {
+      iconName: "twemoji:alien",
+      style: `${iconStyle} text-yellow-300`,
+    },
+  },
+};
+---
+
+<Sections id="skills" title={t("index.skills.title")}>
+  <h2 class="text-xl mt-6 font-semibold text-gray-800 text-center">
+    {t("index.skills.description")}
+  </h2>
+  <div class="lg:flex md:flex sm:block lg:mt-12 mt-6">
+    <div class="w-3/5 mx-auto">
+      <ul>
+        {
+          Object.entries(locale.index.skills.hards)
+            .filter(([key]) => key != "title")
+            .map(([key, value]) => (
+              <li class={`${liStyle} mb-6`}>
+                <Icon
+                  name={skillsIcons.hards[key].iconName}
+                  class={skillsIcons.hards[key].style}
+                />{" "}
+                {value}
+              </li>
+            ))
+        }
+      </ul>
+    </div>
+    <div class="w-2/5 mx-auto">
+      <ul>
+        {
+          Object.entries(locale.index.skills.softs)
+            .filter(([key]) => key != "title")
+            .map(([key, value]) => (
+              <li class={`${liStyle} mb-3.5`}>
+                <Icon
+                  name={skillsIcons.softs[key].iconName}
+                  class={skillsIcons.softs[key].style}
+                />{" "}
+                {value}
+              </li>
+            ))
+        }
+      </ul>
+    </div>
+  </div>
+</Sections>
