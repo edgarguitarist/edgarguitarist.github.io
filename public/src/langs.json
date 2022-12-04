@@ -1,0 +1,52 @@
+[
+  {
+    "name": "HTML-CSS-JS",
+    "src": "/svg/html-css-js.png",
+    "show" : true
+  },
+  {
+    "name": "HTML",
+    "src": "/svg/html.svg",
+    "show" : false
+  },
+  {
+    "name": "CSS",
+    "src": "/svg/css.svg",
+    "show" : false
+  },
+  {
+    "name": "JavaScript",
+    "src": "/svg/js.svg",
+    "show" : false
+  },
+  {
+    "name": "TypeScript",
+    "src": "/svg/typescript.svg",
+    "show" : true
+  },
+  {
+    "name": "Python",
+    "src": "/svg/python-1.svg",
+    "show" : true
+  },
+  {
+    "name": "PHP",
+    "src": "/svg/php.webp",
+    "show" : true
+  },
+  {
+    "name": "Java",
+    "src": "/svg/java.svg",
+    "show" : true
+  },
+  {
+    "name": "Kotlin",
+    "src": "/svg/kotlin.svg",
+    "show" : true
+  },
+  {
+    "name": "Arduino",
+    "src": "/svg/arduino.svg",
+    "show" : true
+  }
+]

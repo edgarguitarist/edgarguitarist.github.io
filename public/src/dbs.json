@@ -1,0 +1,32 @@
+[
+  {
+    "name": "MySQL",
+    "src": "/svg/mysql.svg",
+    "show" : true
+  },
+  {
+    "name": "SQL SERVER",
+    "src": "/svg/sql-server.png",
+    "show" : true
+  },
+  {
+    "name": "MariaDB",
+    "src": "/svg/mariadb.svg",
+    "show" : true
+  },
+  {
+    "name": "PostgreSQL",
+    "src": "/svg/postgresql.svg",
+    "show" : true
+  },
+  {
+    "name": "MongoDB",
+    "src": "/svg/mongodb-no-name.svg",
+    "show" : true
+  },
+  {
+    "name": "Firebase",
+    "src": "/svg/firebase.svg",
+    "show" : true
+  }
+]

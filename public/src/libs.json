@@ -1,0 +1,42 @@
+[
+  {
+    "name": "Node.js",
+    "src": "/svg/nodejs.svg",
+    "show" : true
+  },
+  {
+    "name": "Express",
+    "src": "/svg/express.svg",
+    "show" : true
+  },
+  {
+    "name": "React",
+    "src": "/svg/react.svg",
+    "show" : true
+  },
+  {
+    "name": "Angular.js",
+    "src": "/svg/angular.svg",
+    "show" : true
+  },
+  {
+    "name": "Next.js",
+    "src": "/svg/next-js.svg",
+    "show" : true
+  },
+  {
+    "name": "Astro",
+    "src": "/svg/astro.svg",
+    "show" : true
+  },
+  {
+    "name": "Tailwind",
+    "src": "/svg/tailwind-css.svg",
+    "show" : true
+  },
+  {
+    "name": "Bulma",
+    "src": "/svg/bulma.svg",
+    "show" : true
+  }
+]
