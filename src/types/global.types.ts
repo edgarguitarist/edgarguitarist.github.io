@@ -48,3 +48,31 @@ export type svgProps = {
   class?: string;
   props?: {};
 };
+
+
+//Knowledges
+
+export enum Knowledge {
+  PL = "PL",
+  SGBD = "SGBD",
+  FW = "FW",
+}
+
+export type KnowData = {
+  name: string;
+  src: string;
+  show: boolean;
+};
+
+export type KnowAttribute = {
+  title: string;
+  data: KnowData[];
+};
+export interface KnowDicInterface {
+  [Knowledge.PL]: KnowAttribute;
+  [Knowledge.SGBD]: KnowAttribute;
+  [Knowledge.FW]: KnowAttribute;
+}
+export interface KnowInterface {
+  section: Knowledge;
+}

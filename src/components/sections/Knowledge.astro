@@ -1,0 +1,14 @@
+---
+import Sections from "@layouts/Sections.astro";
+import { t } from "i18next";
+import KnowledgePart from "@components/parts/knowledgePart.astro";
+import { Knowledge as Know } from "../../types/global.types";
+---
+
+<Sections id="knowledge" title={t("index.knowledge.title")}>
+  <div class="my-8">
+    <KnowledgePart section={Know.PL} />
+    <KnowledgePart section={Know.FW} />
+    <KnowledgePart section={Know.SGBD} />
+  </div>
+</Sections>

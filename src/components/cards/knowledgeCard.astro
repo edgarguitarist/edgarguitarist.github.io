@@ -1,0 +1,13 @@
+---
+export interface Props {
+  name: string;
+  src: string;
+}
+
+const { name, src } = Astro.props;
+---
+
+<card class="p-3 w-1/12 bg-slate-100 place-content-center">
+  <img class="my-auto w-20 aspect-square" alt={name} src={src} />
+  <h4 class="pt-2 px-auto text-s font-semibold text-center w-full">{name}</h4>
+</card>
