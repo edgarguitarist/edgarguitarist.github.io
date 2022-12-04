@@ -1,30 +1,24 @@
 ---
 import { changeLanguage, t } from "i18next";
-import Layout from "../layouts/Layout.astro";
+import App from "../layouts/App.astro";
 import { LanguageSelector, Trans } from "astro-i18next/components";
 import Navbar from "../components/Navbar.astro";
 import Footer from "../components/Footer.astro";
 import "../styles/global.css";
+import Aboutme from "@components/sections/Aboutme.astro";
+import Skills from "@components/sections/Skills.astro";
 
 changeLanguage("en");
 ---
 
-<Layout title="Welcome to Astro.">
+<App title="Welcome to Astro.">
 	<Navbar username="edgarguitarist">
 		<LanguageSelector showFlag={false} class="languages text-black " /> 
 	</Navbar>
 	<main>
-		<h1 class="mt-10 text-4xl font-bold">{t("index.working.salute")}</h1>
-		<h2 class="text-3xl my-5">
-			<Trans i18nKey="index.working.subtitle">
-				This page is being migrated to <a class="text-gradient font-bold" href="https://astro.build/">ASTRO</a> 🚀!
-			</Trans>
-		</h2>
-		
-		<h3 class="text-gradient text-xl font-bold">{t("index.working.seeyousoon")}</h3>
-		
-		<iframe class="my-5" width="560" height="315" src="https://www.youtube.com/embed/2GgiZZhO-PA?controls=0&autoplay=1" title="cat breakdancing for 10 hours" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+			
+		<Aboutme />
+		<Skills />
 	</main>
 	<Footer/>
-</Layout>
+</App>
