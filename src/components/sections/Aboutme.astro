@@ -2,7 +2,6 @@
 import Sections from "@layouts/Sections.astro";
 import ButtonSocials from "@components/ButtonSocials.astro";
 import { Info, Nav } from "../../types/global.types";
-import NavLinks from "@components/NavLinks.astro";
 import { t } from "i18next";
 const styleButton =
   "text-white text-center hover:transform hover:scale-105 social-btn w-16 h-16 ";
@@ -22,7 +21,7 @@ const styleButton =
         <span class="title-shadow text-gray-800">{t("index.about.description")}</span>
       </p>
       <p class="text-center py-5">
-        <a href="">
+        <a href="#projects">
           <span class="text-center text-3xl font-bold p-6 text-sky-800"
             >{t("index.about.subtitle")} 👽</span
           >
