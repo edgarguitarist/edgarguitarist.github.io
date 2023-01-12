@@ -1,26 +1,13 @@
 ---
-import { changeLanguage, t } from "i18next";
 import App from "../layouts/App.astro";
-import { LanguageSelector, Trans } from "astro-i18next/components";
-import Navbar from "../components/Navbar.astro";
-import Footer from "../components/Footer.astro";
 import "../styles/global.css";
 import Aboutme from "@components/sections/Aboutme.astro";
 import Skills from "@components/sections/Skills.astro";
 import Knowledge from "@components/sections/Knowledge.astro";
-
-changeLanguage("en");
 ---
 
-<App title="Welcome to Astro.">
-	<Navbar username="edgarguitarist">
-		<LanguageSelector showFlag={false} class="languages text-black " /> 
-	</Navbar>
-	<main>
-			
-		<Aboutme />
-		<Skills />
-		<Knowledge />
-	</main>
-	<Footer/>
+<App>
+  <Aboutme />
+  <Skills />
+  <Knowledge />
 </App>
