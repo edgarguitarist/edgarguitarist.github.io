@@ -33,7 +33,7 @@ const navDic:NavDicInterface = {
   },
 };
 ---
-<a href={navDic[link].href} id={link} class={navStyle}>
+<a href={navDic[link].href} id={`${link}_nav`} class={navStyle}>
   <Icon name={navDic[link].iconName} class={iconStyle}/>
   {navDic[link].label}
 </a>
