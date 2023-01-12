@@ -8,7 +8,7 @@ interface Props {
 const { className, id, title } = Astro.props;
 ---
 
-<section id={id} class={`pt-20 block min-h-screen ${className}`}>
+<section id={id} class={`pt-20 block min-h-screen ${className ?? ''}`}>
   {
     title && (
       <h1 class="text-5xl title-shadow text-gray-800 font-bold text-center">
