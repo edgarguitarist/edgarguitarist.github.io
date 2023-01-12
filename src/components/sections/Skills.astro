@@ -74,7 +74,7 @@ const skillsIcons: any = {
                   name={skillsIcons.hards[key].iconName}
                   class={skillsIcons.hards[key].style}
                 />{" "}
-                {value}
+                {t(`index.skills.hards.${key}`)}
               </li>
             ))
         }
@@ -91,7 +91,7 @@ const skillsIcons: any = {
                   name={skillsIcons.softs[key].iconName}
                   class={skillsIcons.softs[key].style}
                 />{" "}
-                {value}
+                {t(`index.skills.softs.${key}`)}
               </li>
             ))
         }
