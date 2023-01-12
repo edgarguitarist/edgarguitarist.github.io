@@ -9,18 +9,15 @@ body {
   /* overflow-y: hidden; */
 }
 
-main {
-  margin: auto;
-  padding: 1.5rem;
-  max-width: 80%;
-  text-align: -webkit-center;
-  padding-bottom: 6% !important;
+code {
+  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+    Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.languages-wrapper{
+.languages-wrapper {
   display: flex;
   flex-wrap: wrap;
-  padding:  5px 10px;
+  padding: 5px 10px;
   border-radius: 9999px;
   gap: 5px;
   background-color: #4e4e4e;
@@ -32,7 +29,7 @@ main {
   border: none;
   color: white;
   font-weight: 500;
-  cursor: pointer;  
+  cursor: pointer;
 }
 
 .languages-wrapper > select > option {
@@ -59,7 +56,6 @@ main {
 }
 
 .nav-gradient:hover {
-  
   background-image: var(--accent-gradient);
   /* -webkit-background-clip: text;
   -webkit-text-fill-color: transparent; */
@@ -192,7 +188,7 @@ a {
   background: linear-gradient(to left, #743ad5, #d53a9d);
 }
 
-.link {
+#link {
   margin-bottom: -8px;
   right: 0 !important;
   bottom: 0 !important;
@@ -201,33 +197,10 @@ a {
   width: 120px !important;
   height: 75px !important;
 }
-
-@media screen and (max-width: 650px) {
-  .link {
+@media screen and (max-width: 1020px) {
+  #link {
     display: none;
   }
-}
-
-.wd-5 {
-  width: 5%;
-}
-.wd-10 {
-  width: 10%;
-}
-.wd-15 {
-  width: 15%;
-}
-.wd-20 {
-  width: 20%;
-}
-.wd-25 {
-  width: 25%;
-}
-.wd-30 {
-  width: 30%;
-}
-.wd-45 {
-  width: 45%;
 }
 
 .aspect-4-3 {
