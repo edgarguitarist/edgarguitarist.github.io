@@ -20,5 +20,4 @@ jobs:
           node-version: 18
       - run: |
           node ./scraping/user.js
-          node ./scraping/repos.js
           
