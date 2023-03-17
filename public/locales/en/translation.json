@@ -26,21 +26,60 @@
       "title": "SKILLS",
       "description": "One of the things that has allowed me to forge each of the following skills has been my curiosity to know how the things that surround us work, especially technology, and the constant reading and research to solve each unknown.",
       "hards": {
-        "title": "HARD SKILLS",
-        "skill1": "INTERMEDIATE ENGLISH - B1",
-        "skill2": "AGILE METHODOLOGIES",
-        "skill3": "WEB AND MOBILE DEVELOPMENT TOOLS",
-        "skill4": "SOFTWARE VERSIONING MANAGEMENT (GIT)",
-        "skill5": "DATABASE MANAGER"
+        "title": {
+          "label": "HARD SKILLS",
+          "icon": ""
+        },
+        "skill1": {
+          "label": "INTERMEDIATE ENGLISH - B1",
+          "icon": "ic:baseline-language"
+        },
+        "skill2": {
+          "label": "AGILE METHODOLOGIES",
+          "icon": "ic:baseline-check-box"
+        },
+        "skill3": {
+          "label": "WEB AND MOBILE DEVELOPMENT TOOLS",
+          "icon": "ic:outline-mobile-friendly"
+        },
+        "skill4": {
+          "label": "SOFTWARE VERSIONING MANAGEMENT (GIT)",
+          "icon": "mdi:git"
+        },
+        "skill5": {
+          "label": "DATABASE MANAGER",
+          "icon": "mdi:database-sync"
+        }
       },
       "softs": {
-        "title": "SOFT SKILLS",
-        "skill1": "LEADERSHIP",
-        "skill2": "TEAMWORK",
-        "skill3": "COMMUNICATION",
-        "skill4": "CREATIVITY",
-        "skill5": "ADAPTABILITY",
-        "skill6": "NO FEAR OF SUCCESS"
+        "title": {
+          "label": "SOFT SKILLS",
+          "icon": ""
+        },
+        "skill1": {
+          "label": "LEADERSHIP",
+          "icon": "fluent:communication-person-20-filled"
+        },
+        "skill2": {
+          "label": "TEAMWORK",
+          "icon": "mdi:account-group-outline"
+        },
+        "skill3": {
+          "label": "COMMUNICATION",
+          "icon": "carbon:communication-unified"
+        },
+        "skill4": {
+          "label": "CREATIVITY",
+          "icon": "bi:stars"
+        },
+        "skill5": {
+          "label": "ADAPTABILITY",
+          "icon": "eos-icons:rotating-gear"
+        },
+        "skill6": {
+          "label": "NO FEAR OF SUCCESS",
+          "icon": "twemoji:alien"
+        }
       }
     },
     "projects": {

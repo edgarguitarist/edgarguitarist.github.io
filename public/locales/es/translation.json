@@ -26,21 +26,60 @@
       "title": "HABILIDADES",
       "description": "Una de las cosas que me ha permitido forjar cada una de las siguientes habilidades ha sido mi curiosidad por saber como funcionan las cosas que nos rodean en especial la tecnología y la constante lectura e investigación para resolver cada incognita.",
       "hards": {
-        "title": "Habilidades Técnicas",
-        "skill1": "INGLÉS INTERMEDIO - B1",
-        "skill2": "METODOLOGÍAS ÁGILES",
-        "skill3": "HERRAMIENTAS DE DESARROLLO WEB Y MOVIL",
-        "skill4": "VERSIONADO DE SOFTWARE (GIT)",
-        "skill5": "GESTORES DE BASES DE DATOS"
+        "title": {
+          "label": "Habilidades Técnicas",
+          "icon": ""
+        },
+        "skill1": {
+          "label": "INGLÉS INTERMEDIO - B1",
+          "icon": "ic:baseline-language"
+        },
+        "skill2": {
+          "label": "METODOLOGÍAS ÁGILES",
+          "icon": "ic:baseline-check-box"
+        },
+        "skill3": {
+          "label": "HERRAMIENTAS DE DESARROLLO WEB Y MOVIL",
+          "icon": "ic:outline-mobile-friendly"
+        },
+        "skill4": {
+          "label": "VERSIONADO DE SOFTWARE (GIT)",
+          "icon": "mdi:git"
+        },
+        "skill5": {
+          "label": "GESTORES DE BASES DE DATOS",
+          "icon": "mdi:database-sync"
+        }
       },
       "softs": {
-        "title": "Habilidades Sociales",
-        "skill1": "LIDERAZGO",
-        "skill2": "TRABAJO EN EQUIPO",
-        "skill3": "COMUNICACIÓN",
-        "skill4": "CREATIVIDAD",
-        "skill5": "ADAPTABILIDAD",
-        "skill6": "SIN MIEDO AL ÉXITO"
+        "title": {
+          "label": "Habilidades Sociales",
+          "icon": ""
+        },
+        "skill1": {
+          "label": "LIDERAZGO",
+          "icon": "fluent:communication-person-20-filled"
+        },
+        "skill2": {
+          "label": "TRABAJO EN EQUIPO",
+          "icon": "mdi:account-group-outline"
+        },
+        "skill3": {
+          "label": "COMUNICACIÓN",
+          "icon": "carbon:communication-unified"
+        },
+        "skill4": {
+          "label": "CREATIVIDAD",
+          "icon": "bi:stars"
+        },
+        "skill5": {
+          "label": "ADAPTABILIDAD",
+          "icon": "eos-icons:rotating-gear"
+        },
+        "skill6": {
+          "label": "SIN MIEDO AL ÉXITO",
+          "icon": "twemoji:alien"
+        }
       }
     },
     "projects": {
