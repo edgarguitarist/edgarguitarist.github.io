@@ -25,12 +25,12 @@
     "show" : true
   },
   {
-    "name": "Astro",
+    "name": "Astro.js",
     "src": "/svg/astro.svg",
     "show" : true
   },
   {
-    "name": "Tailwind",
+    "name": "TailwindCSS",
     "src": "/svg/tailwind-css.svg",
     "show" : true
   },
