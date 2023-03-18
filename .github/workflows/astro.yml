@@ -59,18 +59,18 @@ jobs:
           node-version: "16"
           cache: ${{ steps.detect-package-manager.outputs.manager }}
           cache-dependency-path: ${{ env.BUILD_PATH }}/package-lock.json
-      - name: Setup Pages
-        id: pages
-        uses: actions/configure-pages@v2
-      - name: Install dependencies
-        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
-        working-directory: ${{ env.BUILD_PATH }}
       - name: Getting my user info
         run: |
           node ./scraping/user.js
       - name: Getting my repos
         run: |
           node ./scraping/repos.js
+      - name: Setup Pages
+        id: pages
+        uses: actions/configure-pages@v2
+      - name: Install dependencies
+        run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
+        working-directory: ${{ env.BUILD_PATH }}
       - name: Generate Localized .astro pages
         run: |
           npx astro-i18next generate
