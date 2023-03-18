@@ -18,7 +18,9 @@ const styleButton =
     </div>
     <div class="lg:w-1/2 w-2/3 lg:mx-10 md:mx-6 pt-6 m-auto">
       <p class="text-center text-4xl font-bold">
-        <span class="title-shadow text-gray-800">{t("index.about.description")}</span>
+        <span class="title-shadow text-gray-800"
+          >{t("index.about.description")}</span
+        >
       </p>
       <p class="text-center py-5">
         <a href="#projects">
@@ -28,10 +30,10 @@ const styleButton =
         </a>
       </p>
       <div class="flex lg:gap-x-4 gap-x-2 place-content-center">
-        <ButtonSocials social={Info.twitter} className={styleButton} />
-        <ButtonSocials social={Info.linkedin} className={styleButton} />
-        <ButtonSocials social={Info.github} className={styleButton} />
-        <ButtonSocials social={Info.pdf2} className={styleButton} />
+        <ButtonSocials social={Info.twitter} />
+        <ButtonSocials social={Info.linkedin} />
+        <ButtonSocials social={Info.github} />
+        <ButtonSocials social={Info.pdf2} />
       </div>
     </div>
   </div>
