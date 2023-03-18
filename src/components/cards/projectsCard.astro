@@ -1,4 +1,6 @@
 ---
+import { Icon } from "astro-icon";
+
 export interface Props {
   name: string;
   repo: string;
@@ -11,11 +13,11 @@ export interface Props {
 const { name, repo, site, description, languages_url } = Astro.props;
 ---
 
-<article class="p-3 lg:w-[31%] border-gradient hover:scale-105">
+<article class="p-3 lg:w-[31%] border-gradient hover:scale-105 dark:bg-slate-900">
   <header>
     <a href={repo} title={name}>
       <h2
-        class="py-3 mx-auto w-[90%] text-2xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap"
+        class="py-3 mx-auto w-[90%] dark:text-white text-2xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap"
       >
         {name}
       </h2>
@@ -24,7 +26,7 @@ const { name, repo, site, description, languages_url } = Astro.props;
   <div class="content h-10">
     <p
       title={description}
-      class="text-sm text-gray-700 overflow-hidden text-ellipsis whitespace-nowrap"
+      class="text-md text-gray-700 dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap"
     >
       {description}
     </p>
@@ -33,16 +35,17 @@ const { name, repo, site, description, languages_url } = Astro.props;
     <div class="flex place-content-center gap-8 center w-[80%] mx-auto">
       <a
         href={repo}
-        class="bg-slate-800 px-10 py-2 rounded-lg text-white font-semibold"
-        target="_blank">GitHub</a
+        class="bg-slate-800 hover:bg-black px-8 py-2 rounded-lg text-white font-semibold flex items-center gap-1"
+        target="_blank"><Icon name="mdi:github" class="w-6 h-6" />GitHub</a
       >
       {
         site && (
           <a
             href={site}
-            class=" bg-slate-800 px-10 py-2 rounded-lg text-white font-semibold"
+            class=" bg-slate-800 hover:bg-black px-8 py-2 rounded-lg text-white font-semibold flex items-center gap-1"
             target="_blank"
           >
+            <Icon name="ic:baseline-language" class="w-6 h-6" />
             Website
           </a>
         )

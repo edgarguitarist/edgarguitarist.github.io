@@ -5,7 +5,7 @@ import Icon from "astro-icon";
 import locale from "@public/locales/en/translation.json";
 
 const iconStyle = "w-7 h-7 my-auto ";
-const liStyle = "flex font-semibold text-2xl text-gray-800 gap-2 ";
+const liStyle = "flex font-semibold text-2xl text-gray-800 dark:text-gray-300 gap-2 ";
 
 // can't include in translation file because TailwindCSS no generate its color class
 
@@ -13,16 +13,16 @@ const colors = {
   hards: {
     skill1: "text-blue-400",
     skill2: "text-green-400",
-    skill3: "text-gray-800",
+    skill3: "text-gray-800 dark:text-gray-300",
     skill4: "text-orange-600",
-    skill5: "text-slate-700",
+    skill5: "text-slate-700 dark:text-gray-300",
   },
   softs: {
     skill1: "text-blue-800",
-    skill2: "text-gray-800",
-    skill3: "text-slate-700",
+    skill2: "text-gray-800 dark:text-gray-100",
+    skill3: "text-slate-700 dark:text-gray-400",
     skill4: "text-yellow-500",
-    skill5: "text-gray-700",
+    skill5: "text-gray-700 dark:text-gray-600",
     skill6: "text-yellow-300",
   },
 };

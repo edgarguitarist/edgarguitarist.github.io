@@ -75,10 +75,6 @@ a {
   box-sizing: border-box;
 }
 
-.title-shadow {
-  text-shadow: 5px 5px 0px rgba(0, 0, 0, 0.2);
-}
-
 .social-btn {
   display: flex;
   place-content: center;
@@ -165,7 +161,7 @@ a {
   border-color: black;
 }
 
-.h-border-gradient:hover {
+.h-border-gradient:hover, .h-border-gradient:active, .h-border-gradient:focus {
   border-style: solid;
   border-width: 3px;
   border-image-slice: 1;
