@@ -1,0 +1,47 @@
+---
+// @ts-nocheck
+import { t } from "i18next";
+import Icon from "astro-icon";
+import locale from "@public/locales/en/translation.json";
+
+const iconStyle = "w-7 h-7 my-auto ";
+const liStyle = "flex font-semibold text-2xl text-gray-800 gap-2 ";
+
+// can't include in translation file because TailwindCSS no generate its color class
+
+const colors = {
+  hards: {
+    skill1: "text-blue-400",
+    skill2: "text-green-400",
+    skill3: "text-gray-800",
+    skill4: "text-orange-600",
+    skill5: "text-slate-700",
+  },
+  softs: {
+    skill1: "text-blue-800",
+    skill2: "text-gray-800",
+    skill3: "text-slate-700",
+    skill4: "text-yellow-500",
+    skill5: "text-gray-700",
+    skill6: "text-yellow-300",
+  },
+};
+
+const { width, skillType, margin } = Astro.props;
+---
+
+<div class={width + " mx-auto"}>
+    <ul>
+      {Object.entries(locale.index.skills[skillType])
+        .filter(([key]) => key != "title")
+        .map(([key, value]) => (
+          <li class={liStyle + margin}>
+            <Icon
+              name={value.icon}
+              class={iconStyle + colors[skillType][key]}
+            />{" "}
+            {t("index.skills." + skillType + "." + key + ".label")}
+          </li>
+        ))}
+    </ul>
+  </div>
