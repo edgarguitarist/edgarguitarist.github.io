@@ -1,0 +1,32 @@
+---
+import ProjectsCard from "@components/cards/projectsCard.astro";
+import repos from "@db/repos.json";
+import { t } from "i18next";
+
+const { forked } = Astro.props;
+const repositories = repos.filter((r) => r.fork === forked);
+---
+
+<div>
+  <h2 class="font-bold text-2xl mt-10 text-left">
+    {!forked ? t("index.projects.subtitle") : t("index.projects.subtitle2")}
+  </h2>
+  <div class="flex justify-around flex-wrap gap-10 mt-10">
+    {
+      repositories
+        .filter(
+          (r) => !r.name.includes("prueba") && !r.name.includes("portfolio") && !r.name.includes("edgarguitarist")
+        )
+        .map((repo) => {
+          return (
+            <ProjectsCard
+              name={repo.name}
+              repo={repo.html_url}
+              site={repo.homepage}
+              description={repo.description}
+            />
+          );
+        })
+    }
+  </div>
+</div>

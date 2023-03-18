@@ -1,0 +1,52 @@
+---
+export interface Props {
+  name: string;
+  repo: string;
+  site: string | null;
+  description: string | null;
+  languages_url?: string | null;
+  language?: string | null;
+}
+
+const { name, repo, site, description, languages_url } = Astro.props;
+---
+
+<article class="p-3 lg:w-[31%] border-gradient hover:scale-105">
+  <header>
+    <a href={repo} title={name}>
+      <h2
+        class="py-3 mx-auto w-[90%] text-2xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap"
+      >
+        {name}
+      </h2>
+    </a>
+  </header>
+  <div class="content h-10">
+    <p
+      title={description}
+      class="text-sm text-gray-700 overflow-hidden text-ellipsis whitespace-nowrap"
+    >
+      {description}
+    </p>
+  </div>
+  <footer>
+    <div class="flex place-content-center gap-8 center w-[80%] mx-auto">
+      <a
+        href={repo}
+        class="bg-slate-800 px-10 py-2 rounded-lg text-white font-semibold"
+        target="_blank">GitHub</a
+      >
+      {
+        site && (
+          <a
+            href={site}
+            class=" bg-slate-800 px-10 py-2 rounded-lg text-white font-semibold"
+            target="_blank"
+          >
+            Website
+          </a>
+        )
+      }
+    </div>
+  </footer>
+</article>
