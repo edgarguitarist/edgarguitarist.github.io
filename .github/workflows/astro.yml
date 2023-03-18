@@ -65,6 +65,12 @@ jobs:
       - name: Install dependencies
         run: ${{ steps.detect-package-manager.outputs.manager }} ${{ steps.detect-package-manager.outputs.command }}
         working-directory: ${{ env.BUILD_PATH }}
+      - name: Getting my user info
+        run: |
+          node ./scraping/user.js
+      - name: Getting my repos
+        run: |
+          node ./scraping/repos.js
       - name: Generate Localized .astro pages
         run: |
           npx astro-i18next generate
