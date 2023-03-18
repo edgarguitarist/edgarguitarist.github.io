@@ -41,6 +41,7 @@ code {
 
 .text-gradient {
   background-image: var(--accent-gradient);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 400%;
@@ -48,6 +49,7 @@ code {
 }
 .text-gradient-2 {
   background-image: var(--accent-gradient);
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   background-size: 210%;
@@ -152,7 +154,18 @@ a {
 }
 
 .border-gradient {
-  border-radius: 50%;
+  border-style: solid;
+  border-width: 3px;
+  border-image-slice: 1;
+  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+}
+.h-border-gradient{
+  border-style: solid;
+  border-width: 3px;
+  border-color: black;
+}
+
+.h-border-gradient:hover {
   border-style: solid;
   border-width: 3px;
   border-image-slice: 1;
@@ -182,10 +195,10 @@ a {
   border-radius: 50%;
   display: block;
   background: #743ad5;
-  background: -webkit-linear-gradient(to left, #743ad5, #d53a9d);
+  background: linear-gradient(to left, #743ad5, #d53a9d);
   background: -o-linear-gradient(to left, #743ad5, #d53a9d);
   background: -moz-linear-gradient(to left, #743ad5, #d53a9d);
-  background: linear-gradient(to left, #743ad5, #d53a9d);
+  background: -webkit-linear-gradient(to left, #743ad5, #d53a9d);
 }
 
 #link {
