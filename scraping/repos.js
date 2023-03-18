@@ -1,7 +1,8 @@
 import { writeDBFile } from "../db/index.js";
-import user from "../db/user.json" assert { type: "json" };
+
+const REPOS_URL = "https://api.github.com/users/edgarguitarist/repos";
 
 export default async () => {
-  writeDBFile("repos", await fetch(user.repos_url).then((res) => res.json()));
+  writeDBFile("repos", await fetch(REPOS_URL).then((res) => res.json()));
   console.log("We got it, my repos data!!!");
 };

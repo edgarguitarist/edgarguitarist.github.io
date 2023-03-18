@@ -8,7 +8,7 @@ on:
       - webhook
 
   schedule:
-    - cron: '0 */1 * * 0'
+    - cron: "0 */1 * * 0"
 
 jobs:
   build:
@@ -18,6 +18,9 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - name: Getting my user info
       - run: |
           node ./scraping/user.js
-          
+      - name: Getting my repos
+        run: |
+          node ./scraping/repos.js
