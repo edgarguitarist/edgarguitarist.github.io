@@ -7,24 +7,27 @@ import { Icon } from "astro-icon";
 
 interface Props {
   social: Info;
-  className?: string;
+  footer?: boolean;
 }
+const styleButton =
+  "text-white text-center hover:transform hover:scale-105 social-btn ";
 
-const { social, className } = Astro.props;
+const { social, footer = true } = Astro.props;
 
 const iconStyle = "w-3/5 h-3/5 my-auto";
-const buttonStyle = className
-  ? className
-  : "text-white text-center hover:transform hover:scale-105 social-btn w-10 h-10 ";
+const buttonStyle = !footer
+  ? styleButton + "w-16 h-16 "
+  : styleButton + "w-10 h-10 ";
+  
 const socialDic: SocialDicInterface = {
   facebook: {
     href: "https://www.facebook.com/edgarm.laz",
-    //iconName: <Facebook />,
+    iconName: "mdi:facebook",
     style: buttonStyle + "fb",
   },
   instagram: {
     href: "https://www.instagram.com/edgarguitarist/",
-    //iconName: <Instagram />,
+    iconName: "mdi:instagram",
     style: buttonStyle + "ins",
   },
   twitter: {
