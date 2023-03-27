@@ -8,7 +8,8 @@
     "start": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "i18n": "npx astro-i18next generate"
   },
   "dependencies": {
     "@astrojs/preact": "^1.2.0",
@@ -16,6 +17,7 @@
     "astro": "^1.6.11",
     "astro-i18next": "^1.0.0-beta.13",
     "astro-icon": "^0.8.0",
+    "dotenv": "^16.0.3",
     "preact": "^10.11.3",
     "tailwindcss": "^3.2.4"
   }
