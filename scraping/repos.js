@@ -2,12 +2,12 @@ import { writeDBFile } from "../db/index.js";
 import * as dotenv from 'dotenv' 
 dotenv.config()
 
-const GITHUB_TOKEN = process.env.GITHUB_TOKEN;
+const TOKEN = process.env.TOKEN;
 const REPOS_URL = process.env.REPOS_URL;
 
 const headers = {
   Accept: "application/vnd.github.v3+json",
-  Authorization: GITHUB_TOKEN,
+  Authorization: TOKEN,
 };
 
 let repos = []
