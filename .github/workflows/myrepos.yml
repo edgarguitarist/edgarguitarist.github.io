@@ -24,6 +24,7 @@ jobs:
           run_install: true
       - run: |
           npm run scrape
-          git config --global user.name edoga-bot
+          git config user.name "edoga-bot"
+          git config user.email "edgarguitarist@gmail.com"
           git diff --quiet && git diff --staged --quiet || git commit -am "[bot] update my repos"
           git push https://${{ secrets.ACCESS_TOKEN }}@github.com/edgarguitarist/edgarguitarist.github.io.git
