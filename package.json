@@ -9,7 +9,8 @@
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "i18n": "npx astro-i18next generate"
+    "i18n": "npx astro-i18next generate",
+    "scrape": "node --no-warnings scraping/index.js"
   },
   "dependencies": {
     "@astrojs/preact": "^1.2.0",
