@@ -2,6 +2,7 @@
 import NavLinks from "./NavLinks.astro";
 import { Nav } from "../types/global.types";
 import { Icon } from "astro-icon";
+import { t } from "i18next";
 const { username } = Astro.props;
 ---
 
@@ -24,6 +25,7 @@ const { username } = Astro.props;
   <button
     id="theme-toggle"
     type="button"
+    title={t("index.nav.toggle")}
     class="text-gray-500 dark:text-gray-400 rounded-lg text-sm p-2.5"
   >
     <svg
