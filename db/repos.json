@@ -109,13 +109,6 @@
     "open_issues": 0,
     "watchers": 1,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "PHP": 3486,
       "JavaScript": 3462,
@@ -223,13 +216,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "PHP": 851474,
       "SCSS": 336872,
@@ -338,13 +324,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "Python": 3424652,
       "Tcl": 24432,
@@ -457,13 +436,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributors": [
       {
         "login": "midudev",
@@ -1139,13 +1111,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributors": [
       {
         "login": "midudev",
@@ -1272,13 +1237,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributors": [
       {
         "login": "midudev",
@@ -1409,13 +1367,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {}
   },
   {
@@ -1486,13 +1437,13 @@
     "deployments_url": "https://api.github.com/repos/edgarguitarist/edgarguitarist.github.io/deployments",
     "created_at": "2021-09-17T20:09:33Z",
     "updated_at": "2022-11-27T05:34:20Z",
-    "pushed_at": "2023-03-27T02:56:27Z",
+    "pushed_at": "2023-04-15T23:50:19Z",
     "git_url": "git://github.com/edgarguitarist/edgarguitarist.github.io.git",
     "ssh_url": "git@github.com:edgarguitarist/edgarguitarist.github.io.git",
     "clone_url": "https://github.com/edgarguitarist/edgarguitarist.github.io.git",
     "svn_url": "https://github.com/edgarguitarist/edgarguitarist.github.io",
     "homepage": "https://edgarguitarist.github.io/",
-    "size": 26151,
+    "size": 26164,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": "Astro",
@@ -1517,17 +1468,10 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
-      "Astro": 20984,
+      "Astro": 21072,
       "CSS": 4267,
-      "JavaScript": 2425,
+      "JavaScript": 2563,
       "TypeScript": 1954
     }
   },
@@ -1630,13 +1574,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "JavaScript": 5374
     }
@@ -1740,13 +1677,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "Java": 4753
     }
@@ -1850,13 +1780,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "PHP": 396955,
       "CSS": 72288,
@@ -1963,13 +1886,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributors": [
       {
         "login": "sudheerj",
@@ -2705,13 +2621,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "PHP": 489886,
       "JavaScript": 57179,
@@ -2819,13 +2728,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "PHP": 492945,
       "JavaScript": 40426,
@@ -2932,13 +2834,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "Java": 150141
     }
@@ -3010,17 +2905,17 @@
     "releases_url": "https://api.github.com/repos/edgarguitarist/kings-league-project/releases{/id}",
     "deployments_url": "https://api.github.com/repos/edgarguitarist/kings-league-project/deployments",
     "created_at": "2023-01-07T17:36:18Z",
-    "updated_at": "2023-01-08T09:53:27Z",
-    "pushed_at": "2023-01-09T19:49:08Z",
+    "updated_at": "2023-04-15T22:30:45Z",
+    "pushed_at": "2023-04-15T22:37:05Z",
     "git_url": "git://github.com/edgarguitarist/kings-league-project.git",
     "ssh_url": "git@github.com:edgarguitarist/kings-league-project.git",
     "clone_url": "https://github.com/edgarguitarist/kings-league-project.git",
     "svn_url": "https://github.com/edgarguitarist/kings-league-project",
     "homepage": "https://kingsleague.dev",
-    "size": 44796,
+    "size": 49804,
     "stargazers_count": 0,
     "watchers_count": 0,
-    "language": "Astro",
+    "language": "JavaScript",
     "has_issues": false,
     "has_projects": true,
     "has_downloads": true,
@@ -3048,13 +2943,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributors": [
       {
         "login": "midudev",
@@ -3075,7 +2963,7 @@
         "received_events_url": "https://api.github.com/users/midudev/received_events",
         "type": "User",
         "site_admin": false,
-        "contributions": 506
+        "contributions": 578
       },
       {
         "login": "PChaparro",
@@ -3096,7 +2984,7 @@
         "received_events_url": "https://api.github.com/users/PChaparro/received_events",
         "type": "User",
         "site_admin": false,
-        "contributions": 66
+        "contributions": 80
       },
       {
         "login": "Felix-Icaza",
@@ -3117,7 +3005,28 @@
         "received_events_url": "https://api.github.com/users/Felix-Icaza/received_events",
         "type": "User",
         "site_admin": false,
-        "contributions": 34
+        "contributions": 61
+      },
+      {
+        "login": "JordiNodeJS",
+        "id": 71975008,
+        "node_id": "MDQ6VXNlcjcxOTc1MDA4",
+        "avatar_url": "https://avatars.githubusercontent.com/u/71975008?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/JordiNodeJS",
+        "html_url": "https://github.com/JordiNodeJS",
+        "followers_url": "https://api.github.com/users/JordiNodeJS/followers",
+        "following_url": "https://api.github.com/users/JordiNodeJS/following{/other_user}",
+        "gists_url": "https://api.github.com/users/JordiNodeJS/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/JordiNodeJS/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/JordiNodeJS/subscriptions",
+        "organizations_url": "https://api.github.com/users/JordiNodeJS/orgs",
+        "repos_url": "https://api.github.com/users/JordiNodeJS/repos",
+        "events_url": "https://api.github.com/users/JordiNodeJS/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/JordiNodeJS/received_events",
+        "type": "User",
+        "site_admin": false,
+        "contributions": 48
       },
       {
         "login": "Damian-Zsiros-Prog",
@@ -3159,7 +3068,28 @@
         "received_events_url": "https://api.github.com/users/Fasping/received_events",
         "type": "User",
         "site_admin": false,
-        "contributions": 27
+        "contributions": 30
+      },
+      {
+        "login": "KewinBarboza",
+        "id": 32785129,
+        "node_id": "MDQ6VXNlcjMyNzg1MTI5",
+        "avatar_url": "https://avatars.githubusercontent.com/u/32785129?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/KewinBarboza",
+        "html_url": "https://github.com/KewinBarboza",
+        "followers_url": "https://api.github.com/users/KewinBarboza/followers",
+        "following_url": "https://api.github.com/users/KewinBarboza/following{/other_user}",
+        "gists_url": "https://api.github.com/users/KewinBarboza/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/KewinBarboza/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/KewinBarboza/subscriptions",
+        "organizations_url": "https://api.github.com/users/KewinBarboza/orgs",
+        "repos_url": "https://api.github.com/users/KewinBarboza/repos",
+        "events_url": "https://api.github.com/users/KewinBarboza/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/KewinBarboza/received_events",
+        "type": "User",
+        "site_admin": false,
+        "contributions": 28
       },
       {
         "login": "AngelAlexQC",
@@ -3183,6 +3113,27 @@
         "contributions": 20
       },
       {
+        "login": "Pabl0Parra",
+        "id": 98957023,
+        "node_id": "U_kgDOBeX23w",
+        "avatar_url": "https://avatars.githubusercontent.com/u/98957023?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/Pabl0Parra",
+        "html_url": "https://github.com/Pabl0Parra",
+        "followers_url": "https://api.github.com/users/Pabl0Parra/followers",
+        "following_url": "https://api.github.com/users/Pabl0Parra/following{/other_user}",
+        "gists_url": "https://api.github.com/users/Pabl0Parra/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/Pabl0Parra/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/Pabl0Parra/subscriptions",
+        "organizations_url": "https://api.github.com/users/Pabl0Parra/orgs",
+        "repos_url": "https://api.github.com/users/Pabl0Parra/repos",
+        "events_url": "https://api.github.com/users/Pabl0Parra/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/Pabl0Parra/received_events",
+        "type": "User",
+        "site_admin": false,
+        "contributions": 15
+      },
+      {
         "login": "edgarguitarist",
         "id": 47311955,
         "node_id": "MDQ6VXNlcjQ3MzExOTU1",
@@ -3204,6 +3155,27 @@
         "contributions": 13
       },
       {
+        "login": "github-actions[bot]",
+        "id": 41898282,
+        "node_id": "MDM6Qm90NDE4OTgyODI=",
+        "avatar_url": "https://avatars.githubusercontent.com/in/15368?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/github-actions%5Bbot%5D",
+        "html_url": "https://github.com/apps/github-actions",
+        "followers_url": "https://api.github.com/users/github-actions%5Bbot%5D/followers",
+        "following_url": "https://api.github.com/users/github-actions%5Bbot%5D/following{/other_user}",
+        "gists_url": "https://api.github.com/users/github-actions%5Bbot%5D/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/github-actions%5Bbot%5D/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/github-actions%5Bbot%5D/subscriptions",
+        "organizations_url": "https://api.github.com/users/github-actions%5Bbot%5D/orgs",
+        "repos_url": "https://api.github.com/users/github-actions%5Bbot%5D/repos",
+        "events_url": "https://api.github.com/users/github-actions%5Bbot%5D/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/github-actions%5Bbot%5D/received_events",
+        "type": "Bot",
+        "site_admin": false,
+        "contributions": 13
+      },
+      {
         "login": "xJosee",
         "id": 54871810,
         "node_id": "MDQ6VXNlcjU0ODcxODEw",
@@ -3220,27 +3192,6 @@
         "repos_url": "https://api.github.com/users/xJosee/repos",
         "events_url": "https://api.github.com/users/xJosee/events{/privacy}",
         "received_events_url": "https://api.github.com/users/xJosee/received_events",
-        "type": "User",
-        "site_admin": false,
-        "contributions": 12
-      },
-      {
-        "login": "KewinBarboza",
-        "id": 32785129,
-        "node_id": "MDQ6VXNlcjMyNzg1MTI5",
-        "avatar_url": "https://avatars.githubusercontent.com/u/32785129?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/KewinBarboza",
-        "html_url": "https://github.com/KewinBarboza",
-        "followers_url": "https://api.github.com/users/KewinBarboza/followers",
-        "following_url": "https://api.github.com/users/KewinBarboza/following{/other_user}",
-        "gists_url": "https://api.github.com/users/KewinBarboza/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/KewinBarboza/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/KewinBarboza/subscriptions",
-        "organizations_url": "https://api.github.com/users/KewinBarboza/orgs",
-        "repos_url": "https://api.github.com/users/KewinBarboza/repos",
-        "events_url": "https://api.github.com/users/KewinBarboza/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/KewinBarboza/received_events",
         "type": "User",
         "site_admin": false,
         "contributions": 12
@@ -3351,27 +3302,6 @@
         "contributions": 8
       },
       {
-        "login": "Pabl0Parra",
-        "id": 98957023,
-        "node_id": "U_kgDOBeX23w",
-        "avatar_url": "https://avatars.githubusercontent.com/u/98957023?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/Pabl0Parra",
-        "html_url": "https://github.com/Pabl0Parra",
-        "followers_url": "https://api.github.com/users/Pabl0Parra/followers",
-        "following_url": "https://api.github.com/users/Pabl0Parra/following{/other_user}",
-        "gists_url": "https://api.github.com/users/Pabl0Parra/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/Pabl0Parra/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/Pabl0Parra/subscriptions",
-        "organizations_url": "https://api.github.com/users/Pabl0Parra/orgs",
-        "repos_url": "https://api.github.com/users/Pabl0Parra/repos",
-        "events_url": "https://api.github.com/users/Pabl0Parra/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/Pabl0Parra/received_events",
-        "type": "User",
-        "site_admin": false,
-        "contributions": 8
-      },
-      {
         "login": "pabman11",
         "id": 15101708,
         "node_id": "MDQ6VXNlcjE1MTAxNzA4",
@@ -3391,6 +3321,27 @@
         "type": "User",
         "site_admin": false,
         "contributions": 7
+      },
+      {
+        "login": "carlosfernandezcabrero",
+        "id": 56631428,
+        "node_id": "MDQ6VXNlcjU2NjMxNDI4",
+        "avatar_url": "https://avatars.githubusercontent.com/u/56631428?v=4",
+        "gravatar_id": "",
+        "url": "https://api.github.com/users/carlosfernandezcabrero",
+        "html_url": "https://github.com/carlosfernandezcabrero",
+        "followers_url": "https://api.github.com/users/carlosfernandezcabrero/followers",
+        "following_url": "https://api.github.com/users/carlosfernandezcabrero/following{/other_user}",
+        "gists_url": "https://api.github.com/users/carlosfernandezcabrero/gists{/gist_id}",
+        "starred_url": "https://api.github.com/users/carlosfernandezcabrero/starred{/owner}{/repo}",
+        "subscriptions_url": "https://api.github.com/users/carlosfernandezcabrero/subscriptions",
+        "organizations_url": "https://api.github.com/users/carlosfernandezcabrero/orgs",
+        "repos_url": "https://api.github.com/users/carlosfernandezcabrero/repos",
+        "events_url": "https://api.github.com/users/carlosfernandezcabrero/events{/privacy}",
+        "received_events_url": "https://api.github.com/users/carlosfernandezcabrero/received_events",
+        "type": "User",
+        "site_admin": false,
+        "contributions": 6
       },
       {
         "login": "saitama1899",
@@ -3493,27 +3444,6 @@
         "repos_url": "https://api.github.com/users/bjvalmasedadev/repos",
         "events_url": "https://api.github.com/users/bjvalmasedadev/events{/privacy}",
         "received_events_url": "https://api.github.com/users/bjvalmasedadev/received_events",
-        "type": "User",
-        "site_admin": false,
-        "contributions": 5
-      },
-      {
-        "login": "carlosfernandezcabrero",
-        "id": 56631428,
-        "node_id": "MDQ6VXNlcjU2NjMxNDI4",
-        "avatar_url": "https://avatars.githubusercontent.com/u/56631428?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/carlosfernandezcabrero",
-        "html_url": "https://github.com/carlosfernandezcabrero",
-        "followers_url": "https://api.github.com/users/carlosfernandezcabrero/followers",
-        "following_url": "https://api.github.com/users/carlosfernandezcabrero/following{/other_user}",
-        "gists_url": "https://api.github.com/users/carlosfernandezcabrero/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/carlosfernandezcabrero/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/carlosfernandezcabrero/subscriptions",
-        "organizations_url": "https://api.github.com/users/carlosfernandezcabrero/orgs",
-        "repos_url": "https://api.github.com/users/carlosfernandezcabrero/repos",
-        "events_url": "https://api.github.com/users/carlosfernandezcabrero/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/carlosfernandezcabrero/received_events",
         "type": "User",
         "site_admin": false,
         "contributions": 5
@@ -3643,53 +3573,11 @@
         "type": "User",
         "site_admin": false,
         "contributions": 5
-      },
-      {
-        "login": "JoeMancera",
-        "id": 43323828,
-        "node_id": "MDQ6VXNlcjQzMzIzODI4",
-        "avatar_url": "https://avatars.githubusercontent.com/u/43323828?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/JoeMancera",
-        "html_url": "https://github.com/JoeMancera",
-        "followers_url": "https://api.github.com/users/JoeMancera/followers",
-        "following_url": "https://api.github.com/users/JoeMancera/following{/other_user}",
-        "gists_url": "https://api.github.com/users/JoeMancera/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/JoeMancera/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/JoeMancera/subscriptions",
-        "organizations_url": "https://api.github.com/users/JoeMancera/orgs",
-        "repos_url": "https://api.github.com/users/JoeMancera/repos",
-        "events_url": "https://api.github.com/users/JoeMancera/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/JoeMancera/received_events",
-        "type": "User",
-        "site_admin": false,
-        "contributions": 5
-      },
-      {
-        "login": "doulovera",
-        "id": 42481580,
-        "node_id": "MDQ6VXNlcjQyNDgxNTgw",
-        "avatar_url": "https://avatars.githubusercontent.com/u/42481580?v=4",
-        "gravatar_id": "",
-        "url": "https://api.github.com/users/doulovera",
-        "html_url": "https://github.com/doulovera",
-        "followers_url": "https://api.github.com/users/doulovera/followers",
-        "following_url": "https://api.github.com/users/doulovera/following{/other_user}",
-        "gists_url": "https://api.github.com/users/doulovera/gists{/gist_id}",
-        "starred_url": "https://api.github.com/users/doulovera/starred{/owner}{/repo}",
-        "subscriptions_url": "https://api.github.com/users/doulovera/subscriptions",
-        "organizations_url": "https://api.github.com/users/doulovera/orgs",
-        "repos_url": "https://api.github.com/users/doulovera/repos",
-        "events_url": "https://api.github.com/users/doulovera/events{/privacy}",
-        "received_events_url": "https://api.github.com/users/doulovera/received_events",
-        "type": "User",
-        "site_admin": false,
-        "contributions": 4
       }
     ],
     "languages": {
-      "Astro": 73287,
-      "JavaScript": 52541,
+      "JavaScript": 52101,
+      "Astro": 2577,
       "TypeScript": 445
     }
   },
@@ -3792,13 +3680,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributors": [
       {
         "login": "midudev",
@@ -4370,13 +4251,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributors": [
       {
         "login": "midudev",
@@ -4530,13 +4404,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributors": [
       {
         "login": "midudev",
@@ -5278,13 +5145,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "JavaScript": 23050,
       "CSS": 2033
@@ -5389,13 +5249,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributors": [
       {
         "login": "midudev",
@@ -5693,13 +5546,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "JavaScript": 10037,
       "HTML": 1678,
@@ -5811,13 +5657,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributors": [
       {
         "login": "yangshun",
@@ -6556,13 +6395,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributors": [
       {
         "login": "midudev",
@@ -6992,13 +6824,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributors": [
       {
         "login": "davila7",
@@ -7125,13 +6950,6 @@
     "open_issues": 0,
     "watchers": 2,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "HTML": 5742,
       "JavaScript": 3547
