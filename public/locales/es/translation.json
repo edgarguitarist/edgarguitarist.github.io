@@ -15,7 +15,8 @@
       "skills": "Habilidades",
       "projects": "Proyectos",
       "knowledge": "Conocimientos",
-      "contact_me": "Contáctame"
+      "contact_me": "Contáctame",
+      "toggle": "Cambiar Tema"
     },
     "about": {
       "title": "Acerca de Mi",
@@ -95,7 +96,7 @@
       "section3": "BIBLIOTECAS & FRAMEWORKS"
     },
     "footer": {
-      "developer": "Desarrollador con ❤️ por",
+      "developer": "Desarrollado con ❤️ por",
       "curriculum": "/documents/Edgar_Laz-Desarrollador.pdf"
     }
   },
