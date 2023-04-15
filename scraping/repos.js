@@ -3,7 +3,7 @@ import * as dotenv from 'dotenv'
 dotenv.config()
 
 const TOKEN = process.env.TOKEN;
-const REPOS_URL = process.env.REPOS_URL;
+const REPOS_URL = process.env.REPOS_URL ?? "https://api.github.com/users/edgarguitarist/repos";
 
 const headers = {
   Accept: "application/vnd.github.v3+json",
