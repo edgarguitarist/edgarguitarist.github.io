@@ -1,4 +1,4 @@
-name: Scrape My Repos Info
+name: Get Repos
 on:
   workflow_dispatch:
 
