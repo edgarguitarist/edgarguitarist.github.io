@@ -5,6 +5,11 @@
 name: Deploy Astro site to Pages
 
 on:
+  #Run when existing an update of data
+  workflow_run:
+    workflows: ["myrepos"]
+    types: [completed]
+    
   # Runs on pushes targeting the default branch
   push:
     branches: ["main"]
