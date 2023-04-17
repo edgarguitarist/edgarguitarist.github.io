@@ -36,16 +36,16 @@ const lenguajes_string = lenguajes.join(", ") + ".";
       </h2>
     </a>
   </header>
-  <div class="content h-16">
+  <div class="content h-20">
     <p
       title={description}
       class="text-md text-gray-700 dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap"
     >
-      {description}
+      {description || '...'}
     </p>
     <p
       title={`${t("index.projects.cards.languages")}: ${lenguajes_string}`}
-      class="text-slate-800 dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap flex items-center justify-center gap-2"
+      class="text-slate-800 dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap flex items-center justify-center gap-2 pt-2"
     >
       {t("index.projects.cards.languages")}: {
         lenguajes.map((lenguaje) => (
