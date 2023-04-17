@@ -1,10 +1,13 @@
 ---
+import { changeLanguage } from "i18next";
 import App from "../layouts/App.astro";
 import "../styles/global.css";
 import Aboutme from "@components/sections/Aboutme.astro";
 import Skills from "@components/sections/Skills.astro";
 import Knowledge from "@components/sections/Knowledge.astro";
 import Projects from "@components/sections/Projects.astro";
+
+changeLanguage("en");
 ---
 
 <App>
