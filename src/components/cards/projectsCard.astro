@@ -1,55 +1,88 @@
 ---
-import { Icon } from "astro-icon";
+import ButtonLanguages from "@components/buttons/ButtonLanguages.astro";
+import ButtonProjectsCard from "@components/buttons/ButtonProjectsCard.astro";
+import { t } from "i18next";
 
-export interface Props {
+interface Props {
   name: string;
-  repo: string;
+  repo_url: string;
   site: string | null;
   description: string | null;
-  languages_url?: string | null;
-  language?: string | null;
+  contributor: Contributor;
+  languages: Languages;
 }
 
-const { name, repo, site, description, languages_url } = Astro.props;
+const { name, repo_url, site, description, contributor, languages } =
+  Astro.props;
+
+const no_show = ["Hack", "PowerShell", "Tcl", "Batchfile", "Shell"];
+
+const lenguajes = Object.keys(languages)
+  .filter((key) => !no_show.includes(key))
+  .sort();
+
+const lenguajes_string = lenguajes.join(", ") + ".";
 ---
 
-<article class="p-3 lg:w-[31%] border-gradient hover:scale-105">
+<article
+  class="p-3 lg:w-[31%] md:w-[45%] w-[96%] border-gradient hover:scale-105 relative font-semibold"
+>
   <header>
-    <a href={repo} title={name}>
+    <a href={repo_url} title={name}>
       <h2
-        class="py-3 mx-auto w-[90%] dark:text-white text-2xl font-semibold overflow-hidden text-ellipsis whitespace-nowrap"
+        class="py-3 mx-auto w-[90%] dark:text-white text-2xl overflow-hidden text-ellipsis whitespace-nowrap"
       >
         {name}
       </h2>
     </a>
   </header>
-  <div class="content h-10">
+  <div class="content h-16">
     <p
       title={description}
       class="text-md text-gray-700 dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap"
     >
       {description}
     </p>
+    <p
+      title={`${t("index.projects.cards.languages")}: ${lenguajes_string}`}
+      class="text-slate-800 dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap flex items-center justify-center gap-2"
+    >
+      {t("index.projects.cards.languages")}: {
+        lenguajes.map((lenguaje) => (
+          <ButtonLanguages language={lenguaje}></ButtonLanguages>
+        ))
+      }
+    </p>
   </div>
   <footer>
     <div class="flex place-content-center gap-8 center w-[80%] mx-auto">
-      <a
-        href={repo}
-        class="bg-slate-800 hover:bg-black px-8 py-2 rounded-lg text-white font-semibold flex items-center gap-1"
-        target="_blank"><Icon name="mdi:github" class="w-6 h-6" />GitHub</a
-      >
+      <ButtonProjectsCard
+        name="GitHub"
+        icon_name="mdi:github"
+        site={repo_url}
+      />
       {
         site && (
-          <a
-            href={site}
-            class=" bg-slate-800 hover:bg-black px-8 py-2 rounded-lg text-white font-semibold flex items-center gap-1"
-            target="_blank"
-          >
-            <Icon name="ic:baseline-language" class="w-6 h-6" />
-            Website
-          </a>
+          <ButtonProjectsCard
+            name="Site"
+            icon_name="ic:baseline-language"
+            site={site}
+          />
         )
       }
     </div>
   </footer>
+  {
+    contributor && (
+      <div
+        id="badge"
+        title={`${contributor.contributions} ${t(
+          "index.projects.cards.contribution"
+        )}`}
+        class="absolute inline-flex items-center justify-center w-8 h-8 font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900 text-md"
+      >
+        {contributor.contributions}
+      </div>
+    )
+  }
 </article>
