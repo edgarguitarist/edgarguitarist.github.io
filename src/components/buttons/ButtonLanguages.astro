@@ -1,0 +1,23 @@
+---
+import langs from "@public/src/langs.json";
+import libs from "@public/src/libs.json";
+const { language } = Astro.props;
+
+interface Properties {
+  name: string;
+  src: string;
+  show: boolean;
+}
+
+const selectedLanguage: Properties =
+  (langs.find((lang) => lang.name === language) as Properties) ??
+  (libs.find((lib) => lib.name === language) as Properties);
+---
+
+<button title={language}>
+  <img
+    class="w-8 h-8"
+    src={selectedLanguage?.src}
+    alt={selectedLanguage?.name}
+  />
+</button>
