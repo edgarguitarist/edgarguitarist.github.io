@@ -2,9 +2,9 @@ import { writeDBFile } from "../db/index.js";
 import * as dotenv from 'dotenv'
 dotenv.config()
 
-const USER = process.env.USER ?? "edgarguitarist";
+const USER = "edgarguitarist";
 const TOKEN = process.env.TOKEN;
-const REPOS_URL = process.env.REPOS_URL ?? `https://api.github.com/users/${USER}/repos`;
+const REPOS_URL = `https://api.github.com/users/${USER}/repos`;
 
 const headers = {
   Accept: "application/vnd.github.v3+json",
