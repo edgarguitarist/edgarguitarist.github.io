@@ -85,8 +85,12 @@
     },
     "projects": {
       "title": "PROJECTS",
-      "subtitle": "REPOSITORIES",
-      "subtitle2": "FORKS",
+      "repositories": "REPOSITORIES",
+      "forks": "FORKS",
+      "cards": {
+        "contribution": "Contributions",
+        "languages": "Languages"
+      },
       "no_description": "No Description"
     },
     "knowledge": {
