@@ -1,6 +1,6 @@
 [
   {
-    "name": "Node.js",
+    "name": "Node",
     "src": "/svg/nodejs.svg",
     "show" : true
   },
@@ -15,17 +15,17 @@
     "show" : true
   },
   {
-    "name": "Angular.js",
+    "name": "Angular",
     "src": "/svg/angular.svg",
     "show" : true
   },
   {
-    "name": "Next.js",
+    "name": "Next",
     "src": "/svg/next-js.svg",
     "show" : true
   },
   {
-    "name": "Astro.js",
+    "name": "Astro",
     "src": "/svg/astro.svg",
     "show" : true
   },
@@ -38,5 +38,15 @@
     "name": "Bulma",
     "src": "/svg/bulma.svg",
     "show" : true
+  },
+  {
+    "name": "Svelte",
+    "src": "/svg/svelte.svg",
+    "show" : false
+  },
+  {
+    "name": "Vue",
+    "src": "/svg/vue.svg",
+    "show" : false
   }
 ]

@@ -1,23 +1,18 @@
 [
   {
-    "name": "HTML-CSS-JS",
-    "src": "/svg/html-css-js.png",
-    "show" : true
-  },
-  {
     "name": "HTML",
     "src": "/svg/html.svg",
-    "show" : false
+    "show" : true
   },
   {
     "name": "CSS",
     "src": "/svg/css.svg",
-    "show" : false
+    "show" : true
   },
   {
     "name": "JavaScript",
     "src": "/svg/js.svg",
-    "show" : false
+    "show" : true
   },
   {
     "name": "TypeScript",
@@ -26,12 +21,12 @@
   },
   {
     "name": "Python",
-    "src": "/svg/python-1.svg",
+    "src": "/svg/python.svg",
     "show" : true
   },
   {
     "name": "PHP",
-    "src": "/svg/php.webp",
+    "src": "/svg/php.svg",
     "show" : true
   },
   {
@@ -48,5 +43,20 @@
     "name": "Arduino",
     "src": "/svg/arduino.svg",
     "show" : true
+  },
+  {
+    "name": "Less",
+    "src": "/svg/less.svg",
+    "show" : false
+  },
+  {
+    "name": "Sass",
+    "src": "/svg/sass.svg",
+    "show" : false
+  },
+  {
+    "name": "SCSS",
+    "src": "/svg/scss.svg",
+    "show" : false
   }
 ]
