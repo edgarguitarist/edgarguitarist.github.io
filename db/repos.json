@@ -109,13 +109,6 @@
     "open_issues": 0,
     "watchers": 2,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "PHP": 3486,
       "JavaScript": 3462,
@@ -223,13 +216,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "PHP": 851474,
       "SCSS": 336872,
@@ -338,13 +324,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "Python": 3424652,
       "Tcl": 24432,
@@ -457,13 +436,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributor": null,
     "languages": {
       "JavaScript": 43818,
@@ -571,13 +543,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributor": null,
     "languages": {
       "JavaScript": 8898
@@ -682,13 +647,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributor": null,
     "languages": {
       "TypeScript": 3405,
@@ -797,13 +755,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {}
   },
   {
@@ -873,16 +824,16 @@
     "releases_url": "https://api.github.com/repos/edgarguitarist/edgarguitarist.github.io/releases{/id}",
     "deployments_url": "https://api.github.com/repos/edgarguitarist/edgarguitarist.github.io/deployments",
     "created_at": "2021-09-17T20:09:33Z",
-    "updated_at": "2022-11-27T05:34:20Z",
-    "pushed_at": "2023-04-17T19:01:10Z",
+    "updated_at": "2023-04-17T19:26:55Z",
+    "pushed_at": "2023-04-17T19:06:26Z",
     "git_url": "git://github.com/edgarguitarist/edgarguitarist.github.io.git",
     "ssh_url": "git@github.com:edgarguitarist/edgarguitarist.github.io.git",
     "clone_url": "https://github.com/edgarguitarist/edgarguitarist.github.io.git",
     "svn_url": "https://github.com/edgarguitarist/edgarguitarist.github.io",
     "homepage": "https://edgarguitarist.github.io/",
-    "size": 26172,
-    "stargazers_count": 0,
-    "watchers_count": 0,
+    "size": 26192,
+    "stargazers_count": 1,
+    "watchers_count": 1,
     "language": "Astro",
     "has_issues": true,
     "has_projects": true,
@@ -903,15 +854,8 @@
     "visibility": "public",
     "forks": 0,
     "open_issues": 0,
-    "watchers": 0,
+    "watchers": 1,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "Astro": 21741,
       "TypeScript": 5293,
@@ -1018,13 +962,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "JavaScript": 5374
     }
@@ -1128,13 +1065,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "Java": 4753
     }
@@ -1238,13 +1168,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "PHP": 396955,
       "CSS": 72288,
@@ -1351,13 +1274,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributor": null,
     "languages": {
       "JavaScript": 3378
@@ -1462,13 +1378,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "PHP": 489886,
       "JavaScript": 57179,
@@ -1576,13 +1485,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "PHP": 492945,
       "JavaScript": 40426,
@@ -1689,13 +1591,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "Java": 150141
     }
@@ -1805,13 +1700,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributor": {
       "login": "edgarguitarist",
       "id": 47311955,
@@ -1938,13 +1826,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributor": {
       "login": "edgarguitarist",
       "id": 47311955,
@@ -2073,13 +1954,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributor": null,
     "languages": {
       "JavaScript": 3696
@@ -2190,13 +2064,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributor": null,
     "languages": {
       "JavaScript": 402084,
@@ -2307,13 +2174,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "JavaScript": 23050,
       "CSS": 2033
@@ -2418,13 +2278,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributor": null,
     "languages": {
       "CSS": 45506,
@@ -2532,13 +2385,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "JavaScript": 10037,
       "HTML": 1678,
@@ -2650,13 +2496,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "master",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributor": null,
     "languages": {
       "JavaScript": 90927,
@@ -2764,13 +2603,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributor": {
       "login": "edgarguitarist",
       "id": 47311955,
@@ -2904,13 +2736,6 @@
     "open_issues": 0,
     "watchers": 0,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "contributor": null,
     "languages": {
       "Python": 9565
@@ -3015,13 +2840,6 @@
     "open_issues": 0,
     "watchers": 3,
     "default_branch": "main",
-    "permissions": {
-      "admin": true,
-      "maintain": true,
-      "push": true,
-      "triage": true,
-      "pull": true
-    },
     "languages": {
       "HTML": 5742,
       "JavaScript": 3547
