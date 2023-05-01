@@ -41,16 +41,14 @@ const lenguajes_string = lenguajes.join(", ") + ".";
       title={description}
       class="text-md text-gray-700 dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap"
     >
-      {description || '...'}
+      {description || "..."}
     </p>
     <p
       title={`${t("index.projects.cards.languages")}: ${lenguajes_string}`}
       class="text-slate-800 dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap flex items-center justify-center gap-2 pt-2"
     >
       {t("index.projects.cards.languages")}: {
-        lenguajes.map((lenguaje) => (
-          <ButtonLanguages language={lenguaje}></ButtonLanguages>
-        ))
+        lenguajes.map((lenguaje) => <ButtonLanguages language={lenguaje} />)
       }
     </p>
   </div>
@@ -79,9 +77,9 @@ const lenguajes_string = lenguajes.join(", ") + ".";
         title={`${contributor.contributions} ${t(
           "index.projects.cards.contribution"
         )}`}
-        class="absolute inline-flex items-center justify-center w-8 h-8 font-bold text-white bg-red-500 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900 text-md"
+        class="absolute inline-flex items-center justify-center w-8 h-8 font-bold bg-red-600 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900 text-md"
       >
-        {contributor.contributions}
+        <span class="text-white">{contributor.contributions}</span>
       </div>
     )
   }
