@@ -26,6 +26,7 @@ const repositories = repos.filter((r) => r.fork === forked);
               description={repo.description}
               contributor={repo.contributor as Contributor}
               languages={repo.languages}
+              stars={repo.stargazers_count}
             />
           );
         })

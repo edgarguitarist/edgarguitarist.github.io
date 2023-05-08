@@ -89,6 +89,7 @@
       "forks": "FORKS",
       "cards": {
         "contribution": "Contributions",
+        "stars": "Stars",
         "languages": "Languages"
       },
       "no_description": "No Description"

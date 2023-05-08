@@ -2,6 +2,7 @@
 import ButtonLanguages from "@components/buttons/ButtonLanguages.astro";
 import ButtonProjectsCard from "@components/buttons/ButtonProjectsCard.astro";
 import { t } from "i18next";
+import Icon from "astro-icon";
 
 interface Props {
   name: string;
@@ -10,9 +11,10 @@ interface Props {
   description: string | null;
   contributor: Contributor;
   languages: Languages;
+  stars: number;
 }
 
-const { name, repo_url, site, description, contributor, languages } =
+const { name, repo_url, site, description, contributor, languages, stars } =
   Astro.props;
 
 const no_show = ["Hack", "PowerShell", "Tcl", "Batchfile", "Shell"];
@@ -70,6 +72,18 @@ const lenguajes_string = lenguajes.join(", ") + ".";
       }
     </div>
   </footer>
+  {
+    Boolean(stars) && !contributor && (
+      <div
+        id="badge-stars"
+        title={`${stars} ${t("index.projects.cards.stars")}`}
+        class="absolute inline-flex items-center justify-center w-10 h-10 font-semibold bg-transparent rounded-full -top-[1.1rem] -right-4 text-md"
+      >
+        <Icon name="mdi:star" class="flex absolute z-[1] text-yellow-300"></Icon>
+        <span class="text-gray-900 z-[2]">{stars}</span>
+      </div>
+    )
+  }
   {
     contributor && (
       <div
