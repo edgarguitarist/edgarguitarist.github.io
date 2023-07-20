@@ -11,6 +11,5 @@ import preact from "@astrojs/preact";
 // https://astro.build/config
 export default defineConfig({
   integrations: [astroI18next(), tailwind(), preact()],
-  site: 'https://edgarguitarist.github.io',
-  output: 'server'
+  site: 'https://edgarguitarist.github.io'
 });
