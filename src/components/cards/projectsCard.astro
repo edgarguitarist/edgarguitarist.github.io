@@ -1,5 +1,5 @@
 ---
-import ButtonLanguages from "@components/buttons/ButtonLanguages.astro";
+import ButtonLanguage from "@components/buttons/ButtonLanguage";
 import ButtonProjectsCard from "@components/buttons/ButtonProjectsCard.astro";
 import { t } from "i18next";
 import Icon from "astro-icon";
@@ -24,9 +24,11 @@ const lenguajes = Object.keys(languages)
   .sort();
 
 const lenguajes_string = lenguajes.join(", ") + ".";
+
 ---
 
 <article
+  id={name + "-card"}
   class="p-3 lg:w-[31%] md:w-[45%] w-[96%] border-gradient hover:scale-105 relative font-semibold"
 >
   <header>
@@ -50,7 +52,12 @@ const lenguajes_string = lenguajes.join(", ") + ".";
       class="text-slate-800 dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap flex items-center justify-center gap-2 pt-2"
     >
       {t("index.projects.cards.languages")}: {
-        lenguajes.map((lenguaje) => <ButtonLanguages language={lenguaje} />)
+        lenguajes.map((lenguaje) => (
+          <ButtonLanguage
+            client:only="preact"
+            language={lenguaje}
+          />
+        ))
       }
     </p>
   </div>
@@ -77,9 +84,9 @@ const lenguajes_string = lenguajes.join(", ") + ".";
       <div
         id={`${"badge-stars"}-${name}`}
         title={`${stars} ${t("index.projects.cards.stars")}`}
-        class="absolute inline-flex items-center justify-center w-10 h-10 font-semibold bg-transparent rounded-full -top-[1.1rem] -right-4 text-md"
+        class="absolute inline-flex items-center justify-center w-8 h-8 font-semibold bg-transparent rounded-full -top-3 -right-3 text-md"
       >
-        <Icon name="mdi:star" class="flex absolute z-[1] text-yellow-300"></Icon>
+        <Icon name="ph:star-fill" class="flex absolute z-[1] text-yellow-300" />
         <span class="text-gray-900 z-[2]">{stars}</span>
       </div>
     )

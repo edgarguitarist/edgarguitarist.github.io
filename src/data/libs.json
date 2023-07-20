@@ -1,0 +1,52 @@
+[
+  {
+    "name": "Node",
+    "src": "/svg/nodejs.svg",
+    "show" : true
+  },
+  {
+    "name": "Express",
+    "src": "/svg/express.svg",
+    "show" : true
+  },
+  {
+    "name": "React",
+    "src": "/svg/react.svg",
+    "show" : true
+  },
+  {
+    "name": "Angular",
+    "src": "/svg/angular.svg",
+    "show" : true
+  },
+  {
+    "name": "Next",
+    "src": "/svg/next-js.svg",
+    "show" : true
+  },
+  {
+    "name": "Astro",
+    "src": "/svg/astro.svg",
+    "show" : true
+  },
+  {
+    "name": "TailwindCSS",
+    "src": "/svg/tailwind-css.svg",
+    "show" : true
+  },
+  {
+    "name": "Bulma",
+    "src": "/svg/bulma.svg",
+    "show" : true
+  },
+  {
+    "name": "Svelte",
+    "src": "/svg/svelte.svg",
+    "show" : false
+  },
+  {
+    "name": "Vue",
+    "src": "/svg/vue.svg",
+    "show" : false
+  }
+]

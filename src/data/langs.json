@@ -1,0 +1,62 @@
+[
+  {
+    "name": "HTML",
+    "src": "/svg/html.svg",
+    "show" : true
+  },
+  {
+    "name": "CSS",
+    "src": "/svg/css.svg",
+    "show" : true
+  },
+  {
+    "name": "JavaScript",
+    "src": "/svg/js.svg",
+    "show" : true
+  },
+  {
+    "name": "TypeScript",
+    "src": "/svg/typescript.svg",
+    "show" : true
+  },
+  {
+    "name": "Python",
+    "src": "/svg/python.svg",
+    "show" : true
+  },
+  {
+    "name": "PHP",
+    "src": "/svg/php.svg",
+    "show" : true
+  },
+  {
+    "name": "Java",
+    "src": "/svg/java.svg",
+    "show" : true
+  },
+  {
+    "name": "Kotlin",
+    "src": "/svg/kotlin.svg",
+    "show" : true
+  },
+  {
+    "name": "Arduino",
+    "src": "/svg/arduino.svg",
+    "show" : true
+  },
+  {
+    "name": "Less",
+    "src": "/svg/less.svg",
+    "show" : false
+  },
+  {
+    "name": "Sass",
+    "src": "/svg/sass.svg",
+    "show" : false
+  },
+  {
+    "name": "SCSS",
+    "src": "/svg/scss.svg",
+    "show" : false
+  }
+]
