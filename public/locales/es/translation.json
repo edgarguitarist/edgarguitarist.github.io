@@ -87,6 +87,8 @@
       "title": "PROYECTOS",
       "repositories": "REPOSITORIOS",
       "forks": "FORKS",
+      "with": "CON",
+      "clear": "LIMPIAR FILTROS",
       "cards": {
         "contribution": "Contribuciones",
         "stars": "Estrellas",
@@ -102,6 +104,7 @@
     },
     "footer": {
       "developer": "Desarrollado con ❤️ por",
+      "using": "usando",
       "curriculum": "/documents/Edgar_Laz-Desarrollador.pdf"
     }
   },

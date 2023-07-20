@@ -5,11 +5,10 @@ interface IUseLocalStorage {
 }
 
 export default function useLanguages() {
-  const [value, setValue] = useState(() => {
-    const item = localStorage.getItem("search");
-    console.log(item);
-    return item ? item : "";
-  });
+  //cada vez que cambie en el localstore el item search se actualiza el estado
+  const [search, setSearch] = useState(
+    JSON.parse(localStorage.getItem("search") ?? "[]")
+  );  
 
-  return [value, setValue];
+  return [search, setSearch];
 }

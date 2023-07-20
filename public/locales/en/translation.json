@@ -87,6 +87,8 @@
       "title": "PROJECTS",
       "repositories": "REPOSITORIES",
       "forks": "FORKS",
+      "with": "WITH",
+      "clear": "CLEAR FILTERS",
       "cards": {
         "contribution": "Contributions",
         "stars": "Stars",
@@ -101,7 +103,8 @@
       "section3": "LIBRARIES & FRAMEWORKS"
     },
     "footer": {
-      "developer": "Developed with ❤️ by",
+      "developer": "Powered with ❤️ by",
+      "using": "using",
       "curriculum": "/documents/Edgar_Laz-Developer.pdf"
     }
   },

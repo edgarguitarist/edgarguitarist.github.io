@@ -2,7 +2,7 @@
 import ProjectsCard from "@components/cards/projectsCard.astro";
 import repos from "@db/repos.json";
 import { t } from "i18next";
-//import useLanguages from "@hooks/useLanguages";
+import useLanguages from "@hooks/useLanguages";
 
 const { forked } = Astro.props;
 let repositories = repos.filter((r) => r.fork === forked);
@@ -15,6 +15,7 @@ let repositories = repos.filter((r) => r.fork === forked);
 //     return Boolean(languages.includes(search));
 //   });
 // }
+
 ---
 
 <div>

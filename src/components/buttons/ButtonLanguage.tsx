@@ -7,18 +7,20 @@ interface Properties {
   show: boolean;
 }
 
-export default function ButtonLanguage({ language }: any) {
+export default function ButtonLanguage({ language, filtro }: any) {
   const selectedLanguage: Properties =
     (langs.find((lang) => lang.name === language) as Properties) ??
     (libs.find((lib) => lib.name === language) as Properties);
 
   const handleClick = () => {
-    const search = JSON.parse(localStorage.getItem("search") ?? "[]");
+   
+    const search = JSON.parse(localStorage.getItem(filtro.tipo) ?? "[]");
     const newElement = new Set([...search, language]);
     if (search.includes(language)) {
       newElement.delete(language);
     }
-    localStorage.setItem("search", JSON.stringify([...newElement]));
+    filtro.metodo([...newElement])
+    localStorage.setItem(filtro.tipo, JSON.stringify([...newElement]));
   };
 
   return (

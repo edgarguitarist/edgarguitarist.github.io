@@ -3,6 +3,7 @@ import { t } from "i18next";
 import { Info } from "../types/global.types";
 import ButtonSocials from "./buttons/ButtonSocials.astro";
 import AnimationLink from "./AnimationLink.astro";
+import astro from "/svg/astro-logo-light.svg";
 ---
 
 <footer
@@ -10,9 +11,11 @@ import AnimationLink from "./AnimationLink.astro";
 >
   <div class="inline-flex w-full my-auto">
     <div class="text-center w-1/2 my-auto p-2">
-      <p class="sm:text-sm md:text-base">
-        <span lang="es">{t("index.footer.developer")}</span>
-        <strong class="text-white">Edgar Laz</strong>
+      <p class="sm:text-sm md:text-base flex justify-center">
+        <span>{t("index.footer.developer")}</span>
+        <strong class="text-white mx-2">Edgar Laz</strong>
+        <span>{t("index.footer.using")}</span>
+        <img src={astro} alt="Astro Logo" class="h-6 ml-2">
       </p>
     </div>
     <div class="w-1/2 inline-flex gap-x-3 place-content-center p-2">
