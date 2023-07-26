@@ -8,6 +8,6 @@ const { name, src } = Astro.props;
 ---
 
 <card class="p-3 lg:w-1/12 bg-transparent place-content-center">
-  <img id={name} class="my-auto w-20 h-20" title={name} alt={name} src={src} />
+  <img id={name} class="my-auto w-20 h-20 dark:hover:drop-shadow-[0_0_2em_#61dafbaa]" title={name} alt={name} src={src} />
   <span class="pt-2 px-auto dark:text-gray-300 text-black font-semibold text-center w-full">{name}</span>
 </card>

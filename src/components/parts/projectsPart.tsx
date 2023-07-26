@@ -34,7 +34,9 @@ export default function ProjectsPart({ forked }: any) {
     },
   };
 
-  const sectionName = !forked ? t("index.projects.repositories") : t("index.projects.forks")
+  const sectionName = !forked
+    ? t("index.projects.repositories")
+    : t("index.projects.forks");
 
   return (
     <div id={sectionName.toLocaleLowerCase()} class=" pt-7">
@@ -43,11 +45,26 @@ export default function ProjectsPart({ forked }: any) {
         {elementos && (
           <div class="flex w-full place-content-between">
             <span class="text-xl ml-3 font-semibold text-gray-500 dark:text-gray-400 self-center">
-            {t("index.projects.with")} ({elementos})
+              {t("index.projects.with")} ({elementos}){" = "}
+              {
+                repositories.filter(
+                  (r) =>
+                    !r.name.includes("prueba") &&
+                    !r.name.includes("portfolio") &&
+                    !r.name.includes("edgarguitarist")
+                ).length
+              }
             </span>
-            <button class="bg-slate-800 hover:bg-black px-4 rounded-lg text-white font-semibold flex items-center gap-1 text-sm" onClick={filtro.clear}>
-            <img src={clearfilter} alt={t("index.projects.clear") ?? 'clear filters'} class="w-6 h-6 text-white mr-1"/>
-            {t("index.projects.clear")}
+            <button
+              class="bg-slate-800 hover:bg-black px-4 rounded-lg text-white font-semibold flex items-center gap-1 text-sm"
+              onClick={filtro.clear}
+            >
+              <img
+                src={clearfilter}
+                alt={t("index.projects.clear") ?? "clear filters"}
+                class="w-6 h-6 text-white mr-1"
+              />
+              {t("index.projects.clear")}
             </button>
           </div>
         )}

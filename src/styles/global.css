@@ -155,13 +155,15 @@ a {
   border-image-slice: 1;
   border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
 }
-.h-border-gradient{
+.h-border-gradient {
   border-style: solid;
   border-width: 3px;
   border-color: black;
 }
 
-.h-border-gradient:hover, .h-border-gradient:active, .h-border-gradient:focus {
+.h-border-gradient:hover,
+.h-border-gradient:active,
+.h-border-gradient:focus {
   border-style: solid;
   border-width: 3px;
   border-image-slice: 1;
