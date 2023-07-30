@@ -932,13 +932,13 @@
     "deployments_url": "https://api.github.com/repos/edgarguitarist/edgarguitarist.github.io/deployments",
     "created_at": "2021-09-17T20:09:33Z",
     "updated_at": "2023-04-17T19:26:55Z",
-    "pushed_at": "2023-07-20T11:38:27Z",
+    "pushed_at": "2023-07-26T08:48:34Z",
     "git_url": "git://github.com/edgarguitarist/edgarguitarist.github.io.git",
     "ssh_url": "git@github.com:edgarguitarist/edgarguitarist.github.io.git",
     "clone_url": "https://github.com/edgarguitarist/edgarguitarist.github.io.git",
     "svn_url": "https://github.com/edgarguitarist/edgarguitarist.github.io",
     "homepage": "https://edgarguitarist.github.io/",
-    "size": 26498,
+    "size": 26502,
     "stargazers_count": 1,
     "watchers_count": 1,
     "language": "Astro",
@@ -964,9 +964,9 @@
     "watchers": 1,
     "default_branch": "main",
     "languages": {
-      "Astro": 22892,
-      "TypeScript": 13667,
-      "CSS": 4278,
+      "Astro": 22935,
+      "TypeScript": 14070,
+      "CSS": 4279,
       "JavaScript": 2699
     }
   },
