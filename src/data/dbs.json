@@ -1,32 +1,37 @@
 [
   {
     "name": "MySQL",
-    "src": "/svg/mysql.svg",
+    "src": "mysql",
     "show" : true
   },
   {
     "name": "SQL SERVER",
-    "src": "/svg/sql-server-nn.svg",
+    "src": "sql-server-nn",
     "show" : true
   },
   {
     "name": "MariaDB",
-    "src": "/svg/mariadb.svg",
+    "src": "mariadb",
+    "show" : true
+  },
+  {
+    "name": "Oracle",
+    "src": "oracle",
     "show" : true
   },
   {
     "name": "PostgreSQL",
-    "src": "/svg/postgresql.svg",
+    "src": "postgresql",
     "show" : true
   },
   {
     "name": "MongoDB",
-    "src": "/svg/mongodb-no-name.svg",
+    "src": "mongodb-no-name",
     "show" : true
   },
   {
     "name": "Firebase",
-    "src": "/svg/firebase.svg",
+    "src": "firebase",
     "show" : true
   }
 ]

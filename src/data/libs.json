@@ -1,52 +1,62 @@
 [
   {
     "name": "Node",
-    "src": "/svg/nodejs.svg",
+    "src": "nodejs",
+    "show" : true
+  },
+  {
+    "name": "Deno",
+    "src": "deno",
+    "show" : true
+  },
+  {
+    "name": "Vite",
+    "src": "vite",
     "show" : true
   },
   {
     "name": "Express",
-    "src": "/svg/express.svg",
+    "src": "express",
     "show" : true
   },
   {
     "name": "React",
-    "src": "/svg/react.svg",
+    "src": "react",
     "show" : true
   },
   {
     "name": "Angular",
-    "src": "/svg/angular.svg",
+    "src": "angular",
     "show" : true
   },
   {
     "name": "Next",
-    "src": "/svg/next-js.svg",
+    "src": "next-js",
     "show" : true
   },
   {
     "name": "Astro",
-    "src": "/svg/astro.svg",
+    "src": "astro",
     "show" : true
   },
   {
     "name": "TailwindCSS",
-    "src": "/svg/tailwind-css.svg",
+    "src": "tailwind-css",
     "show" : true
   },
   {
     "name": "Bulma",
-    "src": "/svg/bulma.svg",
+    "src": "bulma",
     "show" : true
   },
   {
     "name": "Svelte",
-    "src": "/svg/svelte.svg",
+    "src": "svelte",
     "show" : false
   },
   {
     "name": "Vue",
-    "src": "/svg/vue.svg",
+    "src": "vue",
     "show" : false
   }
 ]
