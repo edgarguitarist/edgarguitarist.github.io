@@ -8,6 +8,7 @@ export enum Info {
   facebook = "facebook",
   instagram = "instagram",
   twitter = "twitter",
+  x = "x",
   github = "github",
   pdf = "pdf",
   pdf2 = "pdf2",
@@ -36,6 +37,7 @@ export interface SocialDicInterface {
   [Info.facebook]: GeneralLinkAttribute;
   [Info.instagram]: GeneralLinkAttribute;
   [Info.twitter]: GeneralLinkAttribute;
+  [Info.x]: GeneralLinkAttribute;
   [Info.github]: GeneralLinkAttribute;
   [Info.pdf]: GeneralLinkAttribute;
   [Info.pdf2]: GeneralLinkAttribute;
