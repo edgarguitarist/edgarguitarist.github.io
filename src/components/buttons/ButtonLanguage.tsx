@@ -31,7 +31,7 @@ export default function ButtonLanguage({ language, filtro }: any) {
     >
       <img
         class="w-8 h-8"
-        src={selectedLanguage?.src}
+        src={`/svg/${selectedLanguage?.src}.svg`}
         alt={selectedLanguage?.name}
       />
     </button>

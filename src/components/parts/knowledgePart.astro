@@ -27,7 +27,7 @@ const { section } = Astro.props ;
 ---
 <div id={section}>
     <h2 class="font-semibold dark:text-gray-300 text-black text-2xl mt-10">{knowDic[section].title}</h2>
-    <div class="flex justify-around flex-wrap my-4">
+    <div class="flex justify-between flex-wrap my-4">
       {knowDic[section].data
         .filter((data) => data.show)
         .map((data, indice) => (
