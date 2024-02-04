@@ -931,13 +931,13 @@
     "deployments_url": "https://api.github.com/repos/edgarguitarist/edgarguitarist.github.io/deployments",
     "created_at": "2021-09-17T20:09:33Z",
     "updated_at": "2023-04-17T19:26:55Z",
-    "pushed_at": "2024-01-21T00:23:29Z",
+    "pushed_at": "2024-01-28T01:15:47Z",
     "git_url": "git://github.com/edgarguitarist/edgarguitarist.github.io.git",
     "ssh_url": "git@github.com:edgarguitarist/edgarguitarist.github.io.git",
     "clone_url": "https://github.com/edgarguitarist/edgarguitarist.github.io.git",
     "svn_url": "https://github.com/edgarguitarist/edgarguitarist.github.io",
     "homepage": "https://edgarguitarist.github.io/",
-    "size": 26502,
+    "size": 26503,
     "stargazers_count": 1,
     "watchers_count": 1,
     "language": "Astro",
@@ -2409,13 +2409,13 @@
     "deployments_url": "https://api.github.com/repos/edgarguitarist/Youtube-Utilities-Chrome-Extension/deployments",
     "created_at": "2022-12-10T14:33:30Z",
     "updated_at": "2023-10-22T09:04:55Z",
-    "pushed_at": "2023-10-31T16:57:07Z",
+    "pushed_at": "2024-02-03T02:59:23Z",
     "git_url": "git://github.com/edgarguitarist/Youtube-Utilities-Chrome-Extension.git",
     "ssh_url": "git@github.com:edgarguitarist/Youtube-Utilities-Chrome-Extension.git",
     "clone_url": "https://github.com/edgarguitarist/Youtube-Utilities-Chrome-Extension.git",
     "svn_url": "https://github.com/edgarguitarist/Youtube-Utilities-Chrome-Extension",
     "homepage": "",
-    "size": 71,
+    "size": 81,
     "stargazers_count": 3,
     "watchers_count": 3,
     "language": "JavaScript",
@@ -2441,8 +2441,8 @@
     "watchers": 3,
     "default_branch": "main",
     "languages": {
-      "JavaScript": 10572,
-      "HTML": 8901
+      "JavaScript": 12180,
+      "HTML": 8649
     }
   }
 ]
