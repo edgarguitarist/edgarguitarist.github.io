@@ -20,8 +20,10 @@
     },
     "about": {
       "title": "Acerca de Mi",
-      "description": "SOY DESARROLLADOR FULL STACK WEB Y MOVIL",
-      "subtitle": "Conóceme..."
+      "description": "INGENIERO EN COMPUTACIÓN E INFORMÁTICA",
+      "position": "Lead Project Manager",
+      "pp": "en",
+      "subtitle": "Mis Proyectos"
     },
     "skills": {
       "title": "HABILIDADES",

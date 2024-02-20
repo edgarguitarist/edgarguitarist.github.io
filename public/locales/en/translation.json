@@ -20,8 +20,10 @@
     },
     "about": {
       "title": "ABOUT ME",
-      "description": "I'M A FULL STACK WEB DEVELOPER AND MOBILE",
-      "subtitle": "Know me..."
+      "description": "Computer Systems Engineer",
+      "position": "Lead Project Manager",
+      "pp": "at",
+      "subtitle": "My Projects"
     },
     "skills": {
       "title": "SKILLS",

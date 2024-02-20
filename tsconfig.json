@@ -15,6 +15,7 @@
       "@data/*": ["src/data/*"],
       "@hooks/*": ["src/hooks/*"],
       "@db/*": ["db/*"],
+      "@icons/*": ["src/icons/*"],
     }
   }
 }
