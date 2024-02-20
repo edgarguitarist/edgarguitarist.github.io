@@ -58,5 +58,10 @@
     "name": "SCSS",
     "src": "scss",
     "show" : false
+  },
+  {
+    "name": "Rust",
+    "src": "rust",
+    "show" : false
   }
 ]
