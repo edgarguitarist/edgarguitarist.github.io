@@ -22,12 +22,13 @@ import Footer from "../components/Footer.astro";
     <title>{t("site.title")}</title>
   </head>
 
-  <body class="dark:bg-slate-900 bg-white transition-colors overflow-x-hidden">
+  <body class="dark:bg-slate-900 bg-white transition-colors overflow-x-hidden ">
     <Navbar username="edgarguitarist">
       <LanguageSelector showFlag={false} class="languages text-black dark:text-white" />
     </Navbar>
     <main
-      class="relative lg:m-auto sm:m-0 lg:pb-12 px-6 max-w-screen-xl z-10 text-center"
+      class="relative lg:m-auto sm:m-0 lg:pb-12 px-6 max-w-screen-xl z-10 text-center lg:h-[114vh] overflow-y-scroll scroll"
+      style="scrollbar-width: none;"
     >
       <slot />
     </main>
