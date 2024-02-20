@@ -4,6 +4,7 @@ import { Info } from "../types/global.types";
 import ButtonSocials from "./buttons/ButtonSocials.astro";
 import AnimationLink from "./AnimationLink.astro";
 import astro from "/svg/astro-logo-light.svg";
+import me from "@db/user.json";
 ---
 
 <footer
@@ -13,7 +14,7 @@ import astro from "/svg/astro-logo-light.svg";
     <div class="text-center w-1/2 my-auto p-2">
       <p class="sm:text-sm md:text-base flex justify-center">
         <span>{t("index.footer.developer")}</span>
-        <strong class="text-white mx-2">Edgar Laz</strong>
+        <strong class="text-white mx-2">{me.name}</strong>
         <span>{t("index.footer.using")}</span>
         <img src={astro} alt="Astro Logo" class="h-6 ml-2">
       </p>
