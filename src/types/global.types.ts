@@ -24,7 +24,7 @@ export type GeneralLinkAttribute = {
 
 export interface NavDicInterface {
   [Nav.aboutme]: GeneralLinkAttribute;
-  [Nav.skills]: GeneralLinkAttribute;
+  // [Nav.skills]: GeneralLinkAttribute;
   [Nav.projects]: GeneralLinkAttribute;
   [Nav.knowledge]: GeneralLinkAttribute;
 }
