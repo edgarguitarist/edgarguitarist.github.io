@@ -5,7 +5,16 @@ import { t } from "i18next";
 import clearfilter from "/svg/clearfilter.svg";
 
 export default function ProjectsPart({ forked }: any) {
-  const initialRepositories = repos.filter((r) => r.fork === forked);
+  let initialRepositories = repos
+                                .filter((r) => r.fork === forked)
+  
+  if(!forked){
+    initialRepositories.sort((a, b) => b.stargazers_count - a.stargazers_count)
+  } else{    
+    initialRepositories.sort((a, b) => b.contributor!?.contributions - a.contributor!?.contributions)
+  }
+                                
+
   const [repositories, setRepositories] = useState(initialRepositories);
   const [elementos, setElementos] = useState("");
 
@@ -38,31 +47,33 @@ export default function ProjectsPart({ forked }: any) {
     ? t("index.projects.repositories")
     : t("index.projects.forks");
 
+  const reposFiltered = repositories.filter(
+    (r) =>
+      !r.name.includes("prueba") &&
+      !r.name.includes("portfolio") &&
+      !r.name.includes("edgarguitarist")
+  )
+
   return (
-    <div id={sectionName.toLocaleLowerCase()} class=" pt-7">
-      <h2 class="font-bold flex  text-3xl mt-10 text-left dark:text-white text-black">
+    <div id={sectionName.toLocaleLowerCase()} className=" pt-7">
+      <h2 className="font-bold flex  text-3xl mt-10 text-left dark:text-white text-black">
         {sectionName}
         {elementos && (
-          <div class="flex w-full place-content-between">
-            <span class="text-xl ml-3 font-semibold text-gray-500 dark:text-gray-400 self-center">
+          <div className="flex w-full place-content-between">
+            <span className="text-xl ml-3 font-semibold text-gray-500 dark:text-gray-400 self-center">
               {t("index.projects.with")} ({elementos}){" = "}
               {
-                repositories.filter(
-                  (r) =>
-                    !r.name.includes("prueba") &&
-                    !r.name.includes("portfolio") &&
-                    !r.name.includes("edgarguitarist")
-                ).length
+                reposFiltered.length
               }
             </span>
             <button
-              class="bg-slate-800 hover:bg-black px-4 rounded-lg text-white font-semibold flex items-center gap-1 text-sm"
+              className="bg-slate-800 hover:bg-black px-4 rounded-lg text-white font-semibold flex items-center gap-1 text-sm"
               onClick={filtro.clear}
             >
               <img
                 src={clearfilter}
                 alt={t("index.projects.clear") ?? "clear filters"}
-                class="w-6 h-6 text-white mr-1"
+                className="w-6 h-6 text-white mr-1"
               />
               {t("index.projects.clear")}
             </button>
@@ -70,14 +81,8 @@ export default function ProjectsPart({ forked }: any) {
         )}
       </h2>
 
-      <div class="flex justify-around flex-wrap gap-10 mt-10">
-        {repositories
-          .filter(
-            (r) =>
-              !r.name.includes("prueba") &&
-              !r.name.includes("portfolio") &&
-              !r.name.includes("edgarguitarist")
-          )
+      <div className="flex justify-around flex-wrap gap-10 mt-10">
+        {reposFiltered
           .map((repo) => {
             return (
               <ProjectsCard

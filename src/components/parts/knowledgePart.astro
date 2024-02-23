@@ -3,35 +3,44 @@ import langs from "@data/langs.json";
 import dbs from "@data/dbs.json";
 import libs from "@data/libs.json";
 import KnowledgeCard from "@components/cards/knowledgeCard.astro";
-import type { KnowDicInterface, KnowInterface } from "../../types/global.types";
+import type {
+  KnowDicInterface,
+  KnowInterface,
+  Knowledge,
+} from "../../types/global.types";
 import { t } from "i18next";
 
-interface Props extends KnowInterface{} 
+interface Props extends KnowInterface {}
 
-const { section } = Astro.props ;
+const { section }: { section: Knowledge } = Astro.props;
 
-  const knowDic: KnowDicInterface = {
-    PL: {
-      title: t("index.knowledge.section1"),
-      data: langs,
-    },
-    SGBD: {
-      title: t("index.knowledge.section2"),
-      data: dbs,
-    },
-    FW: {
-      title: t("index.knowledge.section3"),
-      data: libs,
-    },
-  };
+const knowDic: KnowDicInterface = {
+  PL: {
+    title: t("index.knowledge.section1"),
+    data: langs,
+  },
+  SGBD: {
+    title: t("index.knowledge.section2"),
+    data: dbs,
+  },
+  FW: {
+    title: t("index.knowledge.section3"),
+    data: libs,
+  },
+};
 ---
+
 <div id={section}>
-    <h2 class="font-semibold dark:text-gray-300 text-black text-2xl mt-10">{knowDic[section].title}</h2>
-    <div class="flex justify-between flex-wrap my-4">
-      {knowDic[section].data
+  <h2 class="font-semibold dark:text-gray-300 text-black text-2xl mt-10">
+    {knowDic[section].title}
+  </h2>
+  <div class="flex justify-between flex-wrap my-4">
+    {
+      knowDic[section].data
         .filter((data) => data.show)
         .map((data, indice) => (
           <KnowledgeCard src={data.src} name={data.name} />
-        ))}
-    </div>
+        ))
+    }
   </div>
+</div>

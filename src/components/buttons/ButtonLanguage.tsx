@@ -30,7 +30,7 @@ export default function ButtonLanguage({ language, filtro }: any) {
       className=" cursor-pointer hover:scale-110"
     >
       <img
-        class="w-8 h-8"
+        className="w-8 h-8"        
         src={`/svg/${selectedLanguage?.src}.svg`}
         alt={selectedLanguage?.name}
       />
