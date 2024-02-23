@@ -29,7 +29,7 @@ export default async () => {
         repo.contributor = await fetch(contributors_url, { headers })
           .then((res) => res.json())
           .then((res) => res.filter((contributor) => contributor.login === USER))
-          .then((res) => res[0] ?? null);
+          .then((res) => res[0] ?? { contributions: 0 });
       }
       repo.languages = await fetch(languages_url, { headers }).then((res) => res.json())
       return repo;
