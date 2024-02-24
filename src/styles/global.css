@@ -76,8 +76,8 @@ a {
 }
 
 .social-btn {
-  display: flex;
-  place-content: center;
+  display: grid;
+  justify-items: center;
   border-radius: 100%;
   color: #fff;
   background-color: #444;

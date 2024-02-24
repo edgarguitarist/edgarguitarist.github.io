@@ -14,7 +14,6 @@ const styleButton =
 
 const { social, footer = true } = Astro.props;
 
-const iconStyle = "w-3/5 h-3/5 my-auto";
 const buttonStyle = !footer
   ? styleButton + "w-16 h-16 "
   : styleButton + "w-10 h-10 ";
@@ -22,47 +21,38 @@ const buttonStyle = !footer
 const socialDic: SocialDicInterface = {
   facebook: {
     href: "https://www.facebook.com/edgarm.laz",
-    iconName: "mdi:facebook",
     style: buttonStyle + "fb",
   },
   instagram: {
     href: "https://www.instagram.com/edgarguitarist/",
-    iconName: "mdi:instagram",
     style: buttonStyle + "ins",
   },
   twitter: {
     href: "https://twitter.com/edgarguitarist",
-    iconName: "mdi:twitter",
     style: buttonStyle + "twi",
   },
   x: {
     href: "https://x.com/edgarguitarist",
-    iconName: "x",
     style: buttonStyle + "x",
   },
   github: {
     href: "https://www.github.com/edgarguitarist",
-    iconName: "mdi:github",
     style: buttonStyle + "git",
   },
   pdf: {
     href: t("index.footer.curriculum"),
-    iconName: "mdi:file-pdf-box",
     style: buttonStyle + "pdf",
   },
   pdf2: {
     href: t("index.footer.curriculum"),
-    iconName: "mdi:file-pdf",
     style: buttonStyle + "pdf2",
   },
   linkedin: {
     href: "https://www.linkedin.com/in/edgarlteran/",
-    iconName: "mdi:linkedin",
     style: buttonStyle + "lin",
   },
   whatsapp: {
     href: "https://wa.me/593982686560",
-    iconName: "mdi:whatsapp",
     style: buttonStyle + "wha",
   },
 };
@@ -75,5 +65,5 @@ const socialDic: SocialDicInterface = {
   title={PascalCase(social)}
   class={socialDic[social].style || buttonStyle}
 >
-  <Icon name={socialDic[social].iconName} class={iconStyle} />
+  <slot>
 </a>
