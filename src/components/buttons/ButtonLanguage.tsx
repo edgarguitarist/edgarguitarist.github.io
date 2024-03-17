@@ -27,10 +27,10 @@ export default function ButtonLanguage({ language, filtro }: any) {
     <button
       title={language}
       onClick={handleClick}
-      className=" cursor-pointer hover:scale-110"
+      className="cursor-pointer hover:scale-110"
     >
       <img
-        className="w-8 h-8"        
+        className="size-8"        
         src={`/svg/${selectedLanguage?.src}.svg`}
         alt={selectedLanguage?.name}
       />

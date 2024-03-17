@@ -3,20 +3,18 @@ import type { SocialDicInterface, Info } from "../../types/global.types";
 import { t } from "i18next";
 import { PascalCase } from "@utils/global.utils";
 
-import { Icon } from "astro-icon";
-
 interface Props {
   social: Info;
   footer?: boolean;
 }
 const styleButton =
-  "text-white text-center hover:transform hover:scale-105 social-btn ";
+  "text-white text-center hover:transform hover:scale-105 flex rounded-full bg-[#444] ";
 
 const { social, footer = true } = Astro.props;
 
 const buttonStyle = !footer
-  ? styleButton + "w-16 h-16 "
-  : styleButton + "w-10 h-10 ";
+  ? styleButton + "lg:size-16 md:size-28 size-20 "
+  : styleButton + "size-12 ";
 
 const socialDic: SocialDicInterface = {
   facebook: {
@@ -56,14 +54,16 @@ const socialDic: SocialDicInterface = {
     style: buttonStyle + "wha",
   },
 };
+
+let selectedSocial = socialDic[social as Info];
 ---
 
 <a
-  href={socialDic[social].href}
+  href={selectedSocial.href}
   id={`${social}${footer ? "-footer" : ""}`}
   target="_blank"
   title={PascalCase(social)}
-  class={socialDic[social].style || buttonStyle}
+  class={selectedSocial.style || buttonStyle}
 >
   <slot>
 </a>
