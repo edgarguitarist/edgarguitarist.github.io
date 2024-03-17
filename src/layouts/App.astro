@@ -24,10 +24,10 @@ import Footer from "../components/Footer.astro";
 
   <body class="dark:bg-slate-900 bg-white transition-colors overflow-x-hidden ">
     <Navbar username="edgarguitarist">
-      <LanguageSelector showFlag={false} class="languages text-black dark:text-white" />
+      <LanguageSelector showFlag={false} class="bg-transparent border-none text-white font-medium cursor-pointer"/>
     </Navbar>
     <main
-      class="relative lg:m-auto sm:m-0 lg:pb-12 px-6 max-w-screen-xl z-10 text-center lg:h-[114vh] overflow-y-scroll scroll"
+      class="relative lg:m-auto sm:m-0 lg:pb-12 px-6 lg:max-w-screen-xl max-w-full z-10 text-center lg:h-[calc(100vh+7rem)] overflow-y-scroll scroll"
       style="scrollbar-width: none;"
     >
       <slot />
