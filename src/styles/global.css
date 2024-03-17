@@ -6,64 +6,11 @@ body {
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   height: 100%;
   zoom: 90%;
-  /* overflow-y: hidden; */
 }
 
 code {
   font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
     Bitstream Vera Sans Mono, Courier New, monospace;
-}
-
-.languages-wrapper {
-  display: flex;
-  flex-wrap: wrap;
-  padding: 5px 10px;
-  border-radius: 9999px;
-  gap: 5px;
-  background-color: #4e4e4e;
-  width: fit-content;
-}
-
-.languages-wrapper > select {
-  background-color: transparent;
-  border: none;
-  color: white;
-  font-weight: 500;
-  cursor: pointer;
-}
-
-.languages-wrapper > select > option {
-  background-color: transparent;
-  color: black;
-  font-weight: 500;
-  padding: 5px 20px;
-}
-
-.text-gradient {
-  background-image: var(--accent-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 400%;
-  background-position: 0%;
-}
-.text-gradient-2 {
-  background-image: var(--accent-gradient);
-  background-clip: text;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-size: 210%;
-  background-repeat: no-repeat;
-  background-position: 0%;
-}
-
-.nav-gradient:hover {
-  background-image: var(--accent-gradient);
-  /* -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent; */
-  background-size: 400%;
-  background-position: 0%;
-  font-weight: 700;
 }
 
 a {
@@ -152,7 +99,6 @@ a {
   color: white;
   background: red;
   background-color: red;
-  /* border: 1px solid red; */
 }
 
 .border-gradient {
@@ -203,23 +149,4 @@ a {
   background: -o-linear-gradient(to left, #743ad5, #d53a9d);
   background: -moz-linear-gradient(to left, #743ad5, #d53a9d);
   background: -webkit-linear-gradient(to left, #743ad5, #d53a9d);
-}
-
-#link {
-  margin-bottom: -8px;
-  right: 0 !important;
-  bottom: 0 !important;
-  position: fixed !important;
-  z-index: 99 !important;
-  width: 127.1186440689px !important;
-  height: 75px !important;
-}
-@media screen and (max-width: 1020px) {
-  #link {
-    display: none;
-  }
-}
-
-.aspect-4-3 {
-  aspect-ratio: 4/3;
 }
