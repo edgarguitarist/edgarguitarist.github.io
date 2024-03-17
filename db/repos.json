@@ -833,13 +833,13 @@
     "deployments_url": "https://api.github.com/repos/edgarguitarist/edgarguitarist.github.io/deployments",
     "created_at": "2021-09-17T20:09:33Z",
     "updated_at": "2023-04-17T19:26:55Z",
-    "pushed_at": "2024-03-10T00:22:19Z",
+    "pushed_at": "2024-03-17T16:59:39Z",
     "git_url": "git://github.com/edgarguitarist/edgarguitarist.github.io.git",
     "ssh_url": "git@github.com:edgarguitarist/edgarguitarist.github.io.git",
     "clone_url": "https://github.com/edgarguitarist/edgarguitarist.github.io.git",
     "svn_url": "https://github.com/edgarguitarist/edgarguitarist.github.io",
     "homepage": "https://edgarguitarist.github.io/",
-    "size": 26541,
+    "size": 26542,
     "stargazers_count": 1,
     "watchers_count": 1,
     "language": "Astro",
@@ -865,9 +865,9 @@
     "watchers": 1,
     "default_branch": "main",
     "languages": {
-      "Astro": 23802,
+      "Astro": 24209,
       "TypeScript": 14303,
-      "CSS": 4359,
+      "CSS": 2866,
       "JavaScript": 2709
     }
   },
@@ -1398,13 +1398,13 @@
     "deployments_url": "https://api.github.com/repos/edgarguitarist/la-velada-web-oficial/deployments",
     "created_at": "2024-02-21T17:55:44Z",
     "updated_at": "2024-02-21T19:07:50Z",
-    "pushed_at": "2024-03-16T15:33:19Z",
+    "pushed_at": "2024-03-17T10:08:54Z",
     "git_url": "git://github.com/edgarguitarist/la-velada-web-oficial.git",
     "ssh_url": "git@github.com:edgarguitarist/la-velada-web-oficial.git",
     "clone_url": "https://github.com/edgarguitarist/la-velada-web-oficial.git",
     "svn_url": "https://github.com/edgarguitarist/la-velada-web-oficial",
     "homepage": "https://www.infojobs.net/madrid/programador-para-velada-4/of-i14436bb760436ca85d8c5911a67994",
-    "size": 194950,
+    "size": 194946,
     "stargazers_count": 0,
     "watchers_count": 0,
     "language": "Astro",
@@ -1439,8 +1439,8 @@
       "contributions": 0
     },
     "languages": {
-      "Astro": 162200,
-      "TypeScript": 73535,
+      "Astro": 163041,
+      "TypeScript": 73538,
       "JavaScript": 3709,
       "HTML": 53
     }
