@@ -14,8 +14,8 @@ const { username } = Astro.props;
  }
 
 </style>
-<nav id="navbar" class="inline-flex w-full fixed bg-black h-12 z-50 text-white">
-  <div class="w-1/5 pl-6 self-center">
+<nav id="navbar" class="inline-flex w-full fixed bg-black h-12 z-50 text-white mt-[-2px]">
+  <div class="lg:w-1/5 hidden lg:block md:block pl-6 self-center">
     <a
       target="_blank"
       href={`https://www.github.com/${username}`}
@@ -24,18 +24,18 @@ const { username } = Astro.props;
       {username}
     </a>
   </div>
-  <div class="w-3/5 inline-flex gap-x-6 place-content-center">
+  <div class=" w-[70%] lg:w-3/5 inline-flex place-content-center md:gap-x-6 lg:gap-x-6">
     <NavLinks link={Nav.aboutme} />
     <!-- <NavLinks link={Nav.skills} /> -->
     <NavLinks link={Nav.projects} />
     <NavLinks link={Nav.knowledge} />
   </div>
-  <div class="w-1/5 pr-6 my-1 text-right self-center flex gap-x-3">
+  <div class="w-[30%] lg:w-1/5 flex gap-x-2 md:gap-x-6 lg:gap-x-6">
     <button
       id="theme-toggle"
       type="button"
       title={t("index.nav.toggle")}
-      class="text-gray-500 dark:text-gray-400 rounded-lg text-sm p-2.5"
+      class="text-gray-500 dark:text-gray-400 rounded-lg text-sm -pl-16"
     >
       <svg
         id="theme-toggle-dark-icon"
@@ -59,8 +59,8 @@ const { username } = Astro.props;
           clip-rule="evenodd"></path>
       </svg>
     </button>
-    <div class="languages-wrapper flex self-center">
-      <Icon name="mdi:translate" class="w-5 h-5" />
+    <div class="flex bg-slate-700 rounded-full px-3 py-1.5 gap-2  self-center">
+      <Icon name="mdi:translate" class="size-5" />
       <slot />
     </div>
   </div>
