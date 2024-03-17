@@ -2,61 +2,66 @@
   {
     "name": "Node",
     "src": "nodejs",
-    "show" : true
+    "show": true
   },
   {
     "name": "Deno",
     "src": "deno",
-    "show" : true
+    "show": true
   },
   {
     "name": "Vite",
     "src": "vite",
-    "show" : true
+    "show": true
   },
   {
     "name": "Express",
     "src": "express",
-    "show" : true
+    "show": true
+  },
+  {
+    "name": "Sequelize",
+    "src": "sequelize",
+    "show": true
   },
   {
     "name": "React",
     "src": "react",
-    "show" : true
+    "show": true
   },
   {
     "name": "Angular",
     "src": "angular",
-    "show" : true
+    "show": true
   },
   {
     "name": "Next",
     "src": "next-js",
-    "show" : true
+    "show": true
   },
   {
     "name": "Astro",
     "src": "astro",
-    "show" : true
+    "show": true
   },
   {
     "name": "TailwindCSS",
     "src": "tailwind-css",
-    "show" : true
+    "show": true
   },
   {
     "name": "Bulma",
     "src": "bulma",
-    "show" : true
+    "show": true
   },
   {
     "name": "Svelte",
     "src": "svelte",
-    "show" : false
+    "show": false
   },
   {
     "name": "Vue",
     "src": "vue",
-    "show" : false
+    "show": false
   }
 ]
