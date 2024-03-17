@@ -15,23 +15,24 @@ const iconStyle = "m-auto w-3/5 h-3/5 hover:transform hover:scale-105";
 ---
 
 <footer
-  class="inline-flex w-[104%] overflow-x-hidden content-center bg-black h-16 text-white lg:fixed bottom-0 z-10"
+  class="w-[104%] overflow-x-hidden content-center bg-black h-16 text-white lg:fixed bottom-0 z-10"
 >
-  <div class="inline-flex w-full my-auto">
-    <div class="text-center md:w-3/4 my-auto p-2">
-      <p class="text-xl flex justify-center">
-        <span>{t("index.footer.developer")}</span>
-        <strong class="text-white mx-2">{me.name}</strong>
-        <span>{t("index.footer.using")}</span>
-        <img src={astro} alt="Astro Logo" class="h-6 ml-2">
-      </p>
+    <div class="flex">
+      <div class="md:w-3/5 w-5/6 my-auto p-2">
+        <p class="flex text-base place-content-center  w-[110%]">
+          <span>{t("index.footer.developer")}</span>
+          <strong class="text-white mx-2">{me.name}</strong>
+          <span>{t("index.footer.using")}</span>
+          <img src={astro} alt="Astro Logo" class="h-6 ml-2">
+        </p>
+      </div>
+      <div class="w-3/5 hidden md:inline-flex gap-x-3 place-content-center p-2">
+        <ButtonSocials social={Info.x}>{<X class={iconStyle}/>}</ButtonSocials>
+        <ButtonSocials social={Info.linkedin}>{<Linkedin class={iconStyle}/>}</ButtonSocials>
+        <ButtonSocials social={Info.github}>{<Github class={iconStyle}/>}</ButtonSocials>
+        <ButtonSocials social={Info.pdf2}>{<Document class={iconStyle}/>}</ButtonSocials>
+      </div>
+      <AnimationLink />
     </div>
-    <div class="w-3/5 hidden md:inline-flex gap-x-3 place-content-center p-2">
-      <ButtonSocials social={Info.x}>{<X class={iconStyle}/>}</ButtonSocials>
-      <ButtonSocials social={Info.linkedin}>{<Linkedin class={iconStyle}/>}</ButtonSocials>
-      <ButtonSocials social={Info.github}>{<Github class={iconStyle}/>}</ButtonSocials>
-      <ButtonSocials social={Info.pdf2}>{<Document class={iconStyle}/>}</ButtonSocials>
-    </div>
-    <AnimationLink />
-  </div>
+ 
 </footer>
