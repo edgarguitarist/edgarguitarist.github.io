@@ -10,7 +10,7 @@ const { link } = Astro.props;
 const navStyle =
   "h-border-gradient inline-flex gap-x-2 font-semibold text-lg items-center px-2";
 
-const iconStyle = "w-5 h-5 mt-0.5";
+const iconStyle = "size-5 mt-0.5";
 
 const navDic:NavDicInterface = {
   aboutme: {
@@ -18,11 +18,6 @@ const navDic:NavDicInterface = {
     iconName: "mdi:star",
     label: t("index.nav.aboutme"),
   },
-  // skills: {
-  //   href: "#skills",
-  //   iconName: "mdi:wizard-hat",
-  //   label: t("index.nav.skills"),
-  // },
   projects: {
     href: "#projects",
     iconName: "mdi:react",
@@ -34,10 +29,13 @@ const navDic:NavDicInterface = {
     label: t("index.nav.knowledge"),
   },
 };
+
+const navElement = navDic[link as Nav];
+
 ---
-<a href={navDic[link].href} id={`${link}_nav`} class={navStyle}>
-  <Icon name={navDic[link].iconName} class={iconStyle}/>
-  {navDic[link].label}
+<a href={navElement.href} id={`${link}_nav`} class={navStyle}>
+  <Icon name={navElement.iconName} class={iconStyle}/>
+  {navElement.label}
 </a>
 
 

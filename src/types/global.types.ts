@@ -1,6 +1,6 @@
 export enum Nav {
   aboutme = "aboutme",
-  skills = "skills",
+  //skills = "skills",
   projects = "projects",
   knowledge = "knowledge",
 }
