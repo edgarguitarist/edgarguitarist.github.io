@@ -68,5 +68,10 @@
     "name": "PowerShell",
     "src": "powershell",
     "show" : true
+  },
+  {
+    "name": "Bash",
+    "src": "bash",
+    "show" : true
   }
 ]
