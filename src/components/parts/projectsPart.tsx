@@ -55,7 +55,7 @@ export default function ProjectsPart({ forked }: any) {
   )
 
   return (
-    <div id={sectionName.toLocaleLowerCase()} className=" pt-7">
+    <div className=" pt-7">
       <h2 className="font-bold flex  text-3xl mt-10 text-left dark:text-white text-black">
         {sectionName}
         {elementos && (
