@@ -14,6 +14,12 @@ interface Props {
   filtro: any;
 }
 
+interface Pcard {
+  contribution: string;
+  stars: string;
+  languages: string;
+}
+
 export default function ProjectsCard({
   name,
   repo_url,
@@ -23,8 +29,14 @@ export default function ProjectsCard({
   languages,
   stars,
   filtro,
-}: Props) {
-  const no_show = ["Hack", "PowerShell", "Tcl", "Batchfile", "Shell"];
+}: Readonly<Props>) {
+  const no_show = ["Hack", "Tcl", "Batchfile", "Shell"];
+  const {
+    stars: t_stars,
+    contribution: t_contribution,
+    languages: t_languages,
+  } = t("index.projects.cards", { returnObjects: true }) as Pcard;
+  
 
   const lenguajes = Object.keys(languages)
     .filter((key) => !no_show.includes(key))
@@ -52,10 +64,10 @@ export default function ProjectsCard({
           {description || "..."}
         </p>
         <p
-          title={`${t("index.projects.cards.languages")}: ${lenguajes_string}`}
+          title={`${t_languages}: ${lenguajes_string}`}
           className="text-slate-800 dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap flex items-center justify-center gap-2 pt-2"
         >
-          {t("index.projects.cards.languages")}:{" "}
+          {t_languages}:{" "}
           {lenguajes.map((lenguaje) => (
             <ButtonLanguage language={lenguaje} filtro={filtro} />
           ))}
@@ -80,23 +92,25 @@ export default function ProjectsCard({
       {Boolean(stars) && !contributor && (
         <div
           id={`${"badge-stars"}-${name}`}
-          title={`${stars} ${t("index.projects.cards.stars")}`}
+          title={`${stars} ${t_stars}`}
           className="absolute inline-flex items-center justify-center w-8 h-8 font-semibold bg-transparent rounded-full -top-3 -right-3 text-md"
         >
           {/* <Icon
             name="ph:star-fill"
             className="flex absolute z-[1] text-yellow-300"
           /> */}
-          <img src={starfill} alt="icono de estrella" className="flex absolute z-[1] text-yellow-300" />
+          <img
+            src={starfill}
+            alt="icono de estrella"
+            className="flex absolute z-[1] text-yellow-300"
+          />
           <span className="text-gray-900 z-[2]">{stars}</span>
         </div>
       )}
       {contributor?.contributions > 0 && (
         <div
           id={`${"badge-contributions"}-${name}`}
-          title={`${contributor.contributions} ${t(
-            "index.projects.cards.contribution"
-          )}`}
+          title={`${contributor.contributions} ${t_contribution}`}
           className="absolute inline-flex items-center justify-center w-8 h-8 font-bold bg-red-600 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900 text-md"
         >
           <span className="text-white">{contributor.contributions}</span>
