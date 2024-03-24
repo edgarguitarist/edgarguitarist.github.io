@@ -2,7 +2,9 @@ import { useEffect, useState } from "preact/hooks";
 import ProjectsCard from "@components/cards/projectsCard";
 import repos from "@db/repos.json";
 import { t } from "i18next";
-import clearfilter from "/svg/clearfilter.svg";
+
+//INFO: ERROR: i18next Dont works correctly with preact
+
 
 export default function ProjectsPart({ forked }: any) {
   let initialRepositories = repos
@@ -15,12 +17,12 @@ export default function ProjectsPart({ forked }: any) {
   }
                                 
 
-  const [repositories, setRepositories] = useState(initialRepositories);
-  const [elementos, setElementos] = useState("");
+  // const [repositories, setRepositories] = useState(initialRepositories);
+  // const [elementos, setElementos] = useState("");
 
-  useEffect(() => {
-    filtro.metodo(JSON.parse(localStorage.getItem(filtro.tipo) ?? "[]"));
-  }, []);
+  // useEffect(() => {
+  //   filtro.metodo(JSON.parse(localStorage.getItem(filtro.tipo) ?? "[]"));
+  // }, []);
 
   const filtro = {
     tipo: forked ? "forks" : "repositories",
@@ -44,10 +46,12 @@ export default function ProjectsPart({ forked }: any) {
   };
 
   const sectionName = !forked
-    ? t("index.projects.repositories")
-    : t("index.projects.forks");
+    ? "REPOS"
+    : "FORKS";
 
-  const reposFiltered = repositories.filter(
+  console.log(sectionName);
+
+  const reposFiltered = initialRepositories.filter(
     (r) =>
       !r.name.includes("prueba") &&
       !r.name.includes("portfolio") &&
@@ -58,7 +62,7 @@ export default function ProjectsPart({ forked }: any) {
     <div className=" pt-7">
       <h2 className="font-bold flex  text-3xl mt-10 text-left dark:text-white text-black">
         {sectionName}
-        {elementos && (
+        {/* {elementos && (
           <div className="flex w-full place-content-between">
             <span className="text-xl ml-3 font-semibold text-gray-500 dark:text-gray-400 self-center">
               {t("index.projects.with")} ({elementos}){" = "}
@@ -71,14 +75,14 @@ export default function ProjectsPart({ forked }: any) {
               onClick={filtro.clear}
             >
               <img
-                src={clearfilter}
+                src={"/svg/clearfilter.svg"}
                 alt={t("index.projects.clear") ?? "clear filters"}
                 className="w-6 h-6 text-white mr-1"
               />
               {t("index.projects.clear")}
             </button>
           </div>
-        )}
+        )} */}
       </h2>
 
       <div className="flex justify-around flex-wrap gap-10 mt-10">
