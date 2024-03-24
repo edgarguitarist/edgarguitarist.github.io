@@ -150,3 +150,8 @@ a {
   background: -moz-linear-gradient(to left, #743ad5, #d53a9d);
   background: -webkit-linear-gradient(to left, #743ad5, #d53a9d);
 }
+
+option {
+  color: black !important;
+  font-weight: 500;
+}
