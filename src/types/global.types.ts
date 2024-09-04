@@ -4,6 +4,7 @@ export enum Nav {
   projects = "projects",
   knowledge = "knowledge",
 }
+
 export enum Info {
   facebook = "facebook",
   instagram = "instagram",
@@ -15,6 +16,7 @@ export enum Info {
   linkedin = "linkedin",
   whatsapp = "whatsapp",
 }
+
 export type GeneralLinkAttribute = {
   href: string;
   iconName?: string;
