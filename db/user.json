@@ -16,6 +16,7 @@
   "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
   "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
   "type": "User",
+  "user_view_type": "public",
   "site_admin": false,
   "name": "Edgar Laz",
   "company": "Bitekso S.A",

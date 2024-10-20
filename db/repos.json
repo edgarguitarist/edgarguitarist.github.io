@@ -23,6 +23,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/asistente-virtual",
@@ -132,6 +133,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/better-xampp-htdocs-folder",
@@ -175,7 +177,7 @@
     "releases_url": "https://api.github.com/repos/edgarguitarist/better-xampp-htdocs-folder/releases{/id}",
     "deployments_url": "https://api.github.com/repos/edgarguitarist/better-xampp-htdocs-folder/deployments",
     "created_at": "2022-11-06T03:18:55Z",
-    "updated_at": "2023-04-17T06:21:15Z",
+    "updated_at": "2024-10-15T06:27:56Z",
     "pushed_at": "2024-02-24T11:29:20Z",
     "git_url": "git://github.com/edgarguitarist/better-xampp-htdocs-folder.git",
     "ssh_url": "git@github.com:edgarguitarist/better-xampp-htdocs-folder.git",
@@ -183,8 +185,8 @@
     "svn_url": "https://github.com/edgarguitarist/better-xampp-htdocs-folder",
     "homepage": "",
     "size": 177,
-    "stargazers_count": 2,
-    "watchers_count": 2,
+    "stargazers_count": 3,
+    "watchers_count": 3,
     "language": "PHP",
     "has_issues": true,
     "has_projects": true,
@@ -216,7 +218,7 @@
     "visibility": "public",
     "forks": 0,
     "open_issues": 0,
-    "watchers": 2,
+    "watchers": 3,
     "default_branch": "main",
     "languages": {
       "PHP": 3486,
@@ -250,6 +252,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/bmo",
@@ -355,6 +358,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/chess-vite",
@@ -461,6 +465,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/codi.link",
@@ -577,6 +582,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/curso-platzi-react-avanzado",
@@ -683,6 +689,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/deno-wordle",
@@ -790,6 +797,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/edgarguitarist",
@@ -894,6 +902,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/edgarguitarist.github.io",
@@ -937,14 +946,14 @@
     "releases_url": "https://api.github.com/repos/edgarguitarist/edgarguitarist.github.io/releases{/id}",
     "deployments_url": "https://api.github.com/repos/edgarguitarist/edgarguitarist.github.io/deployments",
     "created_at": "2021-09-17T20:09:33Z",
-    "updated_at": "2024-10-06T00:28:40Z",
-    "pushed_at": "2024-10-06T00:28:36Z",
+    "updated_at": "2024-10-13T00:28:35Z",
+    "pushed_at": "2024-10-13T00:28:32Z",
     "git_url": "git://github.com/edgarguitarist/edgarguitarist.github.io.git",
     "ssh_url": "git@github.com:edgarguitarist/edgarguitarist.github.io.git",
     "clone_url": "https://github.com/edgarguitarist/edgarguitarist.github.io.git",
     "svn_url": "https://github.com/edgarguitarist/edgarguitarist.github.io",
     "homepage": "https://edgarguitarist.github.io/",
-    "size": 26661,
+    "size": 26662,
     "stargazers_count": 1,
     "watchers_count": 1,
     "language": "Astro",
@@ -1000,6 +1009,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/faceswapper",
@@ -1106,6 +1116,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/github95",
@@ -1215,6 +1226,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/intellij-pokemon-progress",
@@ -1330,6 +1342,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/javascript-interview-questions",
@@ -1436,6 +1449,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/kings-league-project",
@@ -1535,6 +1549,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false,
       "contributions": 14
     },
@@ -1568,6 +1583,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/la-velada-web-oficial",
@@ -1683,6 +1699,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/miduconf-website",
@@ -1776,6 +1793,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false,
       "contributions": 5
     },
@@ -1811,6 +1829,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/midudev",
@@ -1917,6 +1936,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/naruto-progress",
@@ -2031,6 +2051,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/password-generator",
@@ -2149,6 +2170,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/repos-react",
@@ -2258,6 +2280,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/tech-interview-handbook",
@@ -2373,6 +2396,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/vota.dev",
@@ -2466,6 +2490,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false,
       "contributions": 3
     },
@@ -2500,6 +2525,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/youtube-gpt",
@@ -2612,6 +2638,7 @@
       "events_url": "https://api.github.com/users/edgarguitarist/events{/privacy}",
       "received_events_url": "https://api.github.com/users/edgarguitarist/received_events",
       "type": "User",
+      "user_view_type": "public",
       "site_admin": false
     },
     "html_url": "https://github.com/edgarguitarist/Youtube-Utilities-Chrome-Extension",
