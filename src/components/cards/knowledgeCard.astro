@@ -15,7 +15,7 @@ const { name, src, invert = false } = Astro.props;
       id={name}
       class:list={[
         "w-16 h-16 md:w-20 md:h-20 object-contain relative z-10",
-        invert && "dark:invert",
+        invert && "dark:invert icon-invertible",
       ]}
       title={name}
       src={`/svg/${src}.svg`}

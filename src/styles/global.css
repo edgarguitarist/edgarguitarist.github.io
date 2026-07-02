@@ -252,3 +252,10 @@ option {
 .knowledge-card:hover img {
   filter: drop-shadow(0 0 8px rgba(116,58,213,0.5));
 }
+
+/* Mantener el invert de modo oscuro al hacer hover: el drop-shadow de arriba
+   reemplazaría el filtro invert y el icono se volvería negro sobre el fondo
+   oscuro. Combinamos ambos filtros para los iconos invertibles en dark. */
+:where(.dark) .knowledge-card:hover img.icon-invertible {
+  filter: invert(1) drop-shadow(0 0 8px rgba(116, 58, 213, 0.5));
+}
