@@ -1,12 +1,14 @@
 ---
 import Sections from "@layouts/Sections.astro";
-import { t } from "i18next";
+import { getUI } from "@i18n/ui";
 import KnowledgePart from "@components/parts/knowledgePart.astro";
 import { Knowledge as Know } from "../../types/global.types";
+
+const ui = getUI(Astro.currentLocale);
 ---
 
-<Sections id="knowledge" title={t("index.knowledge.title")}>
-  <div class="my-8 text-center">
+<Sections id="knowledge" title={ui.index.knowledge.title}>
+  <div class="mt-4 text-center max-w-5xl mx-auto">
     <KnowledgePart section={Know.PL} />
     <KnowledgePart section={Know.FW} />
     <KnowledgePart section={Know.SGBD} />

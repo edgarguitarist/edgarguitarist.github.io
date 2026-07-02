@@ -1,6 +1,6 @@
 export enum Nav {
   aboutme = "aboutme",
-  //skills = "skills",
+  experience = "experience",
   projects = "projects",
   knowledge = "knowledge",
 }
@@ -26,7 +26,7 @@ export type GeneralLinkAttribute = {
 
 export interface NavDicInterface {
   [Nav.aboutme]: GeneralLinkAttribute;
-  // [Nav.skills]: GeneralLinkAttribute;
+  [Nav.experience]: GeneralLinkAttribute;
   [Nav.projects]: GeneralLinkAttribute;
   [Nav.knowledge]: GeneralLinkAttribute;
 }

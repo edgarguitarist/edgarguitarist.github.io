@@ -1,0 +1,82 @@
+{
+  "en": {
+    "jobs": [
+      {
+        "company": "Agrosoft Latam",
+        "position": "Software Developer",
+        "location": "Guayaquil, Ecuador",
+        "period": "Nov 2025 - Jun 2026",
+        "current": false,
+        "description": "ERP System Development with Angular, .NET 8 with C# and Microsoft SQL Server.",
+        "tech": ["Angular", ".NET 8", "C#", "SQL Server"]
+      },
+      {
+        "company": "TeamQ",
+        "position": "Senior Frontend Developer",
+        "location": "Erfurt, Germany",
+        "period": "May 2024 - Sep 2025",
+        "current": false,
+        "description": "Developed high-performance web systems using Angular 17 and Tailwind, improving UX and efficiency of internal processes. Led code optimization and best practices initiatives in the Frontend team.",
+        "tech": ["Angular 17", "Tailwind", "TypeScript", "Unit Testing"]
+      },
+      {
+        "company": "Bitekso S.A.",
+        "position": "Lead Software Developer",
+        "location": "Guayaquil, Ecuador",
+        "period": "Mar 2022 - 2024",
+        "current": false,
+        "description": "Led a team of developers and multiple projects for public entities. Implemented web systems using Angular, Node.js, React, Express, SQL Server and PostgreSQL.",
+        "tech": ["Angular", "React", "Node.js", "Express", "SQL Server", "PostgreSQL"]
+      }
+    ],
+    "freelance": {
+      "company": "Freelance",
+      "position": "FullStack Web & Mobile Developer",
+      "location": "Guayaquil, Ecuador",
+      "period": "Dec 2019 - Present",
+      "current": true,
+      "description": "Ongoing side work in parallel to my full-time roles. Web systems and native mobile apps for clients across various industries, with AI integrations for process automation and multimedia content generation.",
+      "tech": ["PHP", "JavaScript", "MySQL", "Java", "Kotlin", "React", "AI"]
+    }
+  },
+  "es": {
+    "jobs": [
+      {
+        "company": "Agrosoft Latam",
+        "position": "Desarrollador de Software",
+        "location": "Guayaquil, Ecuador",
+        "period": "Nov 2025 - Jun 2026",
+        "current": false,
+        "description": "Desarrollo de Sistema ERP con Angular, .NET 8 con C# y Microsoft SQL Server.",
+        "tech": ["Angular", ".NET 8", "C#", "SQL Server"]
+      },
+      {
+        "company": "TeamQ",
+        "position": "Senior Frontend Developer",
+        "location": "Erfurt, Alemania",
+        "period": "May 2024 - Sep 2025",
+        "current": false,
+        "description": "Desarrolle sistemas web de alto rendimiento utilizando Angular 17 y Tailwind, mejorando la experiencia de usuario y la eficiencia de los procesos internos. Lidere iniciativas de optimizacion de codigo y buenas practicas.",
+        "tech": ["Angular 17", "Tailwind", "TypeScript", "Unit Testing"]
+      },
+      {
+        "company": "Bitekso S.A.",
+        "position": "Lead Software Developer",
+        "location": "Guayaquil, Ecuador",
+        "period": "Mar 2022 - 2024",
+        "current": false,
+        "description": "Lidere un grupo de desarrolladores y varios proyectos para entidades publicas. Implemente sistemas web utilizando Angular, Node.js, React, Express, SQL Server y PostgreSQL.",
+        "tech": ["Angular", "React", "Node.js", "Express", "SQL Server", "PostgreSQL"]
+      }
+    ],
+    "freelance": {
+      "company": "Freelance",
+      "position": "Desarrollador Web y Movil FullStack",
+      "location": "Guayaquil, Ecuador",
+      "period": "Dic 2019 - Presente",
+      "current": true,
+      "description": "Trabajo continuo en paralelo a mis empleos de tiempo completo. Sistemas web y aplicaciones moviles nativas para clientes de diversos sectores, con integraciones de IA para automatizacion de procesos y generacion de contenido.",
+      "tech": ["PHP", "JavaScript", "MySQL", "Java", "Kotlin", "React", "AI"]
+    }
+  }
+}

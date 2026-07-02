@@ -50,9 +50,14 @@
     "show": true
   },
   {
+    "name": ".NET",
+    "src": "dotnet",
+    "show": true
+  },
+  {
     "name": "Bulma",
     "src": "bulma",
-    "show": true
+    "show": false
   },
   {
     "name": "Svelte",

@@ -1,0 +1,86 @@
+---
+import Sections from "@layouts/Sections.astro";
+import { getUI } from "@i18n/ui";
+import experienceData from "@data/experience.json";
+import ExperienceCard, { type Job } from "@components/cards/experienceCard.astro";
+
+const lang = (Astro.currentLocale ?? "en") as "en" | "es";
+const ui = getUI(lang);
+const data = experienceData[lang] || experienceData["en"];
+const jobs: Job[] = data.jobs;
+const freelance: Job = data.freelance;
+const currentLabel = ui.index.experience.current;
+---
+
+<Sections id="experience" title={ui.index.experience.title}>
+  <div class="mt-10 max-w-6xl mx-auto">
+    <!-- ============ TRACK 1: TIEMPO COMPLETO ============ -->
+    <p class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider dark:text-gray-400 text-gray-500 mb-6">
+      <span class="w-2 h-2 rounded-full bg-purple-500"></span>
+      {ui.index.experience.fulltime}
+    </p>
+
+    <div class="relative">
+      <!-- Línea del timeline: vertical en móvil, horizontal en desktop -->
+      <span
+        aria-hidden="true"
+        class="absolute z-0 bg-gradient-to-b lg:bg-gradient-to-r from-purple-500/50 via-pink-500/50 to-purple-500/50 left-[7px] top-3 h-[calc(100%-1.5rem)] w-0.5 lg:left-0 lg:top-3 lg:h-0.5 lg:w-full"
+      >
+      </span>
+
+      <ol class="flex flex-col lg:flex-row-reverse gap-y-8 lg:gap-y-0 lg:gap-x-6">
+        {
+          jobs.map((job: Job) => (
+            <li class="relative pl-8 lg:pl-0 lg:flex-1 lg:min-w-0">
+              {/* Nodo */}
+              <span
+                class={`absolute z-10 rounded-full border-2 w-4 h-4 left-[7px] top-3 -translate-x-1/2 lg:left-1/2 lg:top-3 lg:-translate-y-1/2 ${
+                  job.current
+                    ? "bg-green-400 border-green-400 shadow-[0_0_12px_rgba(74,222,128,0.6)]"
+                    : "bg-purple-500 border-purple-500"
+                }`}
+              />
+              {/* Tarjeta */}
+              <div class="lg:pt-10">
+                <ExperienceCard job={job} currentLabel={currentLabel} />
+              </div>
+            </li>
+          ))
+        }
+      </ol>
+    </div>
+
+    <!-- ============ TRACK 2: FREELANCE (EN PARALELO) ============ -->
+    <p class="flex items-center gap-2 text-xs font-bold uppercase tracking-wider dark:text-gray-400 text-gray-500 mt-14 mb-6">
+      <span class="w-2 h-2 rounded-full bg-green-400"></span>
+      {ui.index.experience.freelance}
+      <span class="normal-case font-medium dark:text-gray-500 text-gray-500">· {ui.index.experience.parallel}</span>
+    </p>
+
+    <div class="relative">
+      <!-- Barra continua: vertical en móvil, horizontal en desktop -->
+      <span
+        aria-hidden="true"
+        class="absolute z-0 bg-gradient-to-b lg:bg-gradient-to-r from-green-400/60 via-emerald-400/40 to-green-400/70 left-[7px] top-3 h-[calc(100%-1.5rem)] w-0.5 lg:left-0 lg:top-3 lg:h-0.5 lg:w-full"
+      >
+      </span>
+
+      <div class="relative pl-8 lg:pl-0">
+        <!-- Nodo de inicio (izquierda) -->
+        <span
+          class="absolute z-10 rounded-full border-2 w-4 h-4 bg-purple-500 border-purple-500 left-[7px] top-3 -translate-x-1/2 lg:left-0 lg:top-3 lg:-translate-y-1/2"
+        >
+        </span>
+        <!-- Nodo actual (derecha en desktop, arriba en móvil) -->
+        <span
+          class="hidden lg:block absolute z-10 rounded-full border-2 w-4 h-4 bg-green-400 border-green-400 shadow-[0_0_12px_rgba(74,222,128,0.6)] lg:right-0 lg:top-3 lg:translate-x-1/2 lg:-translate-y-1/2"
+        >
+        </span>
+
+        <div class="lg:pt-10 lg:max-w-md">
+          <ExperienceCard job={freelance} currentLabel={currentLabel} />
+        </div>
+      </div>
+    </div>
+  </div>
+</Sections>

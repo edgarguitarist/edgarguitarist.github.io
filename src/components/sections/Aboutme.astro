@@ -2,83 +2,105 @@
 import Sections from "@layouts/Sections.astro";
 import ButtonSocials from "@components/buttons/ButtonSocials.astro";
 import { Info } from "../../types/global.types";
-import { t } from "i18next";
-import me from "db/user.json";
+import { getUI, format } from "@i18n/ui";
+import me from "@db/user.json";
 
-import X from "@icons/x.astro";
 import Github from "@icons/github.astro";
 import Linkedin from "@icons/linkedin.astro";
 import Document from "@icons/document.astro";
 const iconStyle = "m-auto size-3/5 hover:transform hover:scale-105";
 
-// Definir dos fechas
 const fecha1 = new Date(me.created_at);
 const fecha2 = new Date();
-
-// Calcular la diferencia de años
-const Anios = fecha2.getFullYear() - fecha1.getFullYear();
+let Anios = fecha2.getFullYear() - fecha1.getFullYear();
+// Resta un año si aún no se ha cumplido el aniversario este año
+const noHaCumplido =
+  fecha2.getMonth() < fecha1.getMonth() ||
+  (fecha2.getMonth() === fecha1.getMonth() &&
+    fecha2.getDate() < fecha1.getDate());
+if (noHaCumplido) Anios--;
+const ui = getUI(Astro.currentLocale);
 ---
 
-<Sections id="aboutme" title="">
-  <div class="flex flex-col lg:flex-row lg:pt-6 lg:min-h-[85vh] min-h-[calc(100vh+7rem)]">
-    <div class="lg:w-1/2 self-center">
-      <img
-      src="/images/2025.webp"
-      alt="Edgar Mariano Laz Terán"
-      class="rounded-full profile-photo m-auto lg:size-[500px] md:size-[400px] size-[300px] "
-    />
-    </div>
-    <div
-      class=" lg:w-1/2 lg:mx-10 md:mx-6 m-auto flex flex-col gap-y-6 lg:gap-5 md:text-3xl lg:text-xl text-2xl"
-    >
-      <p class="text-center text-4xl md:text-5xl lg:text-4xl font-bold">
-        <span
-          class="drop-shadow-[5px_5px_0_rgba(0,0,0,0.25)] dark:drop-shadow-[5px_5px_0_rgba(255,255,255,0.10)] text-gray-800 dark:text-gray-100"
-          >{t("index.about.description")}</span
-        >
-      </p>
-      <p
-        class="place-self-center font-bold flex gap-x-2 text-gray-800 dark:text-gray-100"
-      >
-        <img src={"/svg/company.svg"} alt="" class="size-8 dark:invert" />
-        <span class=""
-          >{t("index.about.position")} {t("index.about.pp")} {me.company}</span
-        >
-      </p>
-      <p
-        class="place-self-center font-bold flex gap-x-2 text-gray-800 dark:text-gray-100"
-      >
-        <img src={"/svg/pin-sharp-circle.svg"} alt="" class="size-8 dark:invert" />
-        {me.location}
-      </p>
-      <p
-        class="place-self-center font-bold flex gap-x-2 text-green-900 dark:text-green-400"
-      >
-        <span>+{Anios} {t("index.about.experience")}</span>
-      </p>
-      <p class="text-center lg:text-3xl md:text-4xl text-3xl font-bold p-2 text-sky-800">
-        <a href="#projects">
-          <span
-            class=" dark:text-sky-600"
-            >{t("index.about.subtitle")}
-          </span>
-        </a>
-        <span>👽</span>
-      </p>
-      <div class="flex lg:gap-x-4 gap-x-6 place-content-center">
-        <ButtonSocials footer={false} social={Info.x}
-          >{(<X class={iconStyle} />)}</ButtonSocials
-        >
-        <ButtonSocials footer={false} social={Info.linkedin}
-          >{(<Linkedin class={iconStyle} />)}</ButtonSocials
-        >
-        <ButtonSocials footer={false} social={Info.github}
-          >{(<Github class={iconStyle} />)}</ButtonSocials
-        >
-        <ButtonSocials footer={false} social={Info.pdf2}
-          >{(<Document class={iconStyle} />)}</ButtonSocials
-        >
+<Sections id="aboutme" title="" className="pt-0!">
+  <div class="flex flex-col lg:flex-row lg:min-h-[calc(100vh-3.5rem)] min-h-[60vh] items-center justify-center">
+    <!-- Photo -->
+    <div class="lg:w-5/12 self-center fade-in mt-4 lg:mt-0">
+      <div class="relative flex items-center justify-center">
+        <img
+          src="/images/2025.webp"
+          alt="Edgar Mariano Laz Terán"
+          class="rounded-full profile-photo m-auto lg:size-100 md:size-80 size-55 object-cover"
+        />
       </div>
+    </div>
+
+    <!-- Content -->
+    <div class="lg:w-7/12 lg:mx-10 md:mx-6 mx-4 flex flex-col gap-y-4 lg:gap-5 mt-6 lg:mt-0 text-center lg:text-left">
+      <!-- Greeting -->
+      <div class="fade-in fade-in-delay-1">
+        <p class="text-base md:text-lg dark:text-gray-400 text-gray-500 font-medium tracking-wide">
+          {ui.index.about.greeting}
+        </p>
+        <h1 class="text-3xl md:text-5xl lg:text-5xl font-black mt-1 dark:text-white text-gray-900">
+          Edgar <span class="gradient-text">Laz</span>
+        </h1>
+      </div>
+
+      <!-- Title -->
+      <div class="fade-in fade-in-delay-2">
+        <p class="text-xl md:text-2xl lg:text-2xl font-bold dark:text-gray-100 text-gray-800">
+          {ui.index.about.description}
+        </p>
+      </div>
+
+      <!-- Bio -->
+      <div class="fade-in fade-in-delay-3">
+        <p class="dark:text-gray-400 text-gray-600 text-sm md:text-base leading-relaxed max-w-2xl text-left">
+          {format(ui.index.about.bio, [Anios])}
+        </p>
+      </div>
+
+      <!-- Info pills -->
+      <div class="flex flex-wrap gap-2 md:gap-3 fade-in fade-in-delay-3 justify-center lg:justify-start">
+        <div class="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full dark:bg-white/5 bg-gray-100 border dark:border-white/10 border-gray-200">
+          <img src={"/svg/company.svg"} alt="" class="size-4 md:size-5 dark:invert" />
+          <span class="dark:text-gray-300 text-gray-700 font-medium text-xs md:text-sm">
+            {ui.index.about.position} {ui.index.about.pp} {me.company}
+          </span>
+        </div>
+        <div class="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full dark:bg-white/5 bg-gray-100 border dark:border-white/10 border-gray-200">
+          <img src={"/svg/pin-sharp-circle.svg"} alt="" class="size-4 md:size-5 dark:invert" />
+          <span class="dark:text-gray-300 text-gray-700 font-medium text-xs md:text-sm">{me.location}</span>
+        </div>
+        <div class="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full dark:bg-green-500/10 bg-green-50 border dark:border-green-500/20 border-green-200">
+          <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
+          <span class="dark:text-green-400 text-green-700 font-bold text-xs md:text-sm">+{Anios} {ui.index.about.experience}</span>
+        </div>
+      </div>
+
+      <!-- CTA + Socials -->
+      <div class="flex flex-col sm:flex-row items-center gap-4 fade-in fade-in-delay-4">
+        <a
+          href="#experience"
+          class="group inline-flex items-center gap-2 px-6 py-2.5 md:px-8 md:py-3 rounded-full bg-gradient-to-r from-purple-600 to-pink-600 text-white font-semibold text-sm md:text-base hover:shadow-[0_0_30px_rgba(116,58,213,0.4)] transition-all duration-300 hover:scale-105"
+        >
+          {ui.index.about.subtitle}
+          <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+          </svg>
+        </a>
+        <div class="flex gap-x-3">
+          <ButtonSocials footer={false} social={Info.linkedin}>{(<Linkedin class={iconStyle} />)}</ButtonSocials>
+          <ButtonSocials footer={false} social={Info.github}>{(<Github class={iconStyle} />)}</ButtonSocials>
+          <ButtonSocials footer={false} social={Info.pdf2}>{(<Document class={iconStyle} />)}</ButtonSocials>
+        </div>
+      </div>
+
+      <!-- Tagline -->
+      <p class="dark:text-gray-400 text-gray-500 text-xs md:text-sm italic fade-in fade-in-delay-5">
+        "{ui.index.about.tagline}"
+      </p>
     </div>
   </div>
 </Sections>

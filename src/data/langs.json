@@ -35,6 +35,11 @@
     "show" : true
   },
   {
+    "name": "C#",
+    "src": "csharp",
+    "show" : true
+  },
+  {
     "name": "Kotlin",
     "src": "kotlin",
     "show" : true
