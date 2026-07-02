@@ -1,41 +1,35 @@
 ---
-import Icon from "astro-icon";
-import { t } from "i18next";
-import type { NavDicInterface, Nav } from "../types/global.types"
+import Account from "@icons/account.astro";
+import Briefcase from "@icons/briefcase.astro";
+import CodeBraces from "@icons/code-braces.astro";
+import Chip from "@icons/chip.astro";
+import { getUI } from "@i18n/ui";
+import type { Nav } from "../types/global.types";
+
 interface Props {
   link: Nav;
 }
 
 const { link } = Astro.props;
+const ui = getUI(Astro.currentLocale);
+
 const navStyle =
-  "h-border-gradient inline-flex md:gap-x-2 gap-x-1 font-semibold items-center px-1 text-sm md:text-lg mt-[2px] ";
+  "group inline-flex md:gap-x-2 gap-x-1 font-medium items-center px-3 py-1.5 rounded-lg text-xs md:text-sm dark:text-gray-300 text-gray-600 hover:dark:text-white hover:text-gray-900 dark:hover:bg-white/10 hover:bg-black/[0.05] transition-all duration-200";
 
-const iconStyle = "size-5 mt-0.5";
+const iconStyle = "size-5 mt-0.5 opacity-90";
 
-const navDic:NavDicInterface = {
-  aboutme: {
-    href: "#aboutme",
-    iconName: "mdi:star",
-    label: t("index.nav.aboutme"),
-  },
-  projects: {
-    href: "#projects",
-    iconName: "mdi:react",
-    label: t("index.nav.projects"),
-  },
-  knowledge: {
-    href: "#knowledge",
-    iconName: "mdi:book-open-variant",
-    label: t("index.nav.knowledge"),
-  },
+const navDic = {
+  aboutme: { href: "#aboutme", Icon: Account, label: ui.index.nav.aboutme },
+  experience: { href: "#experience", Icon: Briefcase, label: ui.index.nav.experience },
+  projects: { href: "#projects", Icon: CodeBraces, label: ui.index.nav.projects },
+  knowledge: { href: "#knowledge", Icon: Chip, label: ui.index.nav.knowledge },
 };
 
 const navElement = navDic[link as Nav];
-
+const Icon = navElement.Icon;
 ---
+
 <a href={navElement.href} id={`${link}_nav`} class={navStyle}>
-  <Icon name={navElement.iconName} class={iconStyle}/>
-  {navElement.label}
+  <Icon class={iconStyle} />
+  <span class="hidden sm:inline">{navElement.label}</span>
 </a>
-
-
