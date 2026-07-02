@@ -1,11 +1,21 @@
 ---
 import Sections from "@layouts/Sections.astro";
-import { t } from "i18next";
-//import ProjectsPart from "@components/parts/projectsPart.astro";
+import { getUI } from "@i18n/ui";
 import ProjectsPart from "@components/parts/projectsPart";
+
+// Los textos se resuelven en el server y se pasan ya traducidos a la isla Preact,
+// que consulta los repos EN VIVO desde la API de GitHub (sin scraping ni rebuild).
+const ui = getUI(Astro.currentLocale);
+const labels = {
+  loading: ui.index.projects.loading,
+  error: ui.index.projects.error,
+  empty: ui.index.projects.empty,
+  noDescription: ui.index.projects.no_description,
+  stars: ui.index.projects.cards.stars,
+  site: ui.index.projects.cards.site,
+};
 ---
 
-<Sections id="projects" title={t("index.projects.title")}>
-  <ProjectsPart forked={false} client:load/>
-  <ProjectsPart forked={true} client:load/>
+<Sections id="projects" title={ui.index.projects.title}>
+  <ProjectsPart user="edgarguitarist" labels={labels} client:load />
 </Sections>

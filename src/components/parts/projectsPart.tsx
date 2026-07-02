@@ -1,108 +1,137 @@
 import { useEffect, useState } from "preact/hooks";
 import ProjectsCard from "@components/cards/projectsCard";
-import repos from "@db/repos.json";
-import { t } from "i18next";
 
-//INFO: ERROR: i18next Dont works correctly with preact
+interface Repo {
+  id: number;
+  name: string;
+  html_url: string;
+  homepage: string | null;
+  description: string | null;
+  fork: boolean;
+  language: string | null;
+  stargazers_count: number;
+}
 
+interface Labels {
+  loading: string;
+  error: string;
+  empty: string;
+  noDescription: string;
+  stars: string;
+  site: string;
+}
 
-export default function ProjectsPart({ forked }: any) {
-  let initialRepositories = repos
-                                .filter((r) => r.fork === forked)
-  
-  if(!forked){
-    initialRepositories.sort((a, b) => b.stargazers_count - a.stargazers_count)
-  } else{    
-    initialRepositories.sort((a, b) => b.contributor!?.contributions - a.contributor!?.contributions)
-  }
-                                
+interface Props {
+  user: string;
+  labels: Labels;
+}
 
-  // const [repositories, setRepositories] = useState(initialRepositories);
-  // const [elementos, setElementos] = useState("");
+type State =
+  | { status: "loading" }
+  | { status: "error" }
+  | { status: "ready"; repos: Repo[] };
 
-  // useEffect(() => {
-  //   filtro.metodo(JSON.parse(localStorage.getItem(filtro.tipo) ?? "[]"));
-  // }, []);
+// GitHub guarda "homepage" tal cual lo escribió el usuario (a veces sin http://).
+// Un href sin esquema se resolvería como ruta relativa del propio sitio (404).
+function safeUrl(url: string | null): string | null {
+  const t = (url ?? "").trim();
+  if (!t) return null;
+  return /^https?:\/\//i.test(t) ? t : `https://${t}`;
+}
 
-  const filtro = {
-    tipo: forked ? "forks" : "repositories",
-    metodo: (language: string[]) => {
-      const elementosToText = language.join(", ");
-      setElementos(elementosToText);
-      if (language.length === 0) return setRepositories(initialRepositories);
-      const filteredRepos = initialRepositories.filter((r) => {
-        const l = new Set(language);
-        return Object.keys(r.languages).some((lang: string) => l.has(lang));
+export default function ProjectsPart({ user, labels }: Props) {
+  const [state, setState] = useState<State>({ status: "loading" });
+
+  useEffect(() => {
+    let alive = true;
+    // Se ocultan el repo de perfil (README) y este mismo portfolio.
+    const excluded = new Set([
+      user.toLowerCase(),
+      `${user.toLowerCase()}.github.io`,
+    ]);
+
+    fetch(`https://api.github.com/users/${user}/repos?per_page=100&sort=updated`)
+      .then((res) =>
+        res.ok ? res.json() : Promise.reject(new Error(String(res.status)))
+      )
+      .then((data: Repo[]) => {
+        if (!alive) return;
+        const repos = data
+          .filter((r) => !r.fork && !excluded.has(r.name.toLowerCase()))
+          .sort((a, b) => b.stargazers_count - a.stargazers_count);
+        setState({ status: "ready", repos });
+      })
+      .catch(() => {
+        if (alive) setState({ status: "error" });
       });
-      window.location.hash = filtro.tipo;
-      setRepositories(filteredRepos);
-    },
-    clear: () => {
-      setElementos("");
-      setRepositories(initialRepositories);
-      localStorage.setItem(filtro.tipo, JSON.stringify([]));
-      window.location.hash = filtro.tipo;
-    },
-  };
 
-  const sectionName = !forked
-    ? "REPOS"
-    : "FORKS";
+    return () => {
+      alive = false;
+    };
+  }, [user]);
 
-  console.log(sectionName);
+  const grid = "grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-10";
 
-  const reposFiltered = initialRepositories.filter(
-    (r) =>
-      !r.name.includes("prueba") &&
-      !r.name.includes("portfolio") &&
-      !r.name.includes("edgarguitarist")
-  )
+  if (state.status === "loading") {
+    return (
+      <div
+        className={grid}
+        role="status"
+        aria-busy="true"
+        aria-label={labels.loading}
+      >
+        {Array.from({ length: 6 }).map((_, i) => (
+          <div
+            key={i}
+            class="h-44 rounded-2xl border dark:border-white/10 border-black/10 dark:bg-white/5 bg-black/[0.03] animate-pulse"
+          />
+        ))}
+      </div>
+    );
+  }
+
+  if (state.status === "error") {
+    return (
+      <div class="mt-10 flex flex-col items-center gap-3">
+        <p class="text-center dark:text-gray-400 text-gray-500">
+          {labels.error}
+        </p>
+        <a
+          href={`https://github.com/${user}`}
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex items-center gap-1.5 rounded-lg bg-slate-800 px-4 py-2 text-sm font-semibold text-white transition-colors hover:bg-black"
+        >
+          <img src="/svg/github.svg" alt="" class="w-4 h-4" />
+          github.com/{user}
+        </a>
+      </div>
+    );
+  }
+
+  if (state.repos.length === 0) {
+    return (
+      <p class="mt-10 text-center dark:text-gray-400 text-gray-500">
+        {labels.empty}
+      </p>
+    );
+  }
 
   return (
-    <div className=" pt-7">
-      <h2 className="font-bold flex  text-3xl mt-10 text-left dark:text-white text-black">
-        {sectionName}
-        {/* {elementos && (
-          <div className="flex w-full place-content-between">
-            <span className="text-xl ml-3 font-semibold text-gray-500 dark:text-gray-400 self-center">
-              {t("index.projects.with")} ({elementos}){" = "}
-              {
-                reposFiltered.length
-              }
-            </span>
-            <button
-              className="bg-slate-800 hover:bg-black px-4 rounded-lg text-white font-semibold flex items-center gap-1 text-sm"
-              onClick={filtro.clear}
-            >
-              <img
-                src={"/svg/clearfilter.svg"}
-                alt={t("index.projects.clear") ?? "clear filters"}
-                className="w-6 h-6 text-white mr-1"
-              />
-              {t("index.projects.clear")}
-            </button>
-          </div>
-        )} */}
-      </h2>
-
-      <div className="flex justify-around flex-wrap gap-10 mt-10">
-        {reposFiltered
-          .map((repo) => {
-            return (
-              <ProjectsCard
-                key={repo.id}
-                name={repo.name}
-                repo_url={repo.html_url}
-                site={repo.homepage}
-                description={repo.description ?? ""}
-                contributor={repo.contributor as Contributor}
-                languages={repo.languages}
-                stars={repo.stargazers_count}
-                filtro={filtro}
-              />
-            );
-          })}
-      </div>
+    <div className={grid}>
+      {state.repos.map((repo) => (
+        <ProjectsCard
+          key={repo.id}
+          name={repo.name}
+          repo_url={repo.html_url}
+          site={safeUrl(repo.homepage)}
+          description={repo.description ?? labels.noDescription}
+          language={repo.language}
+          stars={repo.stargazers_count}
+          starsLabel={labels.stars}
+          siteLabel={labels.site}
+        />
+      ))}
     </div>
   );
 }

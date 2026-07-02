@@ -1,23 +1,14 @@
-import ButtonLanguage from "@components/buttons/ButtonLanguage";
 import ButtonProjectsCard from "@components/buttons/ButtonProjectsCard";
-import { t } from "i18next";
-import starfill from "/svg/starfill.svg";
 
 interface Props {
   name: string;
   repo_url: string;
   site: string | null;
   description: string;
-  contributor: Contributor;
-  languages: Languages;
+  language: string | null;
   stars: number;
-  filtro: any;
-}
-
-interface Pcard {
-  contribution: string;
-  stars: string;
-  languages: string;
+  starsLabel: string;
+  siteLabel: string;
 }
 
 export default function ProjectsCard({
@@ -25,97 +16,67 @@ export default function ProjectsCard({
   repo_url,
   site,
   description,
-  contributor,
-  languages,
+  language,
   stars,
-  filtro,
+  starsLabel,
+  siteLabel,
 }: Readonly<Props>) {
-  const no_show = ["Hack", "Tcl", "Batchfile", "Shell"];
-  const {
-    stars: t_stars,
-    contribution: t_contribution,
-    languages: t_languages,
-  } = t("index.projects.cards", { returnObjects: true }) as Pcard;
-  
-
-  const lenguajes = Object.keys(languages)
-    .filter((key) => !no_show.includes(key))
-    .sort();
-
-  const lenguajes_string = lenguajes.join(", ") + ".";
-
   return (
-    <article
-      id={name + "-card"}
-      className="p-3 lg:w-[31%] md:w-[45%] w-[96%] border-gradient hover:scale-105 relative font-semibold"
-    >
-      <header>
-        <a href={repo_url} title={name} target="_blank">
-          <h2 className="py-3 mx-auto w-[90%] dark:text-white text-2xl overflow-hidden text-ellipsis whitespace-nowrap hover:text-[#743ad5] dark:hover:text-[#d53a9d]">
+    <article class="group flex flex-col h-full p-5 rounded-2xl border-gradient transition-transform duration-300 hover:scale-[1.02]">
+      <header class="flex items-start justify-between gap-3">
+        <a
+          href={repo_url}
+          title={name}
+          target="_blank"
+          rel="noreferrer"
+          class="min-w-0"
+        >
+          <h3 class="text-lg font-bold dark:text-white text-gray-900 truncate transition-colors group-hover:text-transparent group-hover:bg-clip-text group-hover:bg-gradient-to-r group-hover:from-purple-400 group-hover:to-pink-400">
             {name}
-          </h2>
+          </h3>
         </a>
+        {stars > 0 && (
+          <span
+            title={`${stars} ${starsLabel}`}
+            class="flex shrink-0 items-center gap-1 text-xs font-semibold dark:text-yellow-300 text-yellow-600"
+          >
+            <svg
+              class="w-3.5 h-3.5"
+              viewBox="0 0 24 24"
+              fill="currentColor"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z" />
+            </svg>
+            {stars}
+          </span>
+        )}
       </header>
-      <div className="content h-20">
-        <p
-          title={description}
-          className="text-md text-gray-700 dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap"
-        >
-          {description || "..."}
-        </p>
-        <p
-          title={`${t_languages}: ${lenguajes_string}`}
-          className="text-slate-800 dark:text-gray-400 overflow-hidden text-ellipsis whitespace-nowrap flex items-center justify-center gap-2 pt-2"
-        >
-          {t_languages}:{" "}
-          {lenguajes.map((lenguaje) => (
-            <ButtonLanguage language={lenguaje} filtro={filtro} />
-          ))}
-        </p>
-      </div>
-      <footer>
-        <div className="flex place-content-center gap-8 center w-[80%] mx-auto">
-          <ButtonProjectsCard
-            name="GitHub"
-            icon_name="mdi:github"
-            site={repo_url}
-          />
+
+      <p class="mt-2 flex-1 text-sm leading-relaxed dark:text-gray-400 text-gray-600 line-clamp-3">
+        {description}
+      </p>
+
+      <div class="mt-5 flex items-center justify-between gap-3">
+        {language ? (
+          <span class="inline-flex items-center gap-1.5 text-xs font-medium dark:text-gray-300 text-gray-600">
+            <span class="h-2.5 w-2.5 rounded-full bg-gradient-to-r from-purple-500 to-pink-500"></span>
+            {language}
+          </span>
+        ) : (
+          <span />
+        )}
+        <div class="flex items-center gap-2">
+          <ButtonProjectsCard name="GitHub" icon_name="mdi:github" site={repo_url} />
           {site && (
             <ButtonProjectsCard
-              name="Site"
+              name={siteLabel}
               icon_name="ic:baseline-language"
               site={site}
             />
           )}
         </div>
-      </footer>
-      {Boolean(stars) && !contributor && (
-        <div
-          id={`${"badge-stars"}-${name}`}
-          title={`${stars} ${t_stars}`}
-          className="absolute inline-flex items-center justify-center w-8 h-8 font-semibold bg-transparent rounded-full -top-3 -right-3 text-md"
-        >
-          {/* <Icon
-            name="ph:star-fill"
-            className="flex absolute z-[1] text-yellow-300"
-          /> */}
-          <img
-            src={starfill}
-            alt="icono de estrella"
-            className="flex absolute z-[1] text-yellow-300"
-          />
-          <span className="text-gray-900 z-[2]">{stars}</span>
-        </div>
-      )}
-      {contributor?.contributions > 0 && (
-        <div
-          id={`${"badge-contributions"}-${name}`}
-          title={`${contributor.contributions} ${t_contribution}`}
-          className="absolute inline-flex items-center justify-center w-8 h-8 font-bold bg-red-600 border-2 border-white rounded-full -top-2 -right-2 dark:border-gray-900 text-md"
-        >
-          <span className="text-white">{contributor.contributions}</span>
-        </div>
-      )}
+      </div>
     </article>
   );
 }
