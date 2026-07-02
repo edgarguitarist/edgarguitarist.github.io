@@ -7,7 +7,8 @@
   {
     "name": "Deno",
     "src": "deno",
-    "show": true
+    "show": true,
+    "invert": true
   },
   {
     "name": "Vite",
@@ -17,7 +18,8 @@
   {
     "name": "Express",
     "src": "express",
-    "show": true
+    "show": true,
+    "invert": true
   },
   {
     "name": "Sequelize",
@@ -37,12 +39,14 @@
   {
     "name": "Next",
     "src": "next-js",
-    "show": true
+    "show": true,
+    "invert": true
   },
   {
     "name": "Astro",
     "src": "astro",
-    "show": true
+    "show": true,
+    "invert": true
   },
   {
     "name": "TailwindCSS",
@@ -88,6 +92,11 @@
   {
     "name": "Bun",
     "src": "bun",
+    "show": true
+  },
+  {
+    "name": "PyTorch",
+    "src": "pytorch",
     "show": true
   }
 ]
