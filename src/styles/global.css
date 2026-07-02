@@ -1,157 +1,254 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  height: 100%;
-  zoom: 90%;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+@import "tailwindcss";
+
+/* Dark mode basado en clase (.dark en <html>), gestionado por el script del Navbar.
+   En Tailwind 4 el dark mode se declara con @custom-variant. */
+@custom-variant dark (&:where(.dark, .dark *));
+
+/* Tokens de marca (fuente de verdad de la paleta). Generan utilidades como
+   bg-brand-purple / text-brand-pink / bg-ink además de estar disponibles como
+   var(--color-*) en el CSS custom. */
+@theme {
+  --color-brand-purple: #743ad5;
+  --color-brand-pink: #d53a9d;
+  --color-ink: #0a0a0f;
 }
 
-code {
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+/* Resets de elementos base. IMPORTANTE: deben ir en @layer base para que las
+   utilidades de Tailwind (p. ej. text-white en un <a>) puedan sobreescribirlos.
+   Fuera de una capa, `a { color: inherit }` ganaría a las utilidades y dejaría
+   todos los enlaces con el color heredado (bug en Tailwind 4). */
+@layer base {
+  html,
+  body {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+      Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+    min-height: 100vh;
+    scroll-behavior: smooth;
+  }
+
+  /* El scroll vive en <html> (un solo contenedor). Antes overflow-x-hidden estaba
+     en <body>, lo que creaba un contenedor de scroll anidado. */
+  html {
+    overflow-x: hidden;
+    /* Compensa el navbar fixed (h-14 = 3.5rem) al navegar a anclas, para que los
+       títulos de sección no queden ocultos bajo la barra. */
+    scroll-padding-top: 3.5rem;
+  }
+
+  code {
+    font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
+      Bitstream Vera Sans Mono, Courier New, monospace;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-* {
-  box-sizing: border-box;
-}
-
+/* ===== SOCIAL BUTTONS ===== */
 .social-btn {
   display: grid;
   justify-items: center;
   border-radius: 100%;
   color: #fff;
-  background-color: #444;
-  -webkit-transition: all 0.3s;
-  -moz-transition: all 0.3s;
-  transition: all 0.3s;
+  background-color: rgba(255,255,255,0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  border: 1px solid rgba(255,255,255,0.1);
 }
 
-.fb:hover {
-  color: #fff;
-  background: #3b5998;
-  background-color: #3b5998;
-}
-.lin:hover {
-  color: #fff;
-  background: #0a66c2;
-  background-color: #0a66c2;
+.social-btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
 }
 
-.git:hover {
-  color: #fff;
-  background: #24292f;
-  background-color: #24292f;
-}
-
-.wha:hover {
-  color: #fff;
-  background: #25d366;
-  background-color: #25d366;
-}
-
-.twi:hover {
-  color: #fff;
-  background: #00acee;
-  background-color: #00acee;
-}
-
-.x:hover{
-  color: #fff;
-  background: #191919;
-  background-color: #191919;
-}
-
-.yt:hover {
-  color: #fff;
-  background: #c4302b;
-  background-color: #c4302b;
-}
-
+.fb:hover { background: #3b5998; border-color: #3b5998; }
+.lin:hover { background: #0a66c2; border-color: #0a66c2; }
+.git:hover { background: #24292f; border-color: #24292f; }
+.wha:hover { background: #25d366; border-color: #25d366; }
+.twi:hover { background: #00acee; border-color: #00acee; }
+.x:hover { background: #000; border-color: #333; }
+.yt:hover { background: #c4302b; border-color: #c4302b; }
 .ins:hover {
-  color: #fff;
-  background: #d6249f;
-  background: radial-gradient(
-    circle at 30% 107%,
-    #fdf497 0%,
-    #fdf497 5%,
-    #fd5949 45%,
-    #d6249f 60%,
-    #285aeb 90%
-  );
-  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.25);
+  background: radial-gradient(circle at 30% 107%, #fdf497 0%, #fdf497 5%, #fd5949 45%, #d6249f 60%, #285aeb 90%);
+  border-color: #d6249f;
 }
+.pdf:hover { color: red; background: white; border: 1px solid red; }
+.pdf2:hover { background: linear-gradient(135deg, #e53e3e, #c53030); border-color: #e53e3e; }
 
-.pdf:hover {
-  color: red;
-  background: white;
-  background-color: white;
-  border: 1px solid red;
-}
-
-.pdf2:hover {
-  color: white;
-  background: red;
-  background-color: red;
-}
-
+/* ===== GRADIENT BORDERS ===== */
 .border-gradient {
   border-style: solid;
-  border-width: 3px;
+  border-width: 1px;
   border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-image-source: linear-gradient(135deg, rgba(116,58,213,0.3), rgba(213,58,157,0.3));
+  border-radius: 16px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+.border-gradient:hover {
+  border-image-source: linear-gradient(135deg, #743ad5, #d53a9d);
+  box-shadow: 0 0 30px rgba(116,58,213,0.15), 0 0 60px rgba(213,58,157,0.1);
+}
+
 .h-border-gradient {
   border-style: solid;
-  border-width: 3px;
-  border-color: black;
+  border-width: 2px;
+  border-color: transparent;
+  transition: all 0.3s ease;
 }
 
 .h-border-gradient:hover,
 .h-border-gradient:active,
 .h-border-gradient:focus {
-  border-style: solid;
-  border-width: 3px;
-  border-image-slice: 1;
-  border-image-source: linear-gradient(to left, #743ad5, #d53a9d);
+  border-bottom-color: #743ad5;
+  background: linear-gradient(to bottom, transparent, rgba(116,58,213,0.05));
 }
 
+/* ===== PROFILE PHOTO ===== */
 .profile-photo {
   position: relative;
-  background: linear-gradient(to left, #743ad5, #d53a9d);
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
+  padding: 4px;
+  background: linear-gradient(135deg, #743ad5, #d53a9d, #743ad5);
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
   border-radius: 50%;
-}
-/*124, 58, 237*/
-.profile-photo:after {
-  position: absolute;
-  display: block;
-  content: "";
-  background-color: transparent;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border-radius: 50%;
-  overflow: hidden;
+  box-shadow: 0 0 40px rgba(116,58,213,0.3), 0 0 80px rgba(213,58,157,0.15);
 }
 
-.gradient-wrapper {
-  border-radius: 50%;
-  display: block;
-  background: #743ad5;
-  background: linear-gradient(to left, #743ad5, #d53a9d);
-  background: -o-linear-gradient(to left, #743ad5, #d53a9d);
-  background: -moz-linear-gradient(to left, #743ad5, #d53a9d);
-  background: -webkit-linear-gradient(to left, #743ad5, #d53a9d);
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
 }
 
+/* ===== GLASSMORPHISM ===== */
+.glass {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+}
+
+/* ===== ANIMATED GRADIENT TEXT ===== */
+.gradient-text {
+  background: linear-gradient(135deg, #743ad5, #d53a9d, #743ad5);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientText 3s ease infinite;
+}
+
+@keyframes gradientText {
+  0%, 100% { background-position: 0% center; }
+  50% { background-position: 200% center; }
+}
+
+/* ===== FADE IN ANIMATION ===== */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-delay-1 { animation-delay: 0.1s; }
+.fade-in-delay-2 { animation-delay: 0.2s; }
+.fade-in-delay-3 { animation-delay: 0.3s; }
+.fade-in-delay-4 { animation-delay: 0.4s; }
+.fade-in-delay-5 { animation-delay: 0.5s; }
+
+/* ===== FLOATING ANIMATION ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+.float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ===== GLOW EFFECT ===== */
+.glow-purple {
+  box-shadow: 0 0 20px rgba(116,58,213,0.3), 0 0 40px rgba(116,58,213,0.1);
+}
+
+/* ===== SCROLLBAR ===== */
+.scroll::-webkit-scrollbar {
+  width: 6px;
+}
+
+.scroll::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+  background: rgba(116,58,213,0.3);
+  border-radius: 3px;
+}
+
+.scroll::-webkit-scrollbar-thumb:hover {
+  background: rgba(116,58,213,0.5);
+}
+
+/* ===== NOISE TEXTURE OVERLAY ===== */
+.noise::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ===== SELECT DROPDOWN ===== */
 option {
   color: black !important;
   font-weight: 500;
+}
+
+/* ===== EXPERIENCE CARD ===== */
+.experience-card::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: 16px;
+  padding: 1px;
+  background: linear-gradient(135deg, transparent, rgba(116,58,213,0.1), transparent);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
+
+/* ===== KNOWLEDGE CARD HOVER ===== */
+.knowledge-card {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.knowledge-card:hover {
+  transform: translateY(-5px) scale(1.05);
+}
+
+.knowledge-card:hover img {
+  filter: drop-shadow(0 0 8px rgba(116,58,213,0.5));
 }

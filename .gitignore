@@ -1,9 +1,13 @@
 # build output
 dist/
 .output/
+.astro/
 
 # dependencies
 node_modules/
+
+# editor / tooling
+.claude/
 
 # logs
 npm-debug.log*
