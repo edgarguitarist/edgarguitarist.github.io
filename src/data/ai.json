@@ -1,7 +1,7 @@
 [
   {
-    "name": "Claude",
-    "src": "claude",
+    "name": "Claude Code",
+    "src": "claude-code",
     "show": true
   },
   {
@@ -15,5 +15,15 @@
     "src": "codex",
     "show": true,
     "invert": true
+  },
+  {
+    "name": "Gemini",
+    "src": "gemini",
+    "show": true
+  },
+  {
+    "name": "Whisper",
+    "src": "whisper",
+    "show": true
   }
 ]

@@ -93,10 +93,5 @@
     "name": "Bun",
     "src": "bun",
     "show": true
-  },
-  {
-    "name": "PyTorch",
-    "src": "pytorch",
-    "show": true
   }
 ]
