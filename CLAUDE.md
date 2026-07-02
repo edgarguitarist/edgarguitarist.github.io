@@ -32,7 +32,7 @@ No hay tests ni linter configurados.
 Hay tres orígenes distintos de datos:
 
 1. **Repos en vivo** (`src/components/parts/projectsPart.tsx`): la sección Projects consulta los repositorios directamente desde la API de GitHub **en el cliente** (`https://api.github.com/users/edgarguitarist/repos`), sin scraping ni rebuild. Filtra los forks y los repos de perfil (`edgarguitarist`) y portfolio (`edgarguitarist.github.io`), y ordena por estrellas. Usa la API pública (1 petición, sin token).
-2. **Perfil** (`db/user.json`): nombre, empresa, ubicación y fecha de creación, usados por Aboutme y Footer. Es un JSON **estático** commiteado (ya no hay scraping); editar a mano si cambia. Alias `@db/user.json`.
+2. **Perfil en vivo** (`src/lib/profile.ts`): nombre, empresa y ubicación se obtienen de la API de GitHub **en build** (`getProfile()`, SSR con fallback) y se **refrescan en vivo** en el cliente (script en `App.astro` que actualiza los elementos `[data-gh]`). Ya no existe `db/user.json` ni el alias `@db`. La fecha de creación de la cuenta (años de experiencia) es un dato inmutable con fallback en el helper.
 3. **Datos estáticos i18n** (`src/data/*.json`): `experience.json`, `langs.json`, `libs.json`, `dbs.json`. `experience.json` está estructurado por locale (`{ "en": {...}, "es": {...} }`); seleccionar la clave con `Astro.currentLocale`.
 
 ### Componentes

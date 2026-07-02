@@ -3,13 +3,15 @@ import Sections from "@layouts/Sections.astro";
 import ButtonSocials from "@components/buttons/ButtonSocials.astro";
 import { Info } from "../../types/global.types";
 import { getUI, format } from "@i18n/ui";
-import me from "@db/user.json";
+import { getProfile } from "@lib/profile";
 
 import Github from "@icons/github.astro";
 import Linkedin from "@icons/linkedin.astro";
 import Document from "@icons/document.astro";
 const iconStyle = "m-auto size-3/5 hover:transform hover:scale-105";
 
+// Perfil obtenido en build (SSR); el script de App.astro lo refresca en vivo.
+const me = await getProfile();
 const fecha1 = new Date(me.created_at);
 const fecha2 = new Date();
 let Anios = fecha2.getFullYear() - fecha1.getFullYear();
@@ -63,16 +65,20 @@ const ui = getUI(Astro.currentLocale);
 
       <!-- Info pills -->
       <div class="flex flex-wrap gap-2 md:gap-3 fade-in fade-in-delay-3 justify-center lg:justify-start">
-        <div class="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full dark:bg-white/5 bg-gray-100 border dark:border-white/10 border-gray-200">
-          <img src={"/svg/company.svg"} alt="" class="size-4 md:size-5 dark:invert" />
-          <span class="dark:text-gray-300 text-gray-700 font-medium text-xs md:text-sm">
-            {ui.index.about.position} {ui.index.about.pp} {me.company}
-          </span>
-        </div>
-        <div class="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full dark:bg-white/5 bg-gray-100 border dark:border-white/10 border-gray-200">
-          <img src={"/svg/pin-sharp-circle.svg"} alt="" class="size-4 md:size-5 dark:invert" />
-          <span class="dark:text-gray-300 text-gray-700 font-medium text-xs md:text-sm">{me.location}</span>
-        </div>
+        {me.company && (
+          <div class="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full dark:bg-white/5 bg-gray-100 border dark:border-white/10 border-gray-200">
+            <img src={"/svg/company.svg"} alt="" class="size-4 md:size-5 dark:invert" />
+            <span class="dark:text-gray-300 text-gray-700 font-medium text-xs md:text-sm">
+              {ui.index.about.position} {ui.index.about.pp} <span data-gh="company">{me.company}</span>
+            </span>
+          </div>
+        )}
+        {me.location && (
+          <div class="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full dark:bg-white/5 bg-gray-100 border dark:border-white/10 border-gray-200">
+            <img src={"/svg/pin-sharp-circle.svg"} alt="" class="size-4 md:size-5 dark:invert" />
+            <span class="dark:text-gray-300 text-gray-700 font-medium text-xs md:text-sm" data-gh="location">{me.location}</span>
+          </div>
+        )}
         <div class="flex items-center gap-2 px-3 py-1.5 md:px-4 md:py-2 rounded-full dark:bg-green-500/10 bg-green-50 border dark:border-green-500/20 border-green-200">
           <span class="w-2 h-2 rounded-full bg-green-400 animate-pulse"></span>
           <span class="dark:text-green-400 text-green-700 font-bold text-xs md:text-sm">+{Anios} {ui.index.about.experience}</span>

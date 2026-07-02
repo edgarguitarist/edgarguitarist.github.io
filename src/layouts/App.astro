@@ -65,5 +65,24 @@ const langOptions = [
       <slot />
     </main>
     <Footer />
+    <script>
+      // Refresca el perfil (empresa, ubicación, nombre) EN VIVO desde GitHub,
+      // por encima de los valores obtenidos en build. Actualiza [data-gh].
+      fetch("https://api.github.com/users/edgarguitarist")
+        .then((r) => (r.ok ? r.json() : null))
+        .then((u) => {
+          if (!u) return;
+          const set = (key: string, val: string) => {
+            if (!val) return;
+            document
+              .querySelectorAll(`[data-gh="${key}"]`)
+              .forEach((el) => (el.textContent = val));
+          };
+          set("name", u.name);
+          set("company", u.company);
+          set("location", u.location);
+        })
+        .catch(() => {});
+    </script>
   </body>
 </html>
