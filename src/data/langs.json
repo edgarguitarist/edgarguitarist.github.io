@@ -67,7 +67,7 @@
   {
     "name": "Rust",
     "src": "rust",
-    "show" : false
+    "show" : true
   },
   {
     "name": "PowerShell",

@@ -1,0 +1,19 @@
+[
+  {
+    "name": "Claude",
+    "src": "claude",
+    "show": true
+  },
+  {
+    "name": "GitHub Copilot",
+    "src": "copilot",
+    "show": true,
+    "invert": true
+  },
+  {
+    "name": "Codex",
+    "src": "codex",
+    "show": true,
+    "invert": true
+  }
+]

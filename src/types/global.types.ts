@@ -60,12 +60,15 @@ export enum Knowledge {
   PL = "PL",
   SGBD = "SGBD",
   FW = "FW",
+  AI = "AI",
 }
 
 export type KnowData = {
   name: string;
   src: string;
   show: boolean;
+  // Invertir el icono en dark mode (para logos monocromos negros).
+  invert?: boolean;
 };
 
 export type KnowAttribute = {
@@ -76,6 +79,7 @@ export interface KnowDicInterface {
   [Knowledge.PL]: KnowAttribute;
   [Knowledge.SGBD]: KnowAttribute;
   [Knowledge.FW]: KnowAttribute;
+  [Knowledge.AI]: KnowAttribute;
 }
 export interface KnowInterface {
   section: Knowledge;

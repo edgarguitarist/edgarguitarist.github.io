@@ -2,9 +2,10 @@
 export interface Props {
   name: string;
   src: string;
+  invert?: boolean;
 }
 
-const { name, src } = Astro.props;
+const { name, src, invert = false } = Astro.props;
 ---
 
 <div class="knowledge-card p-4 lg:w-[100px] w-[80px] flex flex-col items-center cursor-default group">
@@ -12,7 +13,10 @@ const { name, src } = Astro.props;
     <div class="absolute inset-0 bg-purple-500/0 group-hover:bg-purple-500/10 rounded-2xl transition-all duration-300 -m-2"></div>
     <img
       id={name}
-      class="w-16 h-16 md:w-20 md:h-20 object-contain relative z-10"
+      class:list={[
+        "w-16 h-16 md:w-20 md:h-20 object-contain relative z-10",
+        invert && "dark:invert",
+      ]}
       title={name}
       src={`/svg/${src}.svg`}
       alt={name}

@@ -68,5 +68,26 @@
     "name": "Vue",
     "src": "vue",
     "show": false
+  },
+  {
+    "name": "Tauri",
+    "src": "tauri",
+    "show": true
+  },
+  {
+    "name": "Flask",
+    "src": "flask",
+    "show": true,
+    "invert": true
+  },
+  {
+    "name": "Docker",
+    "src": "docker",
+    "show": true
+  },
+  {
+    "name": "Bun",
+    "src": "bun",
+    "show": true
   }
 ]
