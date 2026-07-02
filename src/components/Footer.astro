@@ -32,18 +32,20 @@ const year = new Date().getFullYear();
     >
       {ui.index.footer.developer}
       <strong class="gradient-text font-bold" data-gh="name">{me.name}</strong>
-      <span class="dark:text-gray-600 text-gray-400">·</span>
+      <span class="dark:text-gray-400 text-gray-600">·</span>
       {ui.index.footer.using}
       <img
         src="/svg/astro-logo-light.svg"
         alt="Astro"
-        class="h-5 dark:brightness-100 brightness-0"
+        width="76"
+        height="20"
+        class="h-5 w-auto dark:brightness-100 brightness-0"
       />
     </p>
 
     <!-- Sociales + copyright -->
     <div class="flex items-center gap-4">
-      <span class="hidden md:inline text-xs dark:text-gray-600 text-gray-400"
+      <span class="hidden md:inline text-xs dark:text-gray-400 text-gray-600"
         >© {year}</span
       >
       <div class="flex items-center gap-3">

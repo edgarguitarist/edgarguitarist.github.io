@@ -11,9 +11,9 @@ const { className, id, title } = Astro.props;
 <section id={id} class={`pt-24 pb-8 block ${className ?? ''}`}>
   {
     title && (
-      <h1 class="text-4xl md:text-5xl text-gray-800 dark:text-gray-100 font-black text-center mb-2">
+      <h2 class="text-4xl md:text-5xl text-gray-800 dark:text-gray-100 font-black text-center mb-2">
         <span class="gradient-text">{title}</span>
-      </h1>
+      </h2>
     )
   }
   <slot />
