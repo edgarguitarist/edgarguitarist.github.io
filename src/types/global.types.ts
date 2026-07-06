@@ -14,7 +14,6 @@ export enum Info {
   pdf = "pdf",
   pdf2 = "pdf2",
   linkedin = "linkedin",
-  whatsapp = "whatsapp",
 }
 
 export type GeneralLinkAttribute = {
@@ -44,7 +43,6 @@ export interface SocialDicInterface {
   [Info.pdf]: GeneralLinkAttribute;
   [Info.pdf2]: GeneralLinkAttribute;
   [Info.linkedin]: GeneralLinkAttribute;
-  [Info.whatsapp]: GeneralLinkAttribute;
 }
 
 export type svgProps = {
