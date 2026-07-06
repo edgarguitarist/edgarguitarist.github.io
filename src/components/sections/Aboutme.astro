@@ -3,7 +3,7 @@ import Sections from "@layouts/Sections.astro";
 import ButtonSocials from "@components/buttons/ButtonSocials.astro";
 import { Info } from "../../types/global.types";
 import { getUI, format } from "@i18n/ui";
-import { getProfile } from "@lib/profile";
+import { getProfile, yearsSince } from "@lib/profile";
 
 import Github from "@icons/github.astro";
 import Linkedin from "@icons/linkedin.astro";
@@ -12,15 +12,7 @@ const iconStyle = "m-auto size-3/5 hover:transform hover:scale-105";
 
 // Perfil obtenido en build (SSR); el script de App.astro lo refresca en vivo.
 const me = await getProfile();
-const fecha1 = new Date(me.created_at);
-const fecha2 = new Date();
-let Anios = fecha2.getFullYear() - fecha1.getFullYear();
-// Resta un año si aún no se ha cumplido el aniversario este año
-const noHaCumplido =
-  fecha2.getMonth() < fecha1.getMonth() ||
-  (fecha2.getMonth() === fecha1.getMonth() &&
-    fecha2.getDate() < fecha1.getDate());
-if (noHaCumplido) Anios--;
+const Anios = yearsSince(me.created_at);
 const ui = getUI(Astro.currentLocale);
 ---
 

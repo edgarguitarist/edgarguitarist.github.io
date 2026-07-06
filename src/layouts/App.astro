@@ -1,10 +1,17 @@
 ---
-import { getUI } from "@i18n/ui";
+import { getUI, format } from "@i18n/ui";
+import { getProfile, yearsSince } from "@lib/profile";
 import Footer from "../components/Footer.astro";
 import Navbar from "../components/Navbar.astro";
 
 const ui = getUI(Astro.currentLocale);
 const currentLang = Astro.currentLocale;
+
+// Años de experiencia (misma fuente que el contador del Aboutme): la meta
+// description y el JSON-LD se generan dinámicamente para no quedar desfasados.
+const profile = await getProfile();
+const years = yearsSince(profile.created_at);
+const siteDescription = format(ui.site.description, [years]);
 const langOptions = [
   { code: "en", path: "/", label: "English" },
   { code: "es", path: "/es", label: "Español" },
@@ -22,8 +29,8 @@ const ogImage = isEs ? `${SITE}/images/og-image-es.png` : `${SITE}/images/og-ima
 
 // Resumen profesional para IA/buscadores (schema.org description), por idioma.
 const personDescription = isEs
-  ? "Desarrollador de Software Full-Stack con más de 5 años de experiencia construyendo sistemas web y aplicaciones móviles. Experiencia liderando equipos de desarrollo (Lead / Senior). Especializado en Angular, React, Node.js y .NET, con integraciones de IA. Bilingüe (español e inglés), abierto a nuevas oportunidades remotas o presenciales."
-  : "Full-Stack Software Developer with 5+ years of experience building web systems and mobile apps. Proven experience leading development teams (Lead / Senior roles). Specialized in Angular, React, Node.js and .NET, with AI integrations. Bilingual (Spanish and English), open to new remote or on-site opportunities.";
+  ? `Desarrollador de Software Full-Stack con más de ${years} años de experiencia construyendo sistemas web y aplicaciones móviles. Experiencia liderando equipos de desarrollo (Lead / Senior). Especializado en Angular, React, Node.js y .NET, con integraciones de IA. Bilingüe (español e inglés), abierto a nuevas oportunidades remotas o presenciales.`
+  : `Full-Stack Software Developer with ${years}+ years of experience building web systems and mobile apps. Proven experience leading development teams (Lead / Senior roles). Specialized in Angular, React, Node.js and .NET, with AI integrations. Bilingual (Spanish and English), open to new remote or on-site opportunities.`;
 
 // Datos estructurados schema.org/Person (rich results / knowledge graph / IA).
 const personLd = {
@@ -98,7 +105,7 @@ const personLd = {
       />
     </noscript>
     <meta name="theme-color" content="#0a0a0f" />
-    <meta name="description" content={ui.site.description} />
+    <meta name="description" content={siteDescription} />
     <meta
       name="keywords"
       content="Edgar Laz, Portfolio Edgar Laz, Edgar Mariano Laz Terán, Software Developer, Full Stack Developer, Angular Developer, React Developer, edgarguitarist"
@@ -114,7 +121,7 @@ const personLd = {
 
     <!-- Open Graph -->
     <meta property="og:title" content={ui.site.title} />
-    <meta property="og:description" content={ui.site.description} />
+    <meta property="og:description" content={siteDescription} />
     <meta property="og:type" content="website" />
     <meta property="og:url" content={canonical} />
     <meta property="og:site_name" content="Edgar Mariano Laz Terán" />
@@ -130,7 +137,7 @@ const personLd = {
     <meta name="twitter:site" content="@edgarguitarist" />
     <meta name="twitter:creator" content="@edgarguitarist" />
     <meta name="twitter:title" content={ui.site.title} />
-    <meta name="twitter:description" content={ui.site.description} />
+    <meta name="twitter:description" content={siteDescription} />
     <meta name="twitter:image" content={ogImage} />
 
     <meta name="generator" content={Astro.generator} />

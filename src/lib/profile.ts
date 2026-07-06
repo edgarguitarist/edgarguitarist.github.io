@@ -16,6 +16,22 @@ const FALLBACK: Profile = {
   created_at: "2019-02-04T05:14:18Z",
 };
 
+/**
+ * Años completos transcurridos desde una fecha ISO hasta hoy. Fuente única de
+ * los "años de experiencia" para que la cifra sea consistente en todo el sitio
+ * (contador del Aboutme, meta description, JSON-LD) y nunca se quede desfasada.
+ */
+export function yearsSince(iso: string): number {
+  const start = new Date(iso);
+  const now = new Date();
+  let years = now.getFullYear() - start.getFullYear();
+  const beforeAnniversary =
+    now.getMonth() < start.getMonth() ||
+    (now.getMonth() === start.getMonth() && now.getDate() < start.getDate());
+  if (beforeAnniversary) years--;
+  return years;
+}
+
 let cache: Profile | null = null;
 
 /**
