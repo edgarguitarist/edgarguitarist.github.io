@@ -16,7 +16,13 @@ const langOptions = [
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/images/2025.webp" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+    />
     <meta name="theme-color" content="#0a0a0f" />
     <meta name="description" content="Portfolio - Edgar Mariano Laz Terán - Software Developer" />
     <meta
@@ -50,7 +56,7 @@ const langOptions = [
                 "px-2.5 py-1 rounded-full transition-all duration-200",
                 lang.code === currentLang
                   ? "bg-gradient-to-r from-purple-500 to-pink-500 text-white shadow-sm"
-                  : "dark:text-gray-400 text-gray-500 hover:dark:text-white hover:text-gray-900",
+                  : "dark:text-gray-400 text-gray-600 hover:dark:text-white hover:text-gray-900",
               ]}
             >
               {lang.code.toUpperCase()}
