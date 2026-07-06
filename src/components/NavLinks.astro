@@ -29,7 +29,7 @@ const navElement = navDic[link as Nav];
 const Icon = navElement.Icon;
 ---
 
-<a href={navElement.href} id={`${link}_nav`} class={navStyle}>
+<a href={navElement.href} id={`${link}_nav`} aria-label={navElement.label} class={navStyle}>
   <Icon class={iconStyle} />
   <span class="hidden sm:inline">{navElement.label}</span>
 </a>
