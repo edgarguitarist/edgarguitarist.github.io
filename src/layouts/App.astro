@@ -18,9 +18,14 @@ const urlEs = `${SITE}/es/`;
 const canonical = isEs ? urlEs : urlEn;
 const ogLocale = isEs ? "es_ES" : "en_US";
 const ogLocaleAlt = isEs ? "en_US" : "es_ES";
-const ogImage = `${SITE}/images/og-image.png`;
+const ogImage = isEs ? `${SITE}/images/og-image-es.png` : `${SITE}/images/og-image.png`;
 
-// Datos estructurados schema.org/Person (rich results / knowledge graph).
+// Resumen profesional para IA/buscadores (schema.org description), por idioma.
+const personDescription = isEs
+  ? "Desarrollador de Software Full-Stack con más de 5 años de experiencia construyendo sistemas web y aplicaciones móviles. Experiencia liderando equipos de desarrollo (Lead / Senior). Especializado en Angular, React, Node.js y .NET, con integraciones de IA. Bilingüe (español e inglés), abierto a nuevas oportunidades remotas o presenciales."
+  : "Full-Stack Software Developer with 5+ years of experience building web systems and mobile apps. Proven experience leading development teams (Lead / Senior roles). Specialized in Angular, React, Node.js and .NET, with AI integrations. Bilingual (Spanish and English), open to new remote or on-site opportunities.";
+
+// Datos estructurados schema.org/Person (rich results / knowledge graph / IA).
 const personLd = {
   "@context": "https://schema.org",
   "@type": "Person",
@@ -28,7 +33,40 @@ const personLd = {
   alternateName: "Edgar Laz",
   url: SITE,
   image: ogImage,
-  jobTitle: "Software Developer",
+  jobTitle: isEs ? "Desarrollador de Software Full-Stack" : "Full-Stack Software Developer",
+  description: personDescription,
+  address: {
+    "@type": "PostalAddress",
+    addressLocality: "Guayaquil",
+    addressCountry: "EC",
+  },
+  email: "mailto:edgarguitarist@gmail.com",
+  knowsLanguage: ["Spanish", "English"],
+  knowsAbout: [
+    "Angular",
+    "React",
+    "Node.js",
+    "TypeScript",
+    "JavaScript",
+    ".NET",
+    "C#",
+    "Python",
+    "PHP",
+    "Java",
+    "Kotlin",
+    "Astro",
+    "Next.js",
+    "Express",
+    "TailwindCSS",
+    "Docker",
+    "SQL Server",
+    "PostgreSQL",
+    "MySQL",
+    "MongoDB",
+    "Full-Stack Web Development",
+    "Mobile App Development",
+    "AI Integration",
+  ],
   sameAs: [
     "https://www.github.com/edgarguitarist",
     "https://www.linkedin.com/in/edgarlteran/",
