@@ -1,5 +1,6 @@
 import { defineConfig } from "astro/config";
 import preact from "@astrojs/preact";
+import sitemap from "@astrojs/sitemap";
 import tailwindcss from "@tailwindcss/vite";
 
 // https://astro.build/config
@@ -16,7 +17,17 @@ export default defineConfig({
       prefixDefaultLocale: false,
     },
   },
-  integrations: [preact()],
+  integrations: [
+    preact(),
+    // Genera sitemap-index.xml + sitemap-0.xml con alternates hreflang (en/es)
+    // gracias a la config i18n; robots.txt (en public/) apunta a este índice.
+    sitemap({
+      i18n: {
+        defaultLocale: "en",
+        locales: { en: "en", es: "es" },
+      },
+    }),
+  ],
   // Tailwind 4 se integra como plugin de Vite (el antiguo @astrojs/tailwind
   // quedó deprecado).
   vite: {

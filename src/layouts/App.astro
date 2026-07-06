@@ -9,6 +9,33 @@ const langOptions = [
   { code: "en", path: "/", label: "English" },
   { code: "es", path: "/es", label: "Español" },
 ];
+
+// --- SEO: URLs canónicas / alternativas por idioma (sitio bilingüe en/es) ---
+const SITE = "https://edgarguitarist.github.io";
+const isEs = currentLang === "es";
+const urlEn = `${SITE}/`;
+const urlEs = `${SITE}/es/`;
+const canonical = isEs ? urlEs : urlEn;
+const ogLocale = isEs ? "es_ES" : "en_US";
+const ogLocaleAlt = isEs ? "en_US" : "es_ES";
+const ogImage = `${SITE}/images/og-image.png`;
+
+// Datos estructurados schema.org/Person (rich results / knowledge graph).
+const personLd = {
+  "@context": "https://schema.org",
+  "@type": "Person",
+  name: "Edgar Mariano Laz Terán",
+  alternateName: "Edgar Laz",
+  url: SITE,
+  image: ogImage,
+  jobTitle: "Software Developer",
+  sameAs: [
+    "https://www.github.com/edgarguitarist",
+    "https://www.linkedin.com/in/edgarlteran/",
+    "https://x.com/edgarguitarist",
+    "https://www.instagram.com/edgarguitarist/",
+  ],
+};
 ---
 
 <!DOCTYPE html>
@@ -33,19 +60,49 @@ const langOptions = [
       />
     </noscript>
     <meta name="theme-color" content="#0a0a0f" />
-    <meta name="description" content="Portfolio - Edgar Mariano Laz Terán - Software Developer" />
+    <meta name="description" content={ui.site.description} />
     <meta
       name="keywords"
       content="Edgar Laz, Portfolio Edgar Laz, Edgar Mariano Laz Terán, Software Developer, Full Stack Developer, Angular Developer, React Developer, edgarguitarist"
     />
     <meta name="author" content="Edgar Mariano Laz Terán" />
     <meta name="robots" content="index,follow" />
+
+    <!-- Canonical + alternates de idioma (hreflang) -->
+    <link rel="canonical" href={canonical} />
+    <link rel="alternate" hreflang="en" href={urlEn} />
+    <link rel="alternate" hreflang="es" href={urlEs} />
+    <link rel="alternate" hreflang="x-default" href={urlEn} />
+
+    <!-- Open Graph -->
     <meta property="og:title" content={ui.site.title} />
     <meta property="og:description" content={ui.site.description} />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://edgarguitarist.github.io" />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:site_name" content="Edgar Mariano Laz Terán" />
+    <meta property="og:locale" content={ogLocale} />
+    <meta property="og:locale:alternate" content={ogLocaleAlt} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Edgar Mariano Laz Terán — Software Developer" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@edgarguitarist" />
+    <meta name="twitter:creator" content="@edgarguitarist" />
+    <meta name="twitter:title" content={ui.site.title} />
+    <meta name="twitter:description" content={ui.site.description} />
+    <meta name="twitter:image" content={ogImage} />
+
     <meta name="generator" content={Astro.generator} />
     <title>{ui.site.title}</title>
+
+    <!-- Datos estructurados: Person -->
+    <script
+      type="application/ld+json"
+      set:html={JSON.stringify(personLd)}
+    />
   </head>
 
   <body class="dark:bg-[#0a0a0f] bg-gray-50 transition-colors duration-300 noise">

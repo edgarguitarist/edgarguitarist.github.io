@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://edgarguitarist.github.io/sitemap-index.xml
