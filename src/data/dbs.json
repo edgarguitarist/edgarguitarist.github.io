@@ -1,17 +1,7 @@
 [
   {
-    "name": "MySQL",
-    "src": "mysql",
-    "show" : true
-  },
-  {
     "name": "SQL SERVER",
     "src": "sql-server-nn",
-    "show" : true
-  },
-  {
-    "name": "Oracle",
-    "src": "oracle",
     "show" : true
   },
   {
@@ -20,8 +10,18 @@
     "show" : true
   },
   {
+    "name": "MySQL",
+    "src": "mysql",
+    "show" : true
+  },
+  {
     "name": "MongoDB",
     "src": "mongodb-no-name",
+    "show" : true
+  },
+  {
+    "name": "Oracle",
+    "src": "oracle",
     "show" : true
   },
   {

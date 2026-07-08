@@ -1,12 +1,7 @@
 [
   {
-    "name": "HTML",
-    "src": "html",
-    "show" : true
-  },
-  {
-    "name": "CSS",
-    "src": "css",
+    "name": "TypeScript",
+    "src": "typescript",
     "show" : true
   },
   {
@@ -15,13 +10,13 @@
     "show" : true
   },
   {
-    "name": "TypeScript",
-    "src": "typescript",
+    "name": "Python",
+    "src": "python",
     "show" : true
   },
   {
-    "name": "Python",
-    "src": "python",
+    "name": "C#",
+    "src": "csharp",
     "show" : true
   },
   {
@@ -35,18 +30,34 @@
     "show" : true
   },
   {
-    "name": "C#",
-    "src": "csharp",
-    "show" : true
-  },
-  {
     "name": "Kotlin",
     "src": "kotlin",
     "show" : true
   },
   {
-    "name": "Arduino",
-    "src": "arduino",
+    "name": "Rust",
+    "src": "rust",
+    "show" : true
+  },
+  {
+    "name": "HTML",
+    "src": "html",
+    "show" : true
+  },
+  {
+    "name": "CSS",
+    "src": "css",
+    "show" : true
+  },
+  {
+    "name": "Bash",
+    "src": "bash",
+    "show" : true,
+    "invert": true
+  },
+  {
+    "name": "PowerShell",
+    "src": "powershell",
     "show" : true
   },
   {
@@ -63,21 +74,5 @@
     "name": "SCSS",
     "src": "scss",
     "show" : false
-  },
-  {
-    "name": "Rust",
-    "src": "rust",
-    "show" : true
-  },
-  {
-    "name": "PowerShell",
-    "src": "powershell",
-    "show" : true
-  },
-  {
-    "name": "Bash",
-    "src": "bash",
-    "show" : true,
-    "invert": true
   }
 ]

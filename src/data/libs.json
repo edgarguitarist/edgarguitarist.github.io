@@ -1,32 +1,5 @@
 [
   {
-    "name": "Node",
-    "src": "nodejs",
-    "show": true
-  },
-  {
-    "name": "Deno",
-    "src": "deno",
-    "show": true,
-    "invert": true
-  },
-  {
-    "name": "Vite",
-    "src": "vite",
-    "show": true
-  },
-  {
-    "name": "Express",
-    "src": "express",
-    "show": true,
-    "invert": true
-  },
-  {
-    "name": "Sequelize",
-    "src": "sequelize",
-    "show": true
-  },
-  {
     "name": "React",
     "src": "react",
     "show": true
@@ -49,13 +22,56 @@
     "invert": true
   },
   {
-    "name": "TailwindCSS",
-    "src": "tailwind-css",
+    "name": "Node",
+    "src": "nodejs",
+    "show": true
+  },
+  {
+    "name": "Deno",
+    "src": "deno",
+    "show": true,
+    "invert": true
+  },
+  {
+    "name": "Bun",
+    "src": "bun",
+    "show": true
+  },
+  {
+    "name": "Express",
+    "src": "express",
+    "show": true,
+    "invert": true
+  },
+  {
+    "name": "Sequelize",
+    "src": "sequelize",
     "show": true
   },
   {
     "name": ".NET",
     "src": "dotnet",
+    "show": true
+  },
+  {
+    "name": "Flask",
+    "src": "flask",
+    "show": true,
+    "invert": true
+  },
+  {
+    "name": "TailwindCSS",
+    "src": "tailwind-css",
+    "show": true
+  },
+  {
+    "name": "Tauri",
+    "src": "tauri",
+    "show": true
+  },
+  {
+    "name": "Vite",
+    "src": "vite",
     "show": true
   },
   {
@@ -72,26 +88,5 @@
     "name": "Vue",
     "src": "vue",
     "show": false
-  },
-  {
-    "name": "Tauri",
-    "src": "tauri",
-    "show": true
-  },
-  {
-    "name": "Flask",
-    "src": "flask",
-    "show": true,
-    "invert": true
-  },
-  {
-    "name": "Docker",
-    "src": "docker",
-    "show": true
-  },
-  {
-    "name": "Bun",
-    "src": "bun",
-    "show": true
   }
 ]
