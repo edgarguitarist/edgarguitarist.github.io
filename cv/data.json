@@ -1,0 +1,154 @@
+{
+  "shared": {
+    "name": "Edgar Mariano Laz Terán",
+    "location": "Guayaquil, Ecuador",
+    "email": "edgarguitarist+contacto@gmail.com",
+    "phone": "+593 98 268 6560",
+    "phoneRaw": "+593982686560",
+    "linkedin": { "label": "linkedin.com/in/edgarlteran", "url": "https://www.linkedin.com/in/edgarlteran" },
+    "github": { "label": "github.com/edgarguitarist", "url": "https://github.com/edgarguitarist" },
+    "website": { "label": "edgarguitarist.github.io", "url": "https://edgarguitarist.github.io" }
+  },
+  "en": {
+    "lang": "en",
+    "docTitle": "Edgar Mariano Laz Terán — Full Stack Developer",
+    "role": "Full Stack Developer",
+    "summary": "Full Stack Developer with 7+ years of experience in web and mobile development. I have collaborated with national and international companies, delivering high-quality digital products with Angular, React, .NET, and Node.js. I stand out for my adaptability, technical leadership, and commitment to continuous growth and innovation, building systems that make a real impact on people's daily lives.",
+    "sections": {
+      "experience": "Professional Experience",
+      "education": "Education",
+      "skills": "Technical Skills"
+    },
+    "experience": [
+      {
+        "company": "Agrosoft Latam",
+        "title": "Software Developer",
+        "place": "Guayaquil, Ecuador",
+        "dates": "Nov 2025 – Jun 2026",
+        "bullets": [
+          "Developed an ERP system with Angular, .NET 8 (C#), and Microsoft SQL Server.",
+          "Leveraged AI tools to accelerate software development and legacy migrations."
+        ]
+      },
+      {
+        "company": "TeamQ Deutschland UG",
+        "title": "Senior Frontend Developer",
+        "place": "Remote · Erfurt, Germany",
+        "dates": "May 2024 – Sep 2025",
+        "bullets": [
+          "Built high-performance web systems with Angular 17 and Tailwind CSS, improving user experience and the efficiency of internal processes across multiple entities.",
+          "Led code-optimization and best-practices initiatives within the frontend team, driving the adoption of new technologies and agile methodologies.",
+          "Wrote unit tests across projects to ensure quality and maintainability."
+        ]
+      },
+      {
+        "company": "Bitekso S.A.",
+        "title": "Lead Software Developer",
+        "place": "Guayaquil, Ecuador",
+        "dates": "Mar 2022 – May 2024",
+        "bullets": [
+          "Led a team of developers across several projects for public-sector entities.",
+          "Bridged communication between technical teams and clients to ensure successful delivery.",
+          "Implemented web systems with Angular, Node.js, React, Express, SQL Server, and PostgreSQL."
+        ]
+      },
+      {
+        "company": "Freelance",
+        "title": "Full Stack Web & Mobile Developer",
+        "place": "Guayaquil, Ecuador",
+        "dates": "Dec 2019 – Present",
+        "bullets": [
+          "Build web systems and native mobile apps for clients across various industries using PHP, JavaScript, TypeScript, Angular, React, Tailwind CSS, Node.js, Astro, PostgreSQL, SQL Server, MySQL, Java, and Kotlin.",
+          "Deliver tailored solutions that improve clients' business processes, integrating AI technologies for process automation and multimedia content generation."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "school": "Agrarian University of Ecuador",
+        "degree": "Computer and Information Technology Engineer",
+        "place": "Guayaquil, Ecuador",
+        "dates": "Graduated Mar 2020"
+      }
+    ],
+    "skills": [
+      { "label": "Languages", "value": "TypeScript, JavaScript, C#, PHP, Java, Kotlin, Python, Bash, PowerShell" },
+      { "label": "Frontend", "value": "Angular, React, Next.js, Astro, Tailwind CSS" },
+      { "label": "Backend", "value": "Node.js, Express, .NET 8, Flask" },
+      { "label": "Databases", "value": "SQL Server, PostgreSQL, MySQL, MongoDB, Firebase, SQLite" },
+      { "label": "Tools & AI", "value": "Git, Docker, Claude, ChatGPT, Gemini" },
+      { "label": "Spoken languages", "value": "Spanish (native), English (B2)" }
+    ]
+  },
+  "es": {
+    "lang": "es",
+    "docTitle": "Edgar Mariano Laz Terán — Desarrollador Full Stack",
+    "role": "Desarrollador Full Stack",
+    "summary": "Desarrollador Full Stack con más de 7 años de experiencia en desarrollo web y móvil. He colaborado con empresas nacionales e internacionales, entregando productos digitales de alta calidad con Angular, React, .NET y Node.js. Destaco por mi capacidad de adaptación, liderazgo técnico y mi compromiso con el crecimiento y la innovación constantes, creando sistemas que impactan el día a día de las personas.",
+    "sections": {
+      "experience": "Experiencia Profesional",
+      "education": "Educación",
+      "skills": "Habilidades Técnicas"
+    },
+    "experience": [
+      {
+        "company": "Agrosoft Latam",
+        "title": "Desarrollador de Software",
+        "place": "Guayaquil, Ecuador",
+        "dates": "Nov 2025 – Jun 2026",
+        "bullets": [
+          "Desarrollé un sistema ERP con Angular, .NET 8 (C#) y Microsoft SQL Server.",
+          "Apliqué herramientas de IA para acelerar el desarrollo y la migración de software."
+        ]
+      },
+      {
+        "company": "TeamQ Deutschland UG",
+        "title": "Senior Frontend Developer",
+        "place": "Remoto · Erfurt, Alemania",
+        "dates": "May 2024 – Sep 2025",
+        "bullets": [
+          "Desarrollé sistemas web de alto rendimiento con Angular 17 y Tailwind CSS, mejorando la experiencia de usuario y la eficiencia de los procesos internos de diferentes entidades.",
+          "Lideré iniciativas de optimización de código y buenas prácticas en el equipo de frontend, impulsando la adopción de nuevas tecnologías y metodologías ágiles.",
+          "Escribí pruebas unitarias en distintos proyectos para asegurar la calidad y el mantenimiento."
+        ]
+      },
+      {
+        "company": "Bitekso S.A.",
+        "title": "Lead Software Developer",
+        "place": "Guayaquil, Ecuador",
+        "dates": "Mar 2022 – May 2024",
+        "bullets": [
+          "Lideré un equipo de desarrolladores en varios proyectos para entidades públicas.",
+          "Facilité la comunicación entre los equipos técnicos y los clientes para asegurar entregas exitosas.",
+          "Implementé sistemas web con Angular, Node.js, React, Express, SQL Server y PostgreSQL."
+        ]
+      },
+      {
+        "company": "Freelance",
+        "title": "Desarrollador Web y Móvil Full Stack",
+        "place": "Guayaquil, Ecuador",
+        "dates": "Dic 2019 – Actualidad",
+        "bullets": [
+          "Desarrollo sistemas web y aplicaciones móviles nativas para clientes de diversos sectores con PHP, JavaScript, TypeScript, Angular, React, Tailwind CSS, Node.js, Astro, PostgreSQL, SQL Server, MySQL, Java y Kotlin.",
+          "Entrego soluciones a medida que mejoran los procesos de negocio de los clientes, integrando tecnologías de IA para la automatización de procesos y la generación de contenido multimedia."
+        ]
+      }
+    ],
+    "education": [
+      {
+        "school": "Universidad Agraria del Ecuador",
+        "degree": "Ingeniero en Computación e Informática",
+        "place": "Guayaquil, Ecuador",
+        "dates": "Graduado marzo 2020"
+      }
+    ],
+    "skills": [
+      { "label": "Lenguajes", "value": "TypeScript, JavaScript, C#, PHP, Java, Kotlin, Python, Bash, PowerShell" },
+      { "label": "Frontend", "value": "Angular, React, Next.js, Astro, Tailwind CSS" },
+      { "label": "Backend", "value": "Node.js, Express, .NET 8, Flask" },
+      { "label": "Bases de datos", "value": "SQL Server, PostgreSQL, MySQL, MongoDB, Firebase, SQLite" },
+      { "label": "Herramientas e IA", "value": "Git, Docker, Claude, ChatGPT, Gemini" },
+      { "label": "Idiomas", "value": "Español (nativo), Inglés (B2)" }
+    ]
+  }
+}

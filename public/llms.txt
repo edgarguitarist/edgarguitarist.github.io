@@ -31,10 +31,10 @@ and integrates AI into real products for process automation and content generati
 
 - **Software Developer — Agrosoft Latam** (Nov 2025 – Jun 2026, Guayaquil, Ecuador).
   ERP system development with Angular, .NET 8 / C#, and Microsoft SQL Server.
-- **Senior Frontend Developer — TeamQ** (May 2024 – Sep 2025, Erfurt, Germany).
+- **Senior Frontend Developer — TeamQ** (May 2024 – Sep 2025, Remote · Erfurt, Germany).
   Built high-performance web systems with Angular 17 and Tailwind; led code
   optimization and best-practices initiatives on the frontend team.
-- **Lead Software Developer — Bitekso S.A.** (Mar 2022 – 2024, Guayaquil, Ecuador).
+- **Lead Software Developer — Bitekso S.A.** (Mar 2022 – May 2024, Guayaquil, Ecuador).
   Led a team of developers and multiple projects for public entities using Angular,
   Node.js, React, Express, SQL Server, and PostgreSQL.
 - **Freelance Full-Stack Web & Mobile Developer** (Dec 2019 – Present).
@@ -65,6 +65,8 @@ contracts, and freelance projects.
 ## Contact & links
 
 - Portfolio: https://edgarguitarist.github.io
+- Résumé / CV (English): https://edgarguitarist.github.io/documents/Edgar_Laz-Developer.pdf
+- Currículum (Español): https://edgarguitarist.github.io/documents/Edgar_Laz-Desarrollador.pdf
 - Email: edgarguitarist+contacto@gmail.com
 - LinkedIn: https://www.linkedin.com/in/edgarlteran/
 - GitHub: https://github.com/edgarguitarist

@@ -26,6 +26,12 @@ export default defineConfig({
         defaultLocale: "en",
         locales: { en: "en", es: "es" },
       },
+      // Los PDF del CV viven en public/ y no son rutas Astro, así que se añaden
+      // manualmente para que Google también pueda indexarlos.
+      customPages: [
+        "https://edgarguitarist.github.io/documents/Edgar_Laz-Developer.pdf",
+        "https://edgarguitarist.github.io/documents/Edgar_Laz-Desarrollador.pdf",
+      ],
     }),
   ],
   // Tailwind 4 se integra como plugin de Vite (el antiguo @astrojs/tailwind
